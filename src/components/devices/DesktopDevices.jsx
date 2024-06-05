@@ -3,7 +3,7 @@ import CatBG from '../../assets/images/pages/404cat.png';
 
 function DesktopDevices() {
   return (
-    <div id='pc-design' className='relative grid w-[320px] h-[180px] min-w-[320px] min-h-[180px] max-w-[320px] max-h-[180px] shadow-lg'>
+    <div id='pc-design' className='relative grid w-[320px] h-[180px] min-w-[320px] min-h-[180px] max-w-[320px] max-h-[220px] xl:w-[345px] xl:h-[220px] xl:min-w-[345px] xl:min-h-[220px] xl:max-w-[345px] xl:max-h-[220px] shadow-lg'>
       <div className='relative grid z-20 bg-white w-full h-full border-4 border-solid border-alt-colour rounded-sm shadow-xl overflow-hidden'>
         {/* PC display */}
         <div className='grid w-full h-full overflow-hidden'>

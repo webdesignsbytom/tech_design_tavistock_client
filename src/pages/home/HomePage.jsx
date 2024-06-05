@@ -6,6 +6,8 @@ import InfoBox from '../../components/global/InfoBox';
 // Utils
 import HeaderComponent from '../../components/home/HeaderComponent';
 import InformationComponent from '../../components/home/InformationComponent';
+import PortfolioComponent from '../../components/home/PortfolioComponent';
+import MiniGameComponent from '../../components/home/MiniGameComponent';
 
 function HomePage() {
   let navigate = useNavigate();
@@ -43,12 +45,13 @@ function HomePage() {
           <div className='w-full h-16 bg-slate-50 overflow-hidden'></div>
 
           {/* Second section of main */}
-          <section
-            id='main-display-2'
-            className='grid h-screen bg-red-400 w-full overflow-hidden'
-          >
-            two
-          </section>
+          <PortfolioComponent />
+
+          {/* Colour block */}
+          <div className='w-full h-16 bg-slate-50 overflow-hidden'></div>
+
+          {/* Second section of main */}
+          <MiniGameComponent />
         </main>
       </div>
     </div>

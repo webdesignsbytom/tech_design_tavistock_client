@@ -5,7 +5,7 @@ function InfoBox({ data }) {
 
   return (
     <div className='grid h-fit'>
-      <div className='flex items-center bg-white p-4 shadow rounded-lg h-fit'>
+      <div className='flex items-center bg-white p-4 shadow rounded-lg h-fit hover:bg-alt-colour hover:text-white duration-300'>
         <div className='text-xl p-2 pr-4'>{dataSet.imageUrl}</div>
         <div>
           <h4 className='text-xl font-bold'>{dataSet.title}</h4>
