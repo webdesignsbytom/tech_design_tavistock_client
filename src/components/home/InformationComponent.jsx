@@ -37,7 +37,7 @@ function InformationComponent() {
                       Tech Design by Tom
                     </span>{' '}
                     builds and designs complex or beautifully simple websites,
-                    phone apps, and desktop apps.
+                    phone apps, and desktop apps. With a team of developers that can complete for you any Front-End or Server based project.
                   </p>
                   <p className='pt-2'>
                     We work with various codebases to suit any development needs
@@ -61,16 +61,16 @@ function InformationComponent() {
               <section className='grid h-fit'>
                 <div className='grid grid-cols-2 pt-8 gap-4 overflow-hidden russo-one-regular'>
                   <div>
-                    <button className='w-full h-fit px-4 py-2 font-semibold bg-white text-alt-colour border-2 border-solid border-alt-colour rounded-lg hover:bg-alt-colour hover:text-white duration-300'>
+                    <button className='w-full h-fit px-4 py-2 font-semibold bg-white text-alt-colour border-2 border-solid border-alt-colour rounded-lg hover:bg-alt-colour hover:text-white duration-300 shadow-lg hover:shadow-2xl'>
                       See More
                     </button>
                   </div>
                   <div>
                     <button
                       onClick={() => navigateToPage('/contact')}
-                      className='w-full h-fit px-4 py-2 font-semibold bg-alt-colour text-white border-2 border-solid border-alt-colour rounded-lg hover:text-alt-colour hover:bg-white duration-300'
+                      className='w-full h-fit px-4 py-2 font-semibold bg-alt-colour text-white border-2 border-solid border-alt-colour rounded-lg hover:text-alt-colour hover:bg-white duration-300 shadow-lg hover:shadow-2xl'
                     >
-                      Contact
+                      Contact Now
                     </button>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ function InformationComponent() {
 
           {/* Images - right hand side */}
           <section className='grid w-full h-full overflow-hidden'>
-            <div className='grid items-center w-full h-full px-2 py-2 logo__bg__1 overflow-hidden'>
+            <div className='grid animate-fade-in-move-up items-center w-full h-full px-2 py-2 logo__bg__1 overflow-hidden'>
               {/* Info Boxes */}
               <div className='grid gap-4 h-fit px-16'>
                 {infoBoxDisplay.map((data, index) => {

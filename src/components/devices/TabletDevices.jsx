@@ -3,14 +3,14 @@ import CatBG from '../../assets/images/pages/404cat.png';
 
 function TabletDevices() {
   return (
-    <div className='relative grid w-[240px] h-[140px] min-w-[240px] min-h-[140px] max-w-[240px] max-h-[140px] shadow-lg'>
+    <div className='relative grid h-full w-full shadow-lg overflow-hidden'>
       <div className='relative grid bg-white w-full h-full border-4 border-solid border-alt-colour rounded-xl shadow-xl overflow-hidden'>
         {/* Phone display */}
         <div className='grid w-full h-full overflow-hidden'>
           <img
             src={CatBG}
             alt='lost cat'
-            className='w-full h-full object-cover'
+            className='w-full h-full object-contain'
           />
         </div>
 

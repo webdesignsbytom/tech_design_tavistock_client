@@ -30,21 +30,21 @@ function PortfolioComponent() {
             </div>
           </section>
           {/* Sliding image display - Right hand side */}
-          <section className='grid w-full h-full overflow-hidden p-6'>
-            <div className='grid grid-cols-5 gap-2 w-full h-full bg-pink-600'>
-              <div className='grid w-full h-full items-center justify-center bg-red-400'>
+          <section className='grid w-full h-full overflow-hidden py-6'>
+            <div className='grid grid-cols-display gap-4 w-full h-fit items-center bg-dark-colour py-8 px-6'>
+              <div className='grid w-full max-w-[150px] h-[80%] items-center justify-center overflow-hidden shadow-2xl shadow-blue-500/40' >
                 <PhoneDevices />
               </div>
-              <div className='grid w-full h-full items-start xl:items-center justify-start bg-green-400'>
+              <div className='grid w-full h-full max-h-[180px] items-center justify-start overflow-hidden shadow-2xl shadow-blue-500/40'>
                 <TabletDevices />
               </div>
-              <div className='grid w-full h-full items-center justify-center bg-orange-400'>
+              <div className='grid w-full min-w-[240px] h-full max-h-[260px] items-center overflow-hidden shadow-2xl shadow-blue-500/40'>
                 <DesktopDevices />
               </div>
-              <div className='grid w-full h-full items-end xl:items-center justify-end bg-purple-400'>
+              <div className='grid w-full h-full max-h-[180px] items-start xl:items-center justify-start overflow-hidden shadow-2xl shadow-blue-500/40'>
                 <TabletDevices />
               </div>
-              <div className='grid w-full h-full items-center justify-center bg-blue-400'>
+              <div className='grid w-full max-w-[150px] h-[80%] items-center justify-center overflow-hidden shadow-2xl shadow-blue-500/40'>
                 <PhoneDevices />
               </div>
             </div>

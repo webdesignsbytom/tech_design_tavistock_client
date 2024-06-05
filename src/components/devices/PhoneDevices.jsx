@@ -3,7 +3,7 @@ import CatBG from '../../assets/images/pages/404cat.png';
 
 function PhoneDevices() {
   return (
-    <div className='relative grid w-[108px] h-[200px] min-w-[108px] min-h-[200px] max-w-[108px] max-h-[200px] shadow-lg'>
+    <div className='relative grid h-full w-full shadow-lg'>
       <div className='relative grid bg-white w-full h-full border-4 border-solid border-alt-colour rounded-xl shadow-xl overflow-hidden'>
         {/* Phone display */}
         <div className='grid w-full h-full overflow-hidden'>
