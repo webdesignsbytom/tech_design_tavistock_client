@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 function MiniGameComponent() {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
-
+  
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');

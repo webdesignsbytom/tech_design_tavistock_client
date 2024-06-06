@@ -8,6 +8,7 @@ import DesktopDevices from '../devices/DesktopDevices';
 // Images
 import ArduinoDevice from '../../assets/images/tech/arduino.png';
 import PiDevice from '../../assets/images/tech/raspberry_pi.png';
+import ButtonComponent from '../global/ButtonComponent';
 
 function HeaderComponent() {
   let navigate = useNavigate();
@@ -17,7 +18,7 @@ function HeaderComponent() {
   };
 
   return (
-    <header className='grid w-full h-full p-10 overflow-hidden'>
+    <header id='header' className='grid w-full h-full p-10 overflow-hidden'>
       {/* Down arrow */}
       <div className='absolute z-10 bottom-12 left-1/2 transform -translate-x-1/2 cursor-pointer'>
         <div
@@ -53,22 +54,16 @@ function HeaderComponent() {
 
                 <section className='grid pt-6'>
                   <div className='grid grid-cols-2 gap-4 overflow-hidden bg-white'>
-                    <div>
-                      <button
-                        onClick={() => navigateToPage('/contact')}
-                        className='w-full h-fit px-4 py-2 font-semibold bg-white text-alt-colour border-2 border-solid border-alt-colour rounded-lg hover:bg-alt-colour hover:text-white duration-300 shadow-lg hover:shadow-2xl'
-                      >
-                        See More
-                      </button>
-                    </div>
-                    <div>
-                      <button
-                        onClick={() => navigateToPage('/contact')}
-                        className='w-full h-fit px-4 py-2 font-semibold bg-alt-colour text-white border-2 border-solid border-alt-colour rounded-lg hover:text-alt-colour hover:bg-white duration-300 shadow-lg hover:shadow-2xl'
-                      >
-                        Contact
-                      </button>
-                    </div>
+                    <ButtonComponent
+                      label="See More"
+                      onClick={() => navigateToPage('/contact')}
+                      type="secondary"
+                    />
+                    <ButtonComponent
+                      label="Contact"
+                      onClick={() => navigateToPage('/contact')}
+                      type="primary"
+                    />
                   </div>
                 </section>
               </article>
@@ -127,12 +122,11 @@ function HeaderComponent() {
                     </ul>
                   </div>
                   <div className='grid w-full h-fit'>
-                    <button
+                    <ButtonComponent
+                      label="PROJECTS PAGE"
                       onClick={() => navigateToPage('/projects')}
-                      className='text-xl font russo-one-regular font-semibold px-4 py-2 cursor-pointer shadow-lg hover:shadow-2xl hover:bg-alt-colour  hover:text-white active:scale-95 text-alt-colour border-solid border-alt-colour border-2 rounded-lg bg-white duration-300'
-                    >
-                      PROJECTS PAGE
-                    </button>
+                      type="primary"
+                    />
                   </div>
                 </article>
               </section>
