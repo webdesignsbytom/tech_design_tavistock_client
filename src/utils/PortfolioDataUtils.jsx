@@ -8,31 +8,16 @@ import Prisma from '../assets/svg/file_type_light_prisma.svg';
 import Javascript from '../assets/svg/javascript.svg';
 import PythonIcon from '../assets/svg/python-icon.svg';
 // React Icons
-import { FaTabletAlt } from 'react-icons/fa';
-import { FaTools } from 'react-icons/fa';
+import { FaTabletAlt, FaTools, FaUserAlt, FaServer, FaMobile, FaMoneyCheckAlt } from 'react-icons/fa';
 import { TfiLayoutSliderAlt } from 'react-icons/tfi';
-import { GrUserAdmin } from 'react-icons/gr';
-import { BiMenuAltRight } from 'react-icons/bi';
-import { IoMdColorPalette } from 'react-icons/io';
-import { FaMobile } from 'react-icons/fa';
-import { FaMoneyCheckAlt } from 'react-icons/fa';
-import { MdAdminPanelSettings } from 'react-icons/md';
-import { MdForum } from 'react-icons/md';
-import { FaServer } from 'react-icons/fa';
-import { IoIosRibbon } from 'react-icons/io';
-import { GrScorecard } from 'react-icons/gr';
-import { AiFillLayout } from 'react-icons/ai';
-import { AiOutlineTwitter } from 'react-icons/ai';
-import { GrGamepad } from 'react-icons/gr';
+import { GrUserAdmin, GrScorecard, GrGamepad } from 'react-icons/gr';
+import { BiMenuAltRight, BiError } from 'react-icons/bi';
+import { IoMdColorPalette, IoIosRibbon } from 'react-icons/io';
+import { MdAdminPanelSettings, MdForum, MdModeNight, MdSdStorage, MdDataArray } from 'react-icons/md';
+import { AiFillLayout, AiOutlineTwitter } from 'react-icons/ai';
 import { HiBookOpen } from 'react-icons/hi';
-import { MdModeNight } from 'react-icons/md';
-import { MdSdStorage } from 'react-icons/md';
 import { TbMathFunction } from 'react-icons/tb';
-import { MdDataArray } from 'react-icons/md';
-import { BsFillChatDotsFill } from 'react-icons/bs';
-import { BsPeopleFill } from 'react-icons/bs';
-import { BiError } from 'react-icons/bi';
-import { FaUserAlt } from 'react-icons/fa';
+import { BsFillChatDotsFill, BsPeopleFill } from 'react-icons/bs';
 // Images
 import TavyEpoxy from '../assets/images/projects/tavyepoxyMd.png';
 import BioClicker from '../assets/images/projects/bioclickerMd.png';
@@ -92,7 +77,7 @@ export const portfolioData = [
   {
     id: 1,
     image: MBSHome,
-    url: 'matched-betting-simulator', 
+    url: 'matched-betting-simulator',
     prevUrl: 'tavyepoxy',
     nextUrl: 'worlds-smartest-quiz',
     title: 'Matched Betting Simulator',
@@ -107,7 +92,8 @@ export const portfolioData = [
       { name: 'User Authentication', icon: <GrUserAdmin size={20} /> },
       { name: 'Personal Profiles', icon: <FaUserAlt size={20} /> },
     ],
-    headline: 'Teaching matched betting using specially designed calculator and simulator.',
+    headline:
+      'Teaching matched betting using specially designed calculator and simulator.',
     desc: 'Matched Betting Training is a app mainly designed to teach a player how to make a series of bets guaranteed to make a profit using our system. It is supported by a fleshed out website of user/member systems and forums for posting tips and tricks creating a community of betters. Most site of this type feature a betting calculator and basic instructions. This site goes one further and has built dummy bookie websites to be used in our "Bet Simulator" which takes you step by step through the processes of making a winning bet.',
     featuredComponent: 'Bet Simulator',
     featuredDisplay: '',
@@ -117,7 +103,7 @@ export const portfolioData = [
     id: 2,
     image: WSHome,
     title: 'Worlds Smartest Quiz',
-    url: 'worlds-smartest-quiz', 
+    url: 'worlds-smartest-quiz',
     prevUrl: 'matched-betting-simulator',
     nextUrl: 'myecoapp',
     github: 'https://github.com/webdesignsbytom/worlds-smartest-frontend',
@@ -140,8 +126,8 @@ export const portfolioData = [
     id: 3,
     image: Myecoapp,
     title: 'Myecoapp',
-    url: 'myecoapp', 
-    prevUrl: 'worlds-smartest-quiz', 
+    url: 'myecoapp',
+    prevUrl: 'worlds-smartest-quiz',
     nextUrl: 'bio-clicker',
     github: 'https://github.com/webdesignsbytom/myecoapp-deploy',
     demo: 'https://dazzling-biscuit-b01617.netlify.app/',
@@ -164,7 +150,7 @@ export const portfolioData = [
   {
     id: 4,
     image: BioClicker,
-    url: 'bio-clicker', 
+    url: 'bio-clicker',
     prevUrl: 'myecoapp',
     nextUrl: 'webdesignsbytom',
     title: 'Idle-Clicker game',
@@ -177,11 +163,17 @@ export const portfolioData = [
       { name: '150+ States Managed', icon: <FaServer size={20} /> },
       { name: 'User Authentication', icon: <GrUserAdmin size={20} /> },
       { name: 'Localstorage Backups', icon: <MdSdStorage size={20} /> },
-      { name: 'Player Achievements Monitoring', icon: <IoIosRibbon size={20} /> },
+      {
+        name: 'Player Achievements Monitoring',
+        icon: <IoIosRibbon size={20} />,
+      },
       { name: 'Mutliple Scores', icon: <GrScorecard size={20} /> },
       { name: 'Purchasing Functions', icon: <FaMoneyCheckAlt size={20} /> },
       { name: 'Variable Menus', icon: <BiMenuAltRight size={20} /> },
-      { name: 'Admin Panel with users data', icon: <MdAdminPanelSettings size={20} /> },
+      {
+        name: 'Admin Panel with users data',
+        icon: <MdAdminPanelSettings size={20} />,
+      },
       { name: 'Animated canvas gameplay', icon: <GrUserAdmin size={20} /> },
     ],
     headline: 'Game design using state management and purchasing',
@@ -193,7 +185,7 @@ export const portfolioData = [
     id: 5,
     image: WDBTMain,
     title: 'Web Designs By Tom',
-    url: 'webdesignsbytom', 
+    url: 'webdesignsbytom',
     prevUrl: 'bio-clicker',
     nextUrl: 'tavyepoxy',
     github: 'https://github.com/webdesignsbytom/webdesignsbytom-app',
@@ -203,17 +195,24 @@ export const portfolioData = [
     skills: [
       { name: 'Responsive Design', icon: <FaTabletAlt size={20} /> },
       { name: 'Web Design Tool', icon: <FaTools size={20} /> },
-      { name: 'Colour Palette Builder', icon: <TfiLayoutSliderAlt size={20} /> },
+      {
+        name: 'Colour Palette Builder',
+        icon: <TfiLayoutSliderAlt size={20} />,
+      },
       { name: 'User Authentication', icon: <GrUserAdmin size={20} /> },
       { name: 'Automated Emails', icon: <IoMdColorPalette size={20} /> },
       { name: 'Internal notifications', icon: <IoMdColorPalette size={20} /> },
-      { name: 'Internal messaging system', icon: <IoMdColorPalette size={20} /> },
+      {
+        name: 'Internal messaging system',
+        icon: <IoMdColorPalette size={20} />,
+      },
       { name: 'Admin Area', icon: <IoMdColorPalette size={20} /> },
       { name: 'Developer Area', icon: <IoMdColorPalette size={20} /> },
       { name: 'Full Data Logging', icon: <IoMdColorPalette size={20} /> },
       { name: 'Google Analytics', icon: <IoMdColorPalette size={20} /> },
     ],
-    headline: 'My personal portfolio and sales website for my software engineering skills.',
+    headline:
+      'My personal portfolio and sales website for my software engineering skills.',
     desc: 'I design and build software for independent customers and i needed a website to advertise from. Originally just designed for employers to see my portfolio I built more user sections to practice a few skills and it slowly evolved. I created a design feature where users can select and choose from serveral design options, colour palettes and build a list of user stories. This design tool was made in the hope someone would spend 10 minutes playing with it and then want to use my business. The tool lets you save designs and event submit them as a project the user wants built. That way i already have a complete record of basic data i would need to collect. User stories, links to sites the customer wants to emulate, colour themes, navigation styles and more.',
     featuredComponent: 'Website Design Tool',
     featuredDisplay: '',
@@ -223,7 +222,7 @@ export const portfolioData = [
     id: 5,
     image: TavyEpoxy,
     title: 'TavyEpoxy Furniture',
-    url: 'tavyepoxy', 
+    url: 'tavyepoxy',
     prevUrl: 'webdesignsbytom',
     nextUrl: 'matched-betting-simulator',
     github: 'https://github.com/webdesignsbytom/tavy_epoxy',
@@ -235,7 +234,10 @@ export const portfolioData = [
       { name: '3D Design Tool', icon: <FaTools size={20} /> },
       { name: 'Image Slider on loop', icon: <TfiLayoutSliderAlt size={20} /> },
       { name: 'User Authentication', icon: <GrUserAdmin size={20} /> },
-      { name: 'Advanced CSS colour manipulating', icon: <IoMdColorPalette size={20} /> },
+      {
+        name: 'Advanced CSS colour manipulating',
+        icon: <IoMdColorPalette size={20} />,
+      },
     ],
     headline: 'A sales and gallery website for a local designer',
     desc: 'TavyEpoxy, or Tav-E-poxy is a business I run selling my spare artwork as tables. The website was created to display a gallery of possiblities and attract interest in similar designs from customers. The key to getting customers is to make it easy for them to compare the designs in my gallery and the materials available to make orders based on what they find attractive. To address this I have made contact forms with various basic options for quote requesting. Along with a design tool where customers can create a 3D render of the furniture dimensions and artistic patterns desired.',

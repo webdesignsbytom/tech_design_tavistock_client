@@ -7,11 +7,9 @@ import {
   fullstackListItems,
 } from '../../utils/SalesDataUtils';
 // Icons
-import { BsCheck2Circle } from 'react-icons/bs';
 import DisplayCard from '../global/DisplayCard';
 
 function PurchaseOptions({ myRef }) {
-  let navigate = useNavigate();
 
   return (
     <section ref={myRef} className='relative w-full h-full'>

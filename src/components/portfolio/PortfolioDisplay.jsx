@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 // Utils
-import { portfolioData } from '../../utils/PortfolioData';
+import { portfolioData } from '../../utils/PortfolioDataUtils';
 
 function PortfolioDisplay({ myRef }) {
   const navigate = useNavigate();

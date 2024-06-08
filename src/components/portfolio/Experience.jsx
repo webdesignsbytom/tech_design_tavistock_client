@@ -2,7 +2,7 @@ import React from 'react';
 // Components
 import OrbitAnimation from '../../components/utils/OrbitAnimation';
 // Data 
-import { frontendSkills, backendSkills } from '../../utils/PortfolioData'
+import { frontendSkills, backendSkills } from '../../utils/PortfolioDataUtils'
 // Styles
 import '../../styles/orbitAnimation.css';
 // React icons

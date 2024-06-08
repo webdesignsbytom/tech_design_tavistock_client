@@ -3,7 +3,7 @@ import { useLocation, Link, useNavigate } from 'react-router-dom';
 // Images
 import Logo from '../../assets/images/logos/wdbt-white.svg';
 // Components
-import { navbarLinksArray } from '../../utils/NavbarData';
+import { navbarLinksArray } from '../../utils/NavbarDataUtils';
 // Icons
 import { IoMdMenu } from 'react-icons/io';
 

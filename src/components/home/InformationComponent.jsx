@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // Utils
-import { infoBoxDataArray } from '../../utils/HomePageData';
+import { infoBoxDataArray } from '../../utils/HomePageDataUtils';
 // Components
 import InfoBox from '../global/InfoBox';
 
