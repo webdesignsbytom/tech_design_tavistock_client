@@ -3,7 +3,7 @@ import { useLocation, Link, useNavigate } from 'react-router-dom';
 // Images
 import Logo from '../../assets/images/logos/wdbt-white.svg';
 // Components
-import { navbarLinksArray } from '../../util/NavbarData';
+import { navbarLinksArray } from '../../utils/NavbarData';
 // Icons
 import { IoMdMenu } from 'react-icons/io';
 
@@ -27,7 +27,7 @@ function Navbar() {
     <div className='relative w-full h-[62px] sm:overflow-hidden'>
       <nav className='grid grid-cols-reg w-full h-full bg-alt-colour'>
         <section className='grid w-fit pl-4'>
-          <div className='grid items-center justify-center'>
+          <div className='grid items-center justify-center active:scale-95'>
             <img
               src={Logo}
               onClick={() => navigateToPage('/')}

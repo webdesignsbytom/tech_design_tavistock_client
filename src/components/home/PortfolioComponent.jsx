@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // Utils
-import { techDesignByTomData } from '../../util/CompanyDataUtil';
+import { techDesignByTomData } from '../../utils/CompanyDataUtil';
 // Components
 import PhoneDevices from '../devices/PhoneDevices';
 import DesktopDevices from '../devices/DesktopDevices';

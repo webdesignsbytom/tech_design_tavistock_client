@@ -67,8 +67,8 @@ function HeaderComponent() {
                 <section className='grid pt-4 sm:pt-6'>
                   <div className='grid grid-cols-2 gap-2 overflow-hidden bg-white'>
                     <ButtonComponent
-                      label='See More'
-                      onClick={() => navigateToPage('/contact')}
+                      label='Learn More'
+                      onClick={() => navigateToPage('/about')}
                       type='secondary'
                     />
                     <ButtonComponent
@@ -135,8 +135,8 @@ function HeaderComponent() {
                   </div>
                   <div className='grid w-full h-fit'>
                     <ButtonComponent
-                      label='SEE PROJECTS PAGE'
-                      onClick={() => navigateToPage('/projects')}
+                      label='SEE PORTFOLIO'
+                      onClick={() => navigateToPage('/portfolio')}
                       type='primary'
                     />
                   </div>
