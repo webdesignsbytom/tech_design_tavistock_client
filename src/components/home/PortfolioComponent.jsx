@@ -16,7 +16,7 @@ function PortfolioComponent() {
   };
   return (
     <section id='portfolio' className='grid w-full overflow-hidden'>
-      <div className='grid h-full w-full bg-slate-400 overflow-hidden'>
+      <div className='grid h-full w-full overflow-hidden'>
         {/* Main content */}
         <div className='grid w-full h-full overflow-hidden'>
           <section className='grid items-center w-full h-full overflow-hidden py-6'>

@@ -44,7 +44,7 @@ function HeaderComponent() {
 
         <div className='grid sm:grid-cols-2 w-full h-full overflow-hidden'>
           {/* Text display */}
-          <section className='grid w-full h-full sm:overflow-hidden main__bg sm:px-4'>
+          <section className='grid w-full h-full sm:overflow-hidden main__bg p-4 sm:px-4'>
             <div className='grid relative w-full h-full justify-center items-center justify-items-center'>
               <article className='grid w-fit -mt-1/2 h-fit px-16 py-8  outline outline-1 outline-gray-300 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] rounded-lg bg-white overflow-hidden russo-one-regular'>
                 <section>
