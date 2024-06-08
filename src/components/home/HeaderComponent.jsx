@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 // Icons
 import { FaArrowCircleDown, FaCode } from 'react-icons/fa';
+// Components
 import PhoneDevices from '../devices/PhoneDevices';
 import TabletDevices from '../devices/TabletDevices';
 import DesktopDevices from '../devices/DesktopDevices';
@@ -36,7 +37,6 @@ function HeaderComponent() {
 
       {/* Main contents of header */}
       <div className='grid relative w-full h-full sm:overflow-hidden shadow-lg rounded-lg bg-white'>
-
         {/* Code icon */}
         <div className='absolute z-40 right-8 top-4'>
           <FaCode size={50} />
@@ -86,33 +86,32 @@ function HeaderComponent() {
           <section className='grid relative sm:overflow-hidden sm:pr-6 russo-one-regular'>
             <div className='grid relative grid-rows-2 animate-fade-in-move-up sm:overflow-hidden sm:pr-6'>
               <div className='grid items-center sm:-mb-16'>
-                <section className='relative p-1 w-full h-fit'>
+                <section className='relative p-1 w-full h-fit sm:-mt-20'>
                   <div className='absolute z-30 right-0 sm:left-2 sm:top-4 w-[80px] h-[140px] sm:w-[108px] sm:h-[200px] sm:min-w-[108px] sm:min-h-[200px] sm:max-w-[108px] sm:max-h-[200px] overflow-hidden'>
                     <PhoneDevices />
                   </div>
                   <div className='hidden sm:grid absolute z-20 transform -mt-6 -translate-x-1/2 left-[35%] w-[240px] h-[140px] min-w-[240px] min-h-[140px] max-w-[240px] max-h-[140px] overflow-hidden'>
                     <TabletDevices />
-                    <div className='absolute z-40 mt-10 right-3'>
-                      <img
-                        src={ArduinoDevice}
-                        alt='Arduino'
-                        className='w-28 h-28 object-contain'
-                      />
-                    </div>
-                    <div className='absolute mt-20 z-20'>
-                      <img
-                        src={PiDevice}
-                        alt='Raspberry Pi'
-                        className='w-28 h-28 object-contain'
-                      />
-                    </div>
                   </div>
                   <div className='absolute z-10 left-2 sm:left-1/2 -top-12 sm:top-0 w-[320px] h-[180px] min-w-[320px] min-h-[180px] max-w-[320px] max-h-[220px] xl:w-[345px] xl:h-[220px] xl:min-w-[345px] xl:min-h-[220px] xl:max-w-[345px] xl:max-h-[220px] overflow-hidden'>
                     <DesktopDevices />
                   </div>
                 </section>
               </div>
-
+              <div className='hidden sm:grid absolute z-40 mt-10 top-2 right-8'>
+                <img
+                  src={ArduinoDevice}
+                  alt='Arduino'
+                  className='w-28 h-28 object-contain'
+                />
+              </div>
+              <div className='hidden sm:grid absolute bottom-8 left-20 mt-20 z-20'>
+                <img
+                  src={PiDevice}
+                  alt='Raspberry Pi'
+                  className='w-28 h-28 object-contain'
+                />
+              </div>
               <div className='circuit__bg opacity-50 absolute rotate-45 w-[350px] h-[350px] z-0 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'></div>
 
               <section className='grid z-20 w-full h-full justify-end items-end'>

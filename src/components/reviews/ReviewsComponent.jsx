@@ -1,22 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 // Components
 import ReviewItem from './ReviewItem';
 // Utils
 import LoadingSpinner from '../utils/LoadingSpinner';
+// Data
+import { reviewsDataArray } from '../../utils/ReviewsDataUtil';
 
 function ReviewsComponent() {
-  const [allReviews, setAllReviews] = useState([]);
-
-  // useEffect(() => {
-  //   client
-  //     .get(`/reviews`)
-  //     .then((res) => {
-  //       setAllReviews(res.data.data.reviews);
-  //     })
-  //     .catch((err) => {
-  //       console.error('Unable to get notifications', err);
-  //     });
-  // }, []);
+  const [allReviews] = useState(reviewsDataArray);
 
   return (
     <section className='bg-main-colour rounded mt-4 mb-10 lg:my-20 mx-4 lg:mx-10 px-1'>

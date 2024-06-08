@@ -15,7 +15,7 @@ function PortfolioComponent() {
     navigate(page, { replace: true });
   };
   return (
-    <section id='portfolio' className='grid h-screen w-full overflow-hidden'>
+    <section id='portfolio' className='grid w-full overflow-hidden'>
       <div className='grid h-full w-full bg-slate-400 overflow-hidden'>
         {/* Main content */}
         <div className='grid w-full h-full overflow-hidden'>
