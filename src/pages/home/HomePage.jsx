@@ -1,20 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
-import InfoBox from '../../components/global/InfoBox';
 // Utils
 import HeaderComponent from '../../components/home/HeaderComponent';
 import InformationComponent from '../../components/home/InformationComponent';
 import PortfolioComponent from '../../components/home/PortfolioComponent';
-import MiniGameComponent from '../../components/home/MiniGameComponent';
 
 function HomePage() {
-  let navigate = useNavigate();
-
-  const navigateToPage = (page) => {
-    navigate(page, { replace: true });
-  };
 
   return (
     <div className='min-h-screen w-full overflow-hidden bg-slate-50'>

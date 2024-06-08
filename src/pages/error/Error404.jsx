@@ -1,18 +1,12 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 // Images
 import TreeBG from '../../assets/images/pages/404cat.png';
-import Navbar from '../../components/nav/Navbar';
 // Components
-// Context
-//import { ToggleContext } from '../../context/ToggleContext';
+import Navbar from '../../components/nav/Navbar';
+
 
 function Error404() {
-  //const { setActiveNav } = useContext(ToggleContext)
 
-  // useEffect(() => {
-  //   setActiveNav('*')
-  // }, [])
-  
   return (
     <div className='h-screen overflow-hidden grid bg-gray-50 dark:bg-black dark:text-gray-100'>
       <section className='grid h-full overflow-hidden grid-rows-reg lg:grid-rows-none lg:grid-rows-reg'>
