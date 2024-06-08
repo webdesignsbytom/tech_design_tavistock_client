@@ -42,7 +42,7 @@ function HeaderComponent() {
           <FaCode size={50} />
         </div>
 
-        <div className='grid sm:grid-cols-2 w-full h-full sm:overflow-hidden'>
+        <div className='grid sm:grid-cols-2 w-full h-full overflow-hidden'>
           {/* Text display */}
           <section className='grid w-full h-full sm:overflow-hidden main__bg sm:px-4'>
             <div className='grid relative w-full h-full justify-center items-center justify-items-center'>
