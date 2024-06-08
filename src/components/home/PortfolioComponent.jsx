@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 // Utils
 import { techDesignByTomData } from '../../utils/CompanyDataUtil';
@@ -15,13 +15,13 @@ function PortfolioComponent() {
     navigate(page, { replace: true });
   };
   return (
-    <section id='portfolio' className='grid h-screen w-full overflow-hidden bg-red-400'>
+    <section id='portfolio' className='grid h-screen w-full overflow-hidden'>
       <div className='grid h-full w-full bg-slate-400 overflow-hidden'>
         {/* Main content */}
         <div className='grid w-full h-full overflow-hidden'>
           <section className='grid items-center w-full h-full overflow-hidden py-6'>
             {/* Info Message  */}
-            <section className='grid w-full h-full items-end overflow-hidden bg-blue-500'>
+            <section className='grid w-full h-full items-end overflow-hidden'>
               <div className='grid justify-center sm:items-end text-center justify-items-center w-full h-full'>
                 <p className='text-base w-2/3'>
                   At{' '}
