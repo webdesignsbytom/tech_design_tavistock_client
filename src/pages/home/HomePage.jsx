@@ -5,6 +5,7 @@ import Navbar from '../../components/nav/Navbar';
 import HeaderComponent from '../../components/home/HeaderComponent';
 import InformationComponent from '../../components/home/InformationComponent';
 import PortfolioComponent from '../../components/home/PortfolioComponent';
+import ReviewsComponent from '../../components/reviews/ReviewsComponent';
 
 function HomePage() {
 
@@ -42,6 +43,7 @@ function HomePage() {
           {/* Colour block */}
           <div className='w-full h-16 bg-slate-50 overflow-hidden'></div>
 
+          <ReviewsComponent />
           {/* Second section of main */}
         </main>
       </div>

@@ -6,6 +6,7 @@ import PortfolioPage from './pages/portfolio/PortfolioPage';
 import ContactPage from './pages/contact/ContactPage';
 import AboutPage from './pages/about/AboutPage';
 import TestPage from './pages/test/TestPage';
+import SalesPage from './pages/sales/SalesPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/portfolio' index element={<PortfolioPage />} />
       <Route path='/about' index element={<AboutPage />} />
       <Route path='/contact' index element={<ContactPage />} />
+      <Route path='/sales' index element={<SalesPage />} />
       <Route path='/test' index element={<TestPage />} />
       <Route path='*' element={<Error404 />} />
     </Routes>

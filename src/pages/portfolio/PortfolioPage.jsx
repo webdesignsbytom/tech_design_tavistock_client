@@ -5,7 +5,7 @@ import About from '../../components/portfolio/About';
 import Header from '../../components/portfolio/Header';
 import PortfolioDisplay from '../../components/portfolio/PortfolioDisplay';
 import Experience from '../../components/portfolio/Experience';
-import ReviewsContainer from '../../components/reviews/ReviewsContainer';
+import ReviewsComponent from '../../components/reviews/ReviewsComponent';
 import PortfolioCta from '../../components/portfolio/PortfolioCta';
 import Services from '../../components/portfolio/Services';
 
@@ -20,7 +20,7 @@ function ProjectsPage() {
       <PortfolioDisplay myRef={myRef} />
       <Experience />
       <Services />
-      <ReviewsContainer />
+      <ReviewsComponent />
       <PortfolioCta />
     </div>
   );

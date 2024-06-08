@@ -6,13 +6,13 @@ import WhyChooseUs from '../../components/about/WhyChooseUs';
 import PurchaseOptions from '../../components/sales/PurchaseOptions'
 import PriceTable from '../../components/sales/PriceTable'
 import SalesCta from '../../components/sales/SalesCta'
-import ReviewsContainer from '../../components/reviews/ReviewsContainer'
+import ReviewsComponent from '../../components/reviews/ReviewsComponent'
 
 function AboutPage() {
   const myRef = useRef(null)
 
   return (
-    <div className='w-full dark:bg-black'>
+    <div className='h-full w-full'>
       <Navbar />
       <div>
         <AboutSection myRef={myRef} />
@@ -20,7 +20,7 @@ function AboutPage() {
         <PurchaseOptions myRef={myRef} />
         <PriceTable />
         <SalesCta />
-        <ReviewsContainer />
+        <ReviewsComponent />
       </div>
     </div>
   );

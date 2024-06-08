@@ -4,7 +4,7 @@ import ReviewItem from './ReviewItem';
 // Utils
 import LoadingSpinner from '../utils/LoadingSpinner';
 
-function ReviewsContainer() {
+function ReviewsComponent() {
   const [allReviews, setAllReviews] = useState([]);
 
   // useEffect(() => {
@@ -66,4 +66,4 @@ function ReviewsContainer() {
   );
 }
 
-export default ReviewsContainer;
+export default ReviewsComponent;
