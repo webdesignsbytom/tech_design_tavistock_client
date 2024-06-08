@@ -21,7 +21,7 @@ function PortfolioComponent() {
         <div className='grid w-full h-full overflow-hidden'>
           <section className='grid items-center w-full h-full overflow-hidden py-6'>
             {/* Info Message  */}
-            <section className='grid w-full h-full items-end overflow-hidden'>
+            <section className='grid w-full pb-6 h-full items-end overflow-hidden'>
               <div className='grid justify-center sm:items-end text-center justify-items-center w-full h-full'>
                 <p className='text-base w-2/3'>
                   At{' '}
@@ -56,8 +56,8 @@ function PortfolioComponent() {
             </div>
 
             {/* Cta button */}
-            <section className='grid -mt-10'>
-              <div className='grid px-2 sm:px-0 sm:justify-center w-full'>
+            <section className='grid mt-6'>
+              <div className='grid px-2 sm:px-0 sm:justify-center sm:items-center w-full'>
                 <div className='grid grid-cols-3 gap-2 w-full'>
                   <ButtonComponent
                     label='See Portfolio'

@@ -73,7 +73,7 @@ export const backendSkills = [
   { name: 'PHP', level: 'Beginner' },
 ];
 
-export const portfolioData = [
+export const portfolioDataArray = [
   {
     id: 1,
     image: MBSHome,

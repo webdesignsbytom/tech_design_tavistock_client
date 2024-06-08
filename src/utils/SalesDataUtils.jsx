@@ -1,5 +1,49 @@
 export const initAlert = { status: '', content: '' };
 
+export const servicesDataArray = [
+  {
+    title: 'UI/UX Design',
+    borderColor: 'border-purple-600',
+    items: [
+      'Wireframe and figma designs using the latest design tools',
+      'All devices conformed to style',
+      'Faster streamlined services',
+      'User friendly layouts',
+      'Testing and collecting user experience data',
+      'Colour and style options. Hue matching and pallet building tools.',
+      'Root set styles for speedy changes througout project.'
+    ]
+  },
+  {
+    title: 'Software/App Development',
+    borderColor: 'border-yellow-500',
+    items: [
+      'Fullstack design and development',
+      'Database and user services.',
+      'Game and animation Development.',
+      'Reactive and mobile friendly or mobile first design',
+      'Social medias supporting post/sharing dynamic',
+      'Video, webcam and chat communication services',
+      'Smart home and wireless connectivity',
+      'Restful API services'
+    ]
+  },
+  {
+    title: 'Other Skills',
+    borderColor: 'border-green-600',
+    items: [
+      'Arduino/Pi development',
+      'Circuit design and development',
+      'Customer relations',
+      'CI/CD development',
+      'Documentation and auditing',
+      'Mechanical maintainance',
+      '3D printer models'
+    ]
+  }
+];
+
+
 export const pricingTableData = [
   {
     title: 'Email address',

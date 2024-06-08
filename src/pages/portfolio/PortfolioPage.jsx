@@ -7,7 +7,7 @@ import PortfolioDisplay from '../../components/portfolio/PortfolioDisplay';
 import Experience from '../../components/portfolio/Experience';
 import ReviewsComponent from '../../components/reviews/ReviewsComponent';
 import PortfolioCta from '../../components/portfolio/PortfolioCta';
-import Services from '../../components/portfolio/Services';
+import ServicesComponent from '../../components/portfolio/ServicesComponent';
 
 function ProjectsPage() {
   const myRef = useRef(null);
@@ -17,9 +17,9 @@ function ProjectsPage() {
       <Navbar />
       <Header />
       <About myRef={myRef} />
-      <PortfolioDisplay myRef={myRef} />
+      <PortfolioDisplay />
       <Experience />
-      <Services />
+      <ServicesComponent />
       <ReviewsComponent />
       <PortfolioCta />
     </div>
