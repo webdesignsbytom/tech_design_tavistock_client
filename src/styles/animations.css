@@ -12,3 +12,18 @@
     transform: translateY(0);
   }
 }
+
+.animate-info-tabs {
+  animation: staggeredSideFade 2s ease forwards;
+}
+
+@keyframes staggeredSideFade {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacitx: 1;
+    transform: translateX(0);
+  }
+}

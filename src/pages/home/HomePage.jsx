@@ -22,7 +22,7 @@ function HomePage() {
         {/* Header container */}
         <div
           id='/'
-          className='grid grid-rows-reg h-screen w-full overflow-hidden'
+          className='grid mb-24 sm:mb-0 grid-rows-reg h-screen w-full sm:overflow-hidden'
         >
           {/* Navigation */}
           <Navbar />
@@ -51,7 +51,6 @@ function HomePage() {
           <div className='w-full h-16 bg-slate-50 overflow-hidden'></div>
 
           {/* Second section of main */}
-          <MiniGameComponent />
         </main>
       </div>
     </div>

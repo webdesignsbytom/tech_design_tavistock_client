@@ -8,6 +8,11 @@
   user-select: none;
 }
 
+.hidden-container {
+  display: none;
+  visibility: hidden;
+}
+
 /* Hides the scrollbar for specific containers */
 .scroll-hidden {
   scrollbar-width: none; /* Firefox */

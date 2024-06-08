@@ -22,7 +22,8 @@ module.exports = {
       gridTemplateColumns: {
         reg: 'auto 1fr',
         rev: '1fr auto',
-        display: 'auto auto auto auto auto'
+        display: 'auto auto auto auto auto',
+        displaySmall: '1fr 3fr 1fr'
       },
     },
   },

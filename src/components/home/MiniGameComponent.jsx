@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 function MiniGameComponent() {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
+  const sectionRef = useRef(null);
   
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -27,9 +28,11 @@ function MiniGameComponent() {
     contextRef.current = context;
   }, []);
 
+
   return (
     <section
       id='minigames'
+      ref={sectionRef}
       className='grid relative h-screen w-full overflow-hidden'
     >
       <div className='grid w-full h-full bg-slate-50 overflow-hidden items-center'>

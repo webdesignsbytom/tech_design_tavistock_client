@@ -57,6 +57,10 @@ h6 {
   margin: 0;
 }
 
+p {
+  line-height: 1.25rem;
+}
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
