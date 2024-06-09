@@ -5,6 +5,7 @@ import { infoBoxDataArray } from '../../utils/HomePageDataUtils';
 // Components
 import InfoBox from '../global/InfoBox';
 import ButtonComponent from '../global/ButtonComponent';
+import { businessInfo } from '../../utils/CompanyDataUtil';
 
 function InformationComponent() {
   const sectionRef = useRef(null);
@@ -68,7 +69,7 @@ function InformationComponent() {
                 <div className='px-10 pt-4 sm:px-0 lg:pr-10 sm:pt-6'>
                   <p>
                     <span className='italic font-semibold text-[18px]'>
-                      Tech Design by Tom
+                      {businessInfo.companyName}
                     </span>{' '}
                     builds and designs complex or beautifully simple websites,
                     phone apps, and desktop apps. With a team of developers that

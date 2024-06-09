@@ -616,12 +616,12 @@ function AboutSection({ myRef }) {
 
           {/* Text data */}
           <main className='w-full px-4 lg:w-1/2 xl:w-5/12'>
-            <article className='mt-10 lg:mt-0'>
+            <article className='mt-10 lg:mt-0 mr-6'>
               <span className='text-primary mb-2 block text-lg font-semibold'>
                 Welcome to Webdesignsbytom
               </span>
               <h2 className='text-dark mb-8 text-3xl font-bold sm:text-4xl'>
-                Modern and fully customisable web design
+                Modern and fully customisable app design
               </h2>
               <p className='text-body-color mb-8 text-base'>
                 Your dream website can come to life with my help. While my name
@@ -639,7 +639,7 @@ function AboutSection({ myRef }) {
                 template in minutes.
               </p>
               {/* CTA BUTTONS */}
-              <section className='grid p-2 md:p-0 md:mb-4 md:flex gap-3 w-full'>
+              <section className='grid p-2 md:p-0 md:mb-12 md:flex gap-3 w-full'>
                 <Link
                   to='/contact'
                   className='w-full relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group'
@@ -648,18 +648,18 @@ function AboutSection({ myRef }) {
                   <span className='absolute inset-0 w-full h-full bg-gray-900 rounded-md '></span>
                   <span className='absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-purple-600 rounded-md opacity-0 group-hover:opacity-100 '></span>
                   <span className='relative text-purple-600 transition-colors duration-200 ease-in-out delay-100 group-hover:text-white'>
-                    Contact
+                    Contact Now
                   </span>
                 </Link>
                 <Link
-                  to='/design'
+                  to='/portfolio'
                   className='w-full relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group'
                 >
                   <span className='absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-yellow-500 rounded-md group-hover:mt-0 group-hover:ml-0'></span>
                   <span className='absolute inset-0 w-full h-full bg-gray-900 rounded-md '></span>
                   <span className='absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-yellow-500 rounded-md opacity-0 group-hover:opacity-100 '></span>
                   <span className='relative text-yellow-500 transition-colors duration-200 ease-in-out delay-100 group-hover:text-white'>
-                    Design Tool
+                    See Portfolio
                   </span>
                 </Link>
                 <Link

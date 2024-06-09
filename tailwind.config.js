@@ -6,11 +6,13 @@ module.exports = {
       backgroundImage: {
       },
       colors: {
+        'main-bg': '#f7fafc',
         'main-colour': '#4AAD37',
         'nav-colour': '#4AAD37',
         'dark-colour': '#1e293b',
         'footer-colour': '#1F2937',
         'alt-colour': '#1f2937',
+        'text-alt': '#9333ea',  
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

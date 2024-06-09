@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 // Utils
-import { techDesignByTomData } from '../../utils/CompanyDataUtil';
+import { businessInfo } from '../../utils/CompanyDataUtil';
 // Components
 import PhoneDevices from '../devices/PhoneDevices';
 import DesktopDevices from '../devices/DesktopDevices';
@@ -26,7 +26,7 @@ function PortfolioComponent() {
                 <p className='text-base w-2/3'>
                   At{' '}
                   <span className='font-semibold'>
-                    {techDesignByTomData.companyName}
+                    {businessInfo.companyName}
                   </span>
                   , we specialize in delivering top-notch web and app
                   development, as well as innovative circuit solutions. Our

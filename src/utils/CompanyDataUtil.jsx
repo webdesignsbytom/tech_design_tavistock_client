@@ -1,4 +1,4 @@
-export const techDesignByTomData = {
-    companyName: 'Tech Design by Tom',
+export const businessInfo = {
+    companyName: 'Tech Design Tavistock',
     emailAddress: 'hello@webdesignsbytom.com'
 }
