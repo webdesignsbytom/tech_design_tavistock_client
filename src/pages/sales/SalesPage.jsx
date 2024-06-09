@@ -2,6 +2,7 @@ import React from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
 import ServicesComponent from '../../components/portfolio/ServicesComponent';
+import PurchaseOptions from '../../components/sales/PurchaseOptions';
 
 function SalesPage() {
   return (
@@ -13,6 +14,7 @@ function SalesPage() {
           <Navbar />
           <main>
             SalesPage
+            <PurchaseOptions />
             <ServicesComponent />
           </main>
         </div>
