@@ -7,6 +7,7 @@ import InformationComponent from '../../components/home/InformationComponent';
 import PortfolioComponent from '../../components/home/PortfolioComponent';
 import ReviewsComponent from '../../components/reviews/ReviewsComponent';
 import ServicesComponent from '../../components/portfolio/ServicesComponent';
+import Header from '../../components/home/Header';
 
 function HomePage() {
   return (
@@ -21,7 +22,8 @@ function HomePage() {
           <Navbar />
 
           {/* Header */}
-          <HeaderComponent />
+          {/* <HeaderComponent /> */}
+          <Header />
         </div>
 
         {/* Colour block */}
