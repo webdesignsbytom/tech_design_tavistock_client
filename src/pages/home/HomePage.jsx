@@ -8,6 +8,7 @@ import PortfolioComponent from '../../components/home/PortfolioComponent';
 import ReviewsComponent from '../../components/reviews/ReviewsComponent';
 import ServicesComponent from '../../components/portfolio/ServicesComponent';
 import Header from '../../components/home/Header';
+import Portfolio from '../../components/home/Portfolio';
 
 function HomePage() {
   return (
@@ -35,11 +36,11 @@ function HomePage() {
           <InformationComponent />
 
           {/* Colour block */}
-          <div className='w-full h-16 bg-slate-300 overflow-hidden'></div>
-          <div className='w-full h-16 bg-slate-50 overflow-hidden'></div>
+          {/* <div className='w-full h-16 bg-slate-300 overflow-hidden'></div>
+          <div className='w-full h-16 bg-slate-50 overflow-hidden'></div> */}
 
           {/* Second section of main */}
-          <PortfolioComponent />
+          <Portfolio />
 
           {/* Colour block */}
           <div className='w-full h-16 bg-slate-50 overflow-hidden'></div>

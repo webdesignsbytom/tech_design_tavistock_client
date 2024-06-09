@@ -35,6 +35,9 @@ import TavyepoxyPhone from '../assets/images/projects/tavyepoxyPhone.jpg';
 import MatchedbettingPhone from '../assets/images/projects/matchedbettingPhone.jpg';
 import WSHomeSm from '../assets/images/projects/ws-home-sm.png';
 import WDBTNav from '../assets/images/projects/wdbt-nav-sm.png';
+// Images portfolio component
+import FullWeb1 from '../assets/images/projects/fullpage_2.png'
+import FullWeb2 from '../assets/images/projects/fullpage_1.png'
 
 export const initialData = {
   id: 1,
@@ -72,6 +75,25 @@ export const backendSkills = [
   { name: 'MongoDB', level: 'Experienced' },
   { name: 'PHP', level: 'Beginner' },
 ];
+
+let imageId = 0
+export const portfolioImagesArray = [
+{
+  id: imageId++,
+  image: FullWeb1,
+  alt: 'Web and app display',
+},
+{
+  id: imageId++,
+  image: FullWeb2,
+  alt: 'Web and app display',
+},
+{
+  id: imageId++,
+  image: FullWeb1,
+  alt: 'Web and app display',
+},
+]
 
 export const portfolioDataArray = [
   {
