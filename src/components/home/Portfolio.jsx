@@ -88,6 +88,17 @@ function Portfolio() {
       return '';
     }
   };
+  const getContainerStyle = () => {
+    if (displayType === 'web') {
+      return 'grid overflow-hidden h-[450px] lg:h-[400px] px-2 lg:px-6';
+    } else if (displayType === 'app') {
+      return 'grid overflow-hidden h-[350px] lg:h-[400px] max-w-[200px] mx-auto px-2 lg:px-6';
+    } else if (displayType === 'circuit') {
+      return 'grid overflow-hidden h-[450px] lg:h-[400px] px-2 lg:px-6';
+    } else {
+      return '';
+    }
+  };
 
   return (
     <section
@@ -111,7 +122,7 @@ function Portfolio() {
                 return (
                   <article
                     key={index}
-                    className='grid overflow-hidden h-[450px] lg:h-[400px] px-2 lg:px-6'
+                    className={getContainerStyle()}
                     ref={(el) => (articleRefs.current[index] = el)}
                   >
                     <div className={getStyle()}>
