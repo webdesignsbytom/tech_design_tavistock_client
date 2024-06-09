@@ -66,7 +66,7 @@ function Navbar() {
                         <span className={`text-xs`}>{item.imageUrl}</span>
                       </div>
                       <div className='text-center h-fit'>
-                        <span className={`text-base`}>{item.title}</span>
+                        <span className={`text-base`}>{item.label}</span>
                       </div>
                     </Link>
                   </li>

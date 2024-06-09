@@ -7,6 +7,7 @@ import ReviewsComponent from '../../components/reviews/ReviewsComponent';
 import ServicesComponent from '../../components/portfolio/ServicesComponent';
 import Header from '../../components/home/Header';
 import Portfolio from '../../components/home/Portfolio';
+import FooterComponent from '../../components/footer/FooterComponent';
 
 function HomePage() {
   return (
@@ -46,6 +47,7 @@ function HomePage() {
           <ReviewsComponent />
           {/* Second section of main */}
         </main>
+        <FooterComponent />
       </div>
     </div>
   );
