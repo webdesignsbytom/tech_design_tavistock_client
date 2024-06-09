@@ -1,32 +1,30 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// Components
+import ButtonComponent from '../global/ButtonComponent';
 // Data
 import {
   portfolioWebImagesArray,
   portfolioAppImagesArray,
   portfolioCircuitImagesArray,
 } from '../../utils/PortfolioDataUtils';
-// Components
-import ButtonComponent from '../global/ButtonComponent';
 
 function Portfolio() {
   const articleRefs = useRef([]);
   const sectionRef = useRef(null); // Reference for the section
-  const [portfolioImages, setPortfolioImages] = useState(
-    portfolioWebImagesArray
-  );
-  const [displayType, setDisplayType] = useState('web'); // Track of the display type
-  const [allowAnimation, setAllowAnimation] = useState(true); // Track of the display type
+  const [portfolioImages, setPortfolioImages] = useState(portfolioWebImagesArray);
+  const [displayType, setDisplayType] = useState('web'); // Track the display type
+  const [webFirstView, setWebFirstView] = useState(true); // Track if the web portfolio has been viewed
   let navigate = useNavigate();
 
   useEffect(() => {
-    if (allowAnimation) {
-      const handleIntersection = (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const imgContainer = entry.target.querySelector('.image-container');
-            if (imgContainer) {
-              // Check if imgContainer is not null
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const imgContainer = entry.target.querySelector('.image-container');
+          if (imgContainer) {
+            // Check if imgContainer is not null and it's the web portfolio's first view
+            if (webFirstView && displayType === 'web') {
               imgContainer.classList.add('start-scrolling');
               imgContainer.scrollTo({
                 top: imgContainer.scrollHeight,
@@ -34,24 +32,24 @@ function Portfolio() {
               });
             }
           }
-        });
-      };
-
-      const observer = new IntersectionObserver(handleIntersection, {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5,
+        }
       });
+    };
 
-      articleRefs.current.forEach((article) => {
-        if (article) observer.observe(article);
-      });
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    });
 
-      return () => {
-        observer.disconnect();
-      };
-    }
-  }, []);
+    articleRefs.current.forEach((article) => {
+      if (article) observer.observe(article);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [displayType, webFirstView]);
 
   const navigateToPage = (page) => {
     navigate(page, { replace: true });
@@ -63,24 +61,18 @@ function Portfolio() {
     setDisplayType(type); // Set the display type
     if (type === displayTypes[0]) {
       setPortfolioImages(portfolioWebImagesArray);
+      if (webFirstView) {
+        setWebFirstView(false); // Set to false after the first view
+      }
     } else if (type === displayTypes[1]) {
       setPortfolioImages(portfolioAppImagesArray);
     } else if (type === displayTypes[2]) {
       setPortfolioImages(portfolioCircuitImagesArray);
     }
     if (sectionRef.current) {
-      setAllowAnimation(false)
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-      resetAnimation()
     }
   };
-
-const resetAnimation = () => {
-  setTimeout(() => {
-    console.log('AAAAAAA');
-    setAllowAnimation(true) 
-  }, 700);
-}
 
   const getStyle = () => {
     if (displayType === 'web') {
@@ -93,6 +85,7 @@ const resetAnimation = () => {
       return '';
     }
   };
+
   const getImgStyle = () => {
     if (displayType === 'web') {
       return 'h-auto w-full';
@@ -104,6 +97,7 @@ const resetAnimation = () => {
       return '';
     }
   };
+
   const getContainerStyle = () => {
     if (displayType === 'web') {
       return 'grid overflow-hidden h-[450px] lg:h-[400px] px-2 lg:px-6';
