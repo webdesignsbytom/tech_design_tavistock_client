@@ -28,6 +28,21 @@
   }
 }
 
+.animate-info-tabs-up {
+  animation: staggeredFadeUp 2s ease forwards;
+}
+
+@keyframes staggeredFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate_open_nav {
   animation: openNav 1.2s ease forwards;
 }

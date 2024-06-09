@@ -1,14 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // Images
 import DevicesImage from '../../assets/images/sales/devices.jpg'
 import CodeImage from '../../assets/images/sales/code3.jpg'
 import Heroes from '../../assets/images/sales/heros-expanding.png'
 import { businessInfo } from '../../utils/CompanyDataUtil';
+import ButtonComponent from '../global/ButtonComponent';
 
-function AboutSection({ myRef }) {
+function AboutSection() {
+  let navigate = useNavigate();
 
-  const executeScroll = () => myRef.current.scrollIntoView()  
+  const navigateToPage = (page) => {
+    navigate(page, { replace: true });
+  };
 
   return (
     <section className='grid overflow-hidden dark:text-gray-100 mt-6 md:mt-0 mb-12 mx-4'>
@@ -638,39 +642,28 @@ function AboutSection({ myRef }) {
               </p>
               {/* CTA BUTTONS */}
               <section className='grid p-2 md:p-0 md:mb-12 md:flex gap-3 w-full'>
-                <Link
-                  to='/contact'
-                  className='w-full relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group'
-                >
-                  <span className='absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-purple-600 rounded-md group-hover:mt-0 group-hover:ml-0'></span>
-                  <span className='absolute inset-0 w-full h-full bg-gray-900 rounded-md '></span>
-                  <span className='absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-purple-600 rounded-md opacity-0 group-hover:opacity-100 '></span>
-                  <span className='relative text-purple-600 transition-colors duration-200 ease-in-out delay-100 group-hover:text-white'>
-                    Contact Now
-                  </span>
-                </Link>
-                <Link
-                  to='/portfolio'
-                  className='w-full relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group'
-                >
-                  <span className='absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-yellow-500 rounded-md group-hover:mt-0 group-hover:ml-0'></span>
-                  <span className='absolute inset-0 w-full h-full bg-gray-900 rounded-md '></span>
-                  <span className='absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-yellow-500 rounded-md opacity-0 group-hover:opacity-100 '></span>
-                  <span className='relative text-yellow-500 transition-colors duration-200 ease-in-out delay-100 group-hover:text-white'>
-                    See Portfolio
-                  </span>
-                </Link>
-                <Link
-                  onClick={executeScroll}
-                  className='w-full relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group'
-                >
-                  <span className='absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-green-600 rounded-md group-hover:mt-0 group-hover:ml-0'></span>
-                  <span className='absolute inset-0 w-full h-full bg-gray-900 rounded-md '></span>
-                  <span className='absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-green-600 rounded-md opacity-0 group-hover:opacity-100 '></span>
-                  <span className='relative text-green-600 transition-colors duration-200 ease-in-out delay-100 group-hover:text-white'>
-                    Pricing
-                  </span>
-                </Link>
+              <div className='grid w-full justify-items-center'>
+                  <ButtonComponent
+                    label='Contact Now'
+                    onClick={() => navigateToPage('/contact')}
+                    type='secondary'
+                  />
+                </div>
+                <div className='grid w-full justify-items-center'>
+                  <ButtonComponent
+                    label='See Portfolio'
+                    onClick={() => navigateToPage('/portfolio')}
+                    type='primary'
+                  />
+                </div>
+                <div className='grid w-full justify-items-center'>
+                <a href="#why-choose-us" className='w-full'>
+                    <ButtonComponent
+                      label='See More!'
+                      type='primary'
+                    />
+                  </a>
+                </div>
               </section>
             </article>
           </main>
