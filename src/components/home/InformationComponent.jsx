@@ -7,7 +7,7 @@ import { businessInfo } from '../../utils/CompanyDataUtil';
 import InfoBox from '../global/InfoBox';
 import ButtonComponent from '../global/ButtonComponent';
 // Images
-import PcImage from '../../assets/images/sales/heros-expanding.png'
+import PcImage from '../../assets/images/sales/heros-expanding.png';
 
 function InformationComponent() {
   const sectionRef = useRef(null);
@@ -33,7 +33,7 @@ function InformationComponent() {
     };
 
     const handleIntersection = (entries, observer) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           handleMouseOver();
           observer.disconnect();
@@ -44,7 +44,7 @@ function InformationComponent() {
     const observer = new IntersectionObserver(handleIntersection, {
       root: null,
       rootMargin: '0px',
-      threshold: 0.1
+      threshold: 0.1,
     });
 
     if (sectionElement) {
@@ -68,49 +68,66 @@ function InformationComponent() {
   return (
     <section
       id='information'
-      
-      className='grid relative min-h-screen'
+      className='grid relative min-h-screen lg:max-h-screen lg:overflow-hidden'
     >
       {/* Background extension */}
       {/* Main content of section */}
-      <div className='grid h-full w-full overflow-hidden bg-slate-300 mb-24 sm:mb-10 sm:px-4'>
+      <div className='grid h-full w-full overflow-hidden bg-slate-300 mb-24 sm:mb-10 sm:px-6 lg:px-12'>
         <section className='grid sm:grid-cols-2 w-full h-full overflow-hidden'>
-
-
           {/* Article - left hand side */}
-          <article className='grid items-center h-full w-full overflow-hidden sm:px-4 sm:py-6 lg:px-8 lg:py-6'>
+          <article className='grid items-center h-full w-full overflow-hidden sm:px-4 xl:px-6'>
             <div className='grid h-fit w-full overflow-hidden'>
               {/* Text */}
               <section className='grid h-fit'>
-                <div className='grid h-fit mt-10'>
-                  <div className='text-center'><span className='text-sm font-semibold'>Serivce and Skills</span></div>
+                <div className='grid h-fit mt-10 lg:mt-0'>
+                  <div className='text-center'>
+                    <span className='text-sm font-semibold'>
+                      Serivce and Skills
+                    </span>
+                  </div>
                   <h3 className='poppins_title text-4xl text-text-alt text-center'>
                     What We Do!
                   </h3>
                 </div>
-                <div className='px-8 py-8 my-2'>
-                  <img src={PcImage} alt="PC demo"  className='w-full h-full object-contain'/>
+                <div className='lg:hidden px-8 py-8 my-2 lg:w-[300px]'>
+                  <img
+                    src={PcImage}
+                    alt='PC demo'
+                    className='w-full h-full object-contain'
+                  />
                 </div>
                 <div className='px-10 pt-4 sm:px-0 lg:pr-10 sm:pt-6'>
-                  <p>
-                    <span className='italic font-semibold text-[18px]'>
-                      {businessInfo.companyName}
-                    </span>{' '}
-                    builds and designs complex or beautifully simple websites,
-                    phone apps, and desktop apps. With a team of developers that
-                    can complete for you any Front-End or Server based project.
-                  </p>
-                  <p className='pt-2'>
+                  <div className='grid grid-cols-rev'>
+                    <div className='grid lg:items-center'>
+                      <p>
+                        <span className='italic font-semibold text-[18px]'>
+                          {businessInfo.companyName}
+                        </span>{' '}
+                        builds and designs complex or beautifully simple
+                        websites, phone apps, and desktop apps. With a team of
+                        developers that can complete for you any Front-End or
+                        Server based project.
+                      </p>
+                    </div>
+                    <div className='hidden lg:grid lg:w-[200px] mx-4'>
+                      <img
+                        src={PcImage}
+                        alt='PC demo'
+                        className='w-full h-full object-contain'
+                      />
+                    </div>
+                  </div>
+                  <p className='pt-2 lg:pt-4'>
                     We work with various codebases to suit any development needs
                     you may have, building websites or mobile and desktop apps.
                     Using Cross-platform code for mobile apps in iOS and
                     Android.
                   </p>
-                  <p className='pt-2'>
+                  <p className='pt-2 lg:pt-4'>
                     Our services are affordable, timely, and include product
                     monitoring and bug fixing after release.
                   </p>
-                  <p className='pt-2'>
+                  <p className='pt-2 lg:pt-4'>
                     Specializing in apps that connect to Bluetooth or WiFi
                     devices and offer custom circuit integration and
                     development.
@@ -122,7 +139,11 @@ function InformationComponent() {
               <section className='grid w-full h-fit'>
                 <div className='grid grid-cols-2 px-4 sm:px-0 mt-10 gap-2 overflow-hidden'>
                   <div>
-                    <ButtonComponent label='Explore Demos' onClick={() => navigateToPage('/portfolio')} type='secondary'  />
+                    <ButtonComponent
+                      label='Explore Demos'
+                      onClick={() => navigateToPage('/portfolio')}
+                      type='secondary'
+                    />
                   </div>
                   <div>
                     <ButtonComponent
@@ -137,7 +158,7 @@ function InformationComponent() {
           </article>
 
           {/* Images - right hand side */}
-          <section ref={sectionRef} className='grid w-full h-full'>
+          <section ref={sectionRef} className='grid w-full h-full xl:px-6'>
             <div className='grid items-center w-full h-full px-2 logo__bg__1'>
               {/* Info Boxes */}
               <div
