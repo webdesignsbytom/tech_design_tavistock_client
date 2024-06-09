@@ -16,7 +16,7 @@ function Header() {
   };
 
   return (
-    <div className='grid h-full min-h-screen'>
+    <div className='grid h-full min-h-screen mt-6'>
       <header className='grid w-full'>
         <section className='grid w-full h-full'>
           <article className='grid h-fit justify-center'>
@@ -33,7 +33,7 @@ function Header() {
                 Modern Websites Apps and Desktop Software for any need.
               </h2>
             </div>
-            <div className='grid justify-center mt-4 sm:items-end text-center justify-items-center w-full h-full'>
+            <div className='grid justify-center mt-4 sm:mt-0 sm:items-end text-center justify-items-center w-full h-full'>
               <p className='text-base'>
                 At{' '}
                 <span className='font-semibold'>
@@ -46,11 +46,13 @@ function Header() {
               </p>
             </div>
             <div className='my-8'>
-              <ButtonComponent
-                label='Contact Now'
-                onClick={() => navigateToPage('/contact')}
-                type='primary'
-              />
+              <div className='grid sm:w-1/2 mx-auto'>
+                <ButtonComponent
+                  label='Contact Now'
+                  onClick={() => navigateToPage('/contact')}
+                  type='primary'
+                />
+              </div>
             </div>
 
             <div>
@@ -71,7 +73,7 @@ function Header() {
             </div>
 
             <div className='grid my-8'>
-              <div className='grid gap-4'>
+              <div className='grid sm:grid-cols-2 gap-4'>
                 <div className=''>
                   <ButtonComponent
                     label='Explore Portfolio'

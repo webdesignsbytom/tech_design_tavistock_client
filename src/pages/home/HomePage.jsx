@@ -16,7 +16,7 @@ function HomePage() {
         {/* Header container */}
         <div
           id='/'
-          className='grid grid-rows-reg mb-4'
+          className='grid grid-rows-reg mb-16'
         >
           {/* Navigation */}
           <Navbar />
