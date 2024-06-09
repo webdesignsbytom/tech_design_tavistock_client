@@ -13,6 +13,8 @@ module.exports = {
         'footer-colour': '#1F2937',
         'alt-colour': '#1f2937',
         'text-alt': '#9333ea',  
+        'yellow-1': '#ecc94b',  
+        'green-1': '#38a169',  
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

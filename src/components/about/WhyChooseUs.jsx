@@ -1,12 +1,14 @@
 import React from 'react';
+// Data
+import { businessInfo } from '../../utils/CompanyDataUtil';
 // Icons
 
 function WhyChooseUs() {
   return (
-    <div className='container mb-6 px-6 mx-auto md:my-20'>
+    <div className='container mb-6 px-6 mx-auto lg:mt-32 lg:mb-24'>
       <section className='text-gray-800 dark:text-gray-400'>
-        <h2 className='text-3xl font-bold mb-12 text-center'>
-          Why WebDesignsByTom is so great
+        <h2 className='text-3xl font-bold mb-12 text-center text-text-alt'>
+          Why {businessInfo.companyName} is for you!
         </h2>
 
         <div className='flex flex-wrap items-center'>

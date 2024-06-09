@@ -67,10 +67,10 @@ function FooterComponent() {
 
             <section className='lg:hidden'>
               <section>
-                <ul className='flex w-full justify-between px-4 mt-4 mb-6'>
+                <ul className='flex w-full justify-between px-4 mt-6 mb-6'>
                   {navLinks.map((link, index) => (
                     <li key={index}>
-                      <Link to={link.path}>{link.label}</Link>
+                      <Link to={link.url}>{link.label}</Link>
                     </li>
                   ))}
                 </ul>

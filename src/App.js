@@ -7,12 +7,15 @@ import ContactPage from './pages/contact/ContactPage';
 import AboutPage from './pages/about/AboutPage';
 import TestPage from './pages/test/TestPage';
 import SalesPage from './pages/sales/SalesPage';
+import PortfolioItemPage from './pages/portfolio/PortfolioItemPage';
 
 function App() {
   return (
     <Routes>
       <Route path='/' index element={<HomePage />} />
       <Route path='/portfolio' index element={<PortfolioPage />} />
+      {/* Portfolio Item */}
+      <Route path='/portfolio-item/:itemId' element={<PortfolioItemPage />} />
       <Route path='/about' index element={<AboutPage />} />
       <Route path='/contact' index element={<ContactPage />} />
       <Route path='/sales' index element={<SalesPage />} />

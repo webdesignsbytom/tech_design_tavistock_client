@@ -12,7 +12,9 @@ import {
 function Portfolio() {
   const articleRefs = useRef([]);
   const sectionRef = useRef(null); // Reference for the section
-  const [portfolioImages, setPortfolioImages] = useState(portfolioWebImagesArray);
+  const [portfolioImages, setPortfolioImages] = useState(
+    portfolioWebImagesArray
+  );
   const [displayType, setDisplayType] = useState('web'); // Track the display type
   const [webFirstView, setWebFirstView] = useState(true); // Track if the web portfolio has been viewed
   let navigate = useNavigate();
@@ -102,7 +104,7 @@ function Portfolio() {
     if (displayType === 'web') {
       return 'grid overflow-hidden h-[450px] lg:h-[400px] px-2 lg:px-6';
     } else if (displayType === 'app') {
-      return 'grid overflow-hidden h-[350px] lg:h-[400px] max-w-[220px] mx-auto lg:px-6';
+      return 'grid overflow-hidden h-[350px] lg:h-[400px] max-w-[210px] mx-auto lg:px-6';
     } else if (displayType === 'circuit') {
       return 'grid overflow-hidden h-[450px] lg:h-[400px] px-2 lg:px-6';
     } else {
@@ -114,7 +116,7 @@ function Portfolio() {
     if (displayType === 'web') {
       return 'grid md:grid-cols-3 h-fit gap-12 mt-6';
     } else if (displayType === 'app') {
-      return 'grid grid-cols-3 h-fit gap-4 mt-6';
+      return 'grid grid-cols-3 h-fit gap-2 lg:gap-4 mt-6';
     } else if (displayType === 'circuit') {
       return 'grid md:grid-cols-3 h-fit gap-12 mt-6';
     } else {
@@ -122,11 +124,19 @@ function Portfolio() {
     }
   };
 
+  const getButtonContainerStyle = () => {
+    if (displayType === 'app') {
+      return 'grid grid-cols-3 md:px-8 mt-4 gap-2 overflow-hidden';
+    } else {
+      return 'grid grid-cols-3 md:px-8 mt-10 gap-2 overflow-hidden';
+    }
+  };
+
   return (
     <section
       ref={sectionRef}
       id='portfolio-section'
-      className='grid relative h-full min-h-screen lg:max-h-screen lg:overflow-hidden mt-10'
+      className='grid relative h-full min-h-screen lg:max-h-screen mt-10'
     >
       <div className='grid h-full w-full'>
         <div className='grid grid-rows-reg h-full'>
@@ -139,7 +149,7 @@ function Portfolio() {
             </h3>
           </section>
 
-          <section className='grid h-full w-[85%] mx-auto px-1'>
+          <section className='grid h-full w-[85%] mx-auto'>
             <div className={getMainContainerStyle()}>
               {portfolioImages.map((image, index) => {
                 return (
@@ -162,7 +172,7 @@ function Portfolio() {
 
             {/* Cta buttons */}
             <section className='grid w-full h-fit'>
-              <div className='grid grid-cols-3 md:px-8 mt-10 gap-2 overflow-hidden'>
+              <div className={getButtonContainerStyle()}>
                 <div className='grid w-full justify-items-center'>
                   <ButtonComponent
                     label='See Websites'
@@ -186,6 +196,15 @@ function Portfolio() {
                 </div>
               </div>
             </section>
+          </section>
+          <section className='grid w-full mx-auto mt-6'>
+            <div className='grid w-full mx-auto justify-items-center'>
+              <ButtonComponent
+                label='Contact Now'
+                onClick={() => navigateToPage('/contact')}
+                type='primary'
+              />
+            </div>
           </section>
         </div>
       </div>

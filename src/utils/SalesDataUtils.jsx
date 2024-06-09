@@ -3,7 +3,7 @@ export const initAlert = { status: '', content: '' };
 export const servicesDataArray = [
   {
     title: 'UI/UX Design',
-    borderColor: 'border-purple-600',
+    borderColor: '#1f2937',
     items: [
       'Wireframe and figma designs using the latest design tools',
       'All devices conformed to style',
@@ -16,7 +16,7 @@ export const servicesDataArray = [
   },
   {
     title: 'Software/App Development',
-    borderColor: 'border-yellow-500',
+    borderColor: '#ecc94b',
     items: [
       'Fullstack design and development',
       'Database and user services.',
@@ -30,7 +30,7 @@ export const servicesDataArray = [
   },
   {
     title: 'Other Skills',
-    borderColor: 'border-green-600',
+    borderColor: '#38a169',
     items: [
       'Arduino/Pi development',
       'Circuit design and development',

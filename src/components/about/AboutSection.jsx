@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import DevicesImage from '../../assets/images/sales/devices.jpg'
 import CodeImage from '../../assets/images/sales/code3.jpg'
 import Heroes from '../../assets/images/sales/heros-expanding.png'
+import { businessInfo } from '../../utils/CompanyDataUtil';
 
 function AboutSection({ myRef }) {
 
@@ -616,27 +617,24 @@ function AboutSection({ myRef }) {
 
           {/* Text data */}
           <main className='w-full px-4 lg:w-1/2 xl:w-5/12'>
-            <article className='mt-10 lg:mt-0 mr-6'>
+            <article className='mt-10 lg:-mt-6 mr-6 animate-fade-in-move-up'>
               <span className='text-primary mb-2 block text-lg font-semibold'>
-                Welcome to Webdesignsbytom
+                Welcome to {businessInfo.companyName}
               </span>
               <h2 className='text-dark mb-8 text-3xl font-bold sm:text-4xl'>
-                Modern and fully customisable app design
+                Modern and fully customisable App design
               </h2>
               <p className='text-body-color mb-8 text-base'>
-                Your dream website can come to life with my help. While my name
-                is on the site I work with a team of skilled developers from all
-                over the world. Producing beautiful results designed with the
+                Your dream website or app can come to life with our help. Producing beautiful results designed with the
                 latest search engine optimisation tactics and features as
                 standard.
               </p>
               <p className='text-body-color mb-3 text-base'>
-                We offer a range of affordable websites and can complete any
-                custom build you imagine.
+                We are a few full time people and serveral freelancers working together to produce quality code to a deadline.
               </p>
-              <p className='text-body-color mb-12 text-base'>
-                My quick and easy design tool will help you build a website
-                template in minutes.
+              <p className='text-body-color mb-3 text-base'>
+                We offer a range of affordable websites, apps and other software and can complete any
+                custom build you imagine.
               </p>
               {/* CTA BUTTONS */}
               <section className='grid p-2 md:p-0 md:mb-12 md:flex gap-3 w-full'>

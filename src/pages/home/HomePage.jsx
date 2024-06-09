@@ -29,10 +29,15 @@ function HomePage() {
           <Portfolio />
 
           {/* Colour block */}
-          <div className='w-full h-16 bg-slate-50 overflow-hidden'></div>
+          <div className='w-full h-16 bg-main-bg overflow-hidden'></div>
 
           {/* Third section of main */}
           <ServicesComponent />
+
+          {/* Colour block */}
+          <div className='w-full h-16 bg-main-bg overflow-hidden'></div>
+
+          {/* Forth section of main */}
           <ReviewsComponent />
         </main>
 
