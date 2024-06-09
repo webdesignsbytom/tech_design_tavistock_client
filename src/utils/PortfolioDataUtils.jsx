@@ -8,12 +8,25 @@ import Prisma from '../assets/svg/file_type_light_prisma.svg';
 import Javascript from '../assets/svg/javascript.svg';
 import PythonIcon from '../assets/svg/python-icon.svg';
 // React Icons
-import { FaTabletAlt, FaTools, FaUserAlt, FaServer, FaMobile, FaMoneyCheckAlt } from 'react-icons/fa';
+import {
+  FaTabletAlt,
+  FaTools,
+  FaUserAlt,
+  FaServer,
+  FaMobile,
+  FaMoneyCheckAlt,
+} from 'react-icons/fa';
 import { TfiLayoutSliderAlt } from 'react-icons/tfi';
 import { GrUserAdmin, GrScorecard, GrGamepad } from 'react-icons/gr';
 import { BiMenuAltRight, BiError } from 'react-icons/bi';
 import { IoMdColorPalette, IoIosRibbon } from 'react-icons/io';
-import { MdAdminPanelSettings, MdForum, MdModeNight, MdSdStorage, MdDataArray } from 'react-icons/md';
+import {
+  MdAdminPanelSettings,
+  MdForum,
+  MdModeNight,
+  MdSdStorage,
+  MdDataArray,
+} from 'react-icons/md';
 import { AiFillLayout, AiOutlineTwitter } from 'react-icons/ai';
 import { HiBookOpen } from 'react-icons/hi';
 import { TbMathFunction } from 'react-icons/tb';
@@ -36,8 +49,9 @@ import MatchedbettingPhone from '../assets/images/projects/matchedbettingPhone.j
 import WSHomeSm from '../assets/images/projects/ws-home-sm.png';
 import WDBTNav from '../assets/images/projects/wdbt-nav-sm.png';
 // Images portfolio component
-import FullWeb1 from '../assets/images/projects/fullpage_2.png'
-import FullWeb2 from '../assets/images/projects/fullpage_1.png'
+import FullWeb1 from '../assets/images/projects/fullpage_2.png';
+import FullWeb2 from '../assets/images/projects/fullpage_1.png';
+import CatApp1 from '../assets/images/projects/cat_app_1.jpg';
 
 export const initialData = {
   id: 1,
@@ -76,24 +90,60 @@ export const backendSkills = [
   { name: 'PHP', level: 'Beginner' },
 ];
 
-let imageId = 0
-export const portfolioImagesArray = [
-{
-  id: imageId++,
-  image: FullWeb1,
-  alt: 'Web and app display',
-},
-{
-  id: imageId++,
-  image: FullWeb2,
-  alt: 'Web and app display',
-},
-{
-  id: imageId++,
-  image: FullWeb1,
-  alt: 'Web and app display',
-},
-]
+let imageId = 0;
+export const portfolioWebImagesArray = [
+  {
+    id: imageId++,
+    image: FullWeb1,
+    alt: 'Web and app display',
+  },
+  {
+    id: imageId++,
+    image: FullWeb2,
+    alt: 'Web and app display',
+  },
+  {
+    id: imageId++,
+    image: FullWeb1,
+    alt: 'Web and app display',
+  },
+];
+
+export const portfolioAppImagesArray = [
+  {
+    id: imageId++,
+    image: CatApp1,
+    alt: 'Web and app display',
+  },
+  {
+    id: imageId++,
+    image: CatApp1,
+    alt: 'Web and app display',
+  },
+  {
+    id: imageId++,
+    image: CatApp1,
+    alt: 'Web and app display',
+  },
+];
+
+export const portfolioCircuitImagesArray = [
+  {
+    id: imageId++,
+    image: FullWeb1,
+    alt: 'Web and app display',
+  },
+  {
+    id: imageId++,
+    image: FullWeb2,
+    alt: 'Web and app display',
+  },
+  {
+    id: imageId++,
+    image: FullWeb1,
+    alt: 'Web and app display',
+  },
+];
 
 export const portfolioDataArray = [
   {

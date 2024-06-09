@@ -2,9 +2,7 @@ import React from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
 // Utils
-import HeaderComponent from '../../components/home/HeaderComponent';
 import InformationComponent from '../../components/home/InformationComponent';
-import PortfolioComponent from '../../components/home/PortfolioComponent';
 import ReviewsComponent from '../../components/reviews/ReviewsComponent';
 import ServicesComponent from '../../components/portfolio/ServicesComponent';
 import Header from '../../components/home/Header';
@@ -22,7 +20,6 @@ function HomePage() {
           {/* Navigation */}
           <Navbar />
           {/* Header */}
-          {/* <HeaderComponent /> */}
           <Header />
         </div>
 
