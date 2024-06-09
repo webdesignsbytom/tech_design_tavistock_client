@@ -20,19 +20,7 @@ function FooterComponent() {
 
   return (
     <footer className='grid h-fit w-full'>
-      <div className='grid bg-alt-colour h-fit text-white'>
-        {/* Phone */}
-        <section className='mx-4 py-2 lg:hidden'>
-          <h3 className='text-left'>Contact:</h3>
-          <div className='flex justify-between'>
-            {contactDetails.map((contact, index) => (
-              <p key={index}>
-                {contact.type}: {contact.value}
-              </p>
-            ))}
-          </div>
-        </section>
-
+      <div className='grid bg-alt-colour h-fit text-white pt-4'>
         {/* Large */}
         <div className='grid grid-rows-rev h-full'>
           <section className='hidden lg:grid lg:grid-cols-3 h-full px-4'>
@@ -78,7 +66,6 @@ function FooterComponent() {
             </section>
 
             <section className='lg:hidden'>
-              <h4 className='underline'>Site Navigation</h4>
               <section>
                 <ul className='flex w-full justify-between px-4 mt-4 mb-6'>
                   {navLinks.map((link, index) => (
@@ -90,7 +77,7 @@ function FooterComponent() {
               </section>
             </section>
 
-            <section className='flex w-full lg:hidden justify-center'>
+            <section className='flex w-full py-2 lg:hidden justify-center'>
               <img
                 src={Logo}
                 className='w-10'

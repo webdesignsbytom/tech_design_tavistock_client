@@ -162,7 +162,7 @@ function Portfolio() {
 
             {/* Cta buttons */}
             <section className='grid w-full h-fit'>
-              <div className='grid grid-cols-3 px-4 sm:px-0 mt-10 gap-2 overflow-hidden'>
+              <div className='grid grid-cols-3 md:px-8 mt-10 gap-2 overflow-hidden'>
                 <div className='grid w-full justify-items-center'>
                   <ButtonComponent
                     label='See Websites'

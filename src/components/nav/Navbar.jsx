@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useLocation, Link, useNavigate } from 'react-router-dom';
 // Images
 import Logo from '../../assets/images/logos/wdbt-white.svg';
@@ -10,8 +10,10 @@ import { IoMdMenu } from 'react-icons/io';
 function Navbar() {
   const [navOptions] = useState(navbarLinksArray);
   const [phoneNavIsOpen, setPhoneNavIsOpen] = useState(false);
+  const [animationClass, setAnimationClass] = useState('');
+  const animationInProgress = useRef(false);
+
   const location = useLocation();
-  console.log('location: ', location);
 
   let navigate = useNavigate();
 
@@ -20,12 +22,30 @@ function Navbar() {
   };
 
   const openPhoneNav = () => {
-    setPhoneNavIsOpen(!phoneNavIsOpen);
+    if (animationInProgress.current) {
+      return;
+    }
+
+    animationInProgress.current = true;
+
+    if (phoneNavIsOpen) {
+      setAnimationClass('animate_close_nav');
+      setTimeout(() => {
+        setPhoneNavIsOpen(false);
+        animationInProgress.current = false;
+      }, 1500); // Duration of the closeNav animation
+    } else {
+      setAnimationClass('animate_open_nav');
+      setPhoneNavIsOpen(true);
+      setTimeout(() => {
+        animationInProgress.current = false;
+      }, 1500); // Duration of the openNav animation
+    }
   };
 
   return (
-    <div className='relative w-full h-[62px] sm:overflow-hidden'>
-      <nav className='grid grid-cols-reg w-full h-full bg-alt-colour'>
+    <div className='relative w-full h-[62px] md:overflow-hidden'>
+      <nav className='grid grid-cols-reg relative z-50 w-full h-full bg-alt-colour'>
         <section className='grid w-fit pl-4'>
           <div className='grid items-center justify-center active:scale-95'>
             <img
@@ -38,16 +58,17 @@ function Navbar() {
         </section>
         <section className='grid'>
           {/* Phone screen */}
-          <section className='grid sm:hidden pr-4 items-center justify-end h-full'>
-            <div
+          <section className='grid md:hidden pr-4 items-center justify-end h-full'>
+            <button
               onClick={openPhoneNav}
               className='grid w-fit h-fit items-center justify-center text-4xl text-white active:scale-50 active:brightness-90'
             >
               <IoMdMenu />
-            </div>
+            </button>
           </section>
+
           {/* Large screen */}
-          <div className='hidden sm:grid justify-end items-center pr-8'>
+          <div className='hidden md:grid justify-end items-center pr-8'>
             <ul className='grid gap-5 grid-cols-5 w-fit'>
               {navOptions.map((item, index) => {
                 const isActive = location.pathname === item.url;
@@ -78,7 +99,7 @@ function Navbar() {
       </nav>
 
       {phoneNavIsOpen && (
-        <div className='grid z-50 absolute h-full w-full'>
+        <div className={`grid ${animationClass} z-40 absolute h-full w-full`}>
           <div className='grid gap-6 bg-alt-colour h-full pt-4 pb-10'>
             {navOptions.map((item, index) => {
               const isActive = location.pathname === item.url;
@@ -97,7 +118,7 @@ function Navbar() {
                       <span className={`text-xs`}>{item.imageUrl}</span>
                     </div>
                     <div className='text-center h-fit'>
-                      <span className={`text-lg`}>{item.title}</span>
+                      <span className={`text-lg`}>{item.label}</span>
                     </div>
                   </Link>
                 </li>
