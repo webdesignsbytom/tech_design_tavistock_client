@@ -12,16 +12,18 @@
   display: none;
   visibility: hidden;
 }
-
-/* Hides the scrollbar for specific containers */
-.scroll-hidden {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+/* Invisible scroll */
+.scrollbar-hidden {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 }
 
-/* Hide scrollbar for Chrome, Safari, and Opera */
-.scroll-hidden::-webkit-scrollbar {
-  display: none;
+.scrollbar-hidden::-webkit-scrollbar {
+  width: 0px;
+}
+
+.scrollbar-hidden::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }
 
 .russo-one-regular {

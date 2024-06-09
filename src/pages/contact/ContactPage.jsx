@@ -5,7 +5,7 @@ import Navbar from '../../components/nav/Navbar';
 function ContactPage() {
   return (
     <div className='min-h-screen w-full overflow-hidden'>
-      <div className='grid w-full h-full overflow-y-scroll scroll-hidden'>
+      <div className='grid w-full h-full overflow-y-scroll scrollbar-hidden'>
         {/* Header container */}
         <div className='grid grid-rows-reg h-screen w-full overflow-hidden bg-slate-50'>
           {/* Navigation */}

@@ -13,7 +13,7 @@ import Portfolio from '../../components/home/Portfolio';
 function HomePage() {
   return (
     <div className='min-h-screen w-full overflow-hidden bg-main-bg'>
-      <div className='grid w-full h-full overflow-y-scroll scroll-hidden'>
+      <div className='grid w-full h-full overflow-y-scroll scrollbar-hidden'>
         {/* Header container */}
         <div
           id='/'

@@ -32,7 +32,7 @@ function Portfolio() {
               {portfolioImages.map((image, index) => {
                 return (
                   <article key={index} className='grid overflow-hidden h-[450px]'>
-                    <div className='border-2 border-black border-solid rounded-lg h-full w-full bg-pink overflow-x-hidden overflow-y-scroll'>
+                    <div className='border-2 border-black border-solid rounded-lg h-full w-full bg-pink overflow-x-hidden overflow-y-scroll scrollbar-hidden'>
                         <img src={image.image} alt={image.alt} />
                     </div>
                   </article>
