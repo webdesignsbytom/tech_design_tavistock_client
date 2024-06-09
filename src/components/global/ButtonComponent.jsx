@@ -21,7 +21,7 @@ const ButtonComponent = ({ label, onClick, type }) => {
   return (
     <button
       onClick={onClick}
-      className={`w-full h-fit sm:px-1 lg:px-4 text-sm sm:text-base py-2 font-semibold border-2 border-solid rounded-lg duration-300 shadow-xl hover:shadow-2xl ${styles}`}
+      className={`w-full sm:max-w-[350px] h-fit sm:px-1 lg:px-4 text-sm sm:text-base py-2 font-semibold border-2 border-solid rounded-lg duration-300 shadow-xl hover:shadow-2xl ${styles}`}
     >
       {label}
     </button>

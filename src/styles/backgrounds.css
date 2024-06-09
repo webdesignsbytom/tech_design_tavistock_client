@@ -21,6 +21,7 @@
 
 .logo__bg__1 {
   background: url("../assets/images/logos/wdbt-black.svg");
-  background-size: 100%;
+  background-size: 75%;
   background-repeat: no-repeat;
+  background-position: center;
 }

@@ -5,11 +5,11 @@ function InfoBox({ data, index }) {
 
   return (
     <div id={index + '_infoBox'} className='grid h-fit hidden-container'>
-      <div className='flex items-center bg-white p-4 shadow rounded-lg h-fit hover:bg-alt-colour hover:text-white duration-300'>
-        <div className='lg:text-xl p-2 pr-4'>{dataSet.imageUrl}</div>
+      <div className='grid grid-cols-reg gap-2 lg:gap-6 lg:pr-2 items-center bg-white p-4 shadow rounded-lg h-fit hover:bg-alt-colour hover:text-white duration-300'>
+        <div className='text-xl'>{dataSet.imageUrl}</div>
         <div>
           <h4 className='text-base lg:text-xl font-bold'>{dataSet.title}</h4>
-          <p className='text-sm lg:text-base'>{dataSet.desc}</p>
+          <p className='text-sm lg:text-base leading-5'>{dataSet.desc}</p>
         </div>
       </div>
     </div>
