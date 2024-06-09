@@ -23,7 +23,7 @@ function FooterComponent() {
       <div className='grid bg-alt-colour h-fit text-white pt-4'>
         {/* Large */}
         <div className='grid grid-rows-rev h-full'>
-          <section className='hidden lg:grid lg:grid-cols-3 h-full px-4'>
+          <section className='hidden lg:grid lg:grid-cols-3 h-full px-4 py-4'>
             <section className='grid'>
               <h4 className='underline text-left'>Site Navigation</h4>
               <section>
