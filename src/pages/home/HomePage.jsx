@@ -4,8 +4,8 @@ import Navbar from '../../components/nav/Navbar';
 import InformationComponent from '../../components/home/InformationComponent';
 import ReviewsComponent from '../../components/reviews/ReviewsComponent';
 import ServicesComponent from '../../components/portfolio/ServicesComponent';
-import Header from '../../components/home/Header';
-import Portfolio from '../../components/home/Portfolio';
+import HeaderComponent from '../../components/home/HeaderComponent';
+import PortfolioComponent from '../../components/home/PortfolioComponent';
 import FooterComponent from '../../components/footer/FooterComponent';
 
 function HomePage() {
@@ -17,7 +17,7 @@ function HomePage() {
           {/* Navigation */}
           <Navbar />
           {/* Header */}
-          <Header />
+          <HeaderComponent />
         </div>
 
         {/* Main content */}
@@ -26,7 +26,7 @@ function HomePage() {
           <InformationComponent />
 
           {/* Second section of main */}
-          <Portfolio />
+          <PortfolioComponent />
 
           {/* Colour block */}
           <div className='w-full h-16 bg-main-bg overflow-hidden'></div>

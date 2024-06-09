@@ -7,7 +7,7 @@ function WhyChooseUs() {
   return (
     <div className='container mb-6 px-6 mx-auto lg:mt-32 lg:mb-24'>
       <section className='text-gray-800 dark:text-gray-400'>
-        <h2 className='text-3xl font-bold mb-12 text-center text-text-alt'>
+        <h2 className='text-3xl font-bold mb-12 text-center text-text-alt poppins_title'>
           Why {businessInfo.companyName} is for you!
         </h2>
 

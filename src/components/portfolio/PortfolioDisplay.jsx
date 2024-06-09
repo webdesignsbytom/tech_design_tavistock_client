@@ -5,7 +5,7 @@ import { portfolioDataArray } from '../../utils/PortfolioDataUtils';
 
 function PortfolioDisplay() {
   const [portfolioData] = useState(portfolioDataArray)
-  console.log('portfolioData', portfolioData);
+
   const navigate = useNavigate();
 
   const displayInfo = (item) => {
@@ -16,18 +16,19 @@ function PortfolioDisplay() {
 
   return (
     <section
-      id='portfolio'
-      className='grid lg:grid-rows-reg my-10 py-10 dark:text-gray-400'
+      id='portfolio-display'
+      className='grid lg:grid-rows-reg py-10 dark:text-gray-400'
     >
       <section className='text-center mt-8 mb-4'>
-        <h5 className='font-semibold'>My Recent Work</h5>
-        <h2 className='text-2xl font-bold'>Portfolio</h2>
+        <h5 className='font-semibold'>Recent Work</h5>
+        <h2 className='text-3xl font-bold text-text-alt poppins_title'>Portfolio</h2>
       </section>
+
 
       <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center md:mx-2 p-4 lg:mx-8 my-auto py-2'>
         {portfolioData.map((item, index) => {
           return (
-            <article className='bg-gray-200 dark:text-gray-700 group rounded-xl text-center p-4 grid gap-2 hover:outline hover:outline-4 hover:outline-black dark:hover:outline-white hover:bg-gray-900 cursor-pointer'>
+            <article key={index} className='bg-gray-200 dark:text-gray-700 group rounded-xl text-center p-4 grid gap-2 hover:outline hover:outline-4 hover:outline-black dark:hover:outline-white hover:bg-gray-900 cursor-pointer'>
             <h3 className='mb-2 group-hover:text-white text-xl font-semibold'>
               {item.title}
             </h3>

@@ -619,20 +619,20 @@ function AboutSection({ myRef }) {
           <main className='w-full px-4 lg:w-1/2 xl:w-5/12'>
             <article className='mt-10 lg:-mt-6 mr-6 animate-fade-in-move-up'>
               <span className='text-primary mb-2 block text-lg font-semibold'>
-                Welcome to {businessInfo.companyName}
+                We are {businessInfo.companyName}
               </span>
-              <h2 className='text-dark mb-8 text-3xl font-bold sm:text-4xl'>
+              <h2 className='mb-8 text-3xl font-bold sm:text-4xl text-text-alt poppins_title'>
                 Modern and fully customisable App design
               </h2>
-              <p className='text-body-color mb-8 text-base'>
+              <p className='mb-8 text-base'>
                 Your dream website or app can come to life with our help. Producing beautiful results designed with the
                 latest search engine optimisation tactics and features as
                 standard.
               </p>
-              <p className='text-body-color mb-3 text-base'>
+              <p className='mb-3 text-base'>
                 We are a few full time people and serveral freelancers working together to produce quality code to a deadline.
               </p>
-              <p className='text-body-color mb-3 text-base'>
+              <p className='mb-3 text-base'>
                 We offer a range of affordable websites, apps and other software and can complete any
                 custom build you imagine.
               </p>
