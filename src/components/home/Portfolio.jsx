@@ -102,9 +102,21 @@ function Portfolio() {
     if (displayType === 'web') {
       return 'grid overflow-hidden h-[450px] lg:h-[400px] px-2 lg:px-6';
     } else if (displayType === 'app') {
-      return 'grid overflow-hidden h-[350px] lg:h-[400px] max-w-[200px] mx-auto px-2 lg:px-6';
+      return 'grid overflow-hidden h-[350px] lg:h-[400px] max-w-[220px] mx-auto lg:px-6';
     } else if (displayType === 'circuit') {
       return 'grid overflow-hidden h-[450px] lg:h-[400px] px-2 lg:px-6';
+    } else {
+      return '';
+    }
+  };
+
+  const getMainContainerStyle = () => {
+    if (displayType === 'web') {
+      return 'grid md:grid-cols-3 h-fit gap-12 mt-6';
+    } else if (displayType === 'app') {
+      return 'grid grid-cols-3 h-fit gap-4 mt-6';
+    } else if (displayType === 'circuit') {
+      return 'grid md:grid-cols-3 h-fit gap-12 mt-6';
     } else {
       return '';
     }
@@ -128,7 +140,7 @@ function Portfolio() {
           </section>
 
           <section className='grid h-full w-[85%] mx-auto px-1'>
-            <div className='grid md:grid-cols-3 h-fit gap-12 mt-6'>
+            <div className={getMainContainerStyle()}>
               {portfolioImages.map((image, index) => {
                 return (
                   <article
