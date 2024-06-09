@@ -69,9 +69,18 @@ function Portfolio() {
       setPortfolioImages(portfolioCircuitImagesArray);
     }
     if (sectionRef.current) {
+      setAllowAnimation(false)
       sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      resetAnimation()
     }
   };
+
+const resetAnimation = () => {
+  setTimeout(() => {
+    console.log('AAAAAAA');
+    setAllowAnimation(true) 
+  }, 700);
+}
 
   const getStyle = () => {
     if (displayType === 'web') {
