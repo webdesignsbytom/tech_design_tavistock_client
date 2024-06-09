@@ -16,6 +16,7 @@ function Portfolio() {
   const [displayType, setDisplayType] = useState('web'); // Add this state to keep track of the display type
   let navigate = useNavigate();
   const articleRefs = useRef([]);
+  const sectionRef = useRef(null); // Reference for the section
 
   useEffect(() => {
     const handleIntersection = (entries) => {
@@ -64,6 +65,9 @@ function Portfolio() {
     } else if (type === displayTypes[2]) {
       setPortfolioImages(portfolioCircuitImagesArray);
     }
+    if (sectionRef.current) {
+      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const getStyle = () => {
@@ -102,6 +106,7 @@ function Portfolio() {
 
   return (
     <section
+    ref={sectionRef}
       id='portfolio-section'
       className='grid relative h-full min-h-screen lg:max-h-screen lg:overflow-hidden mt-10'
     >

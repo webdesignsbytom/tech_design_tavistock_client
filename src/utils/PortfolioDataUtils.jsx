@@ -90,56 +90,56 @@ export const backendSkills = [
   { name: 'PHP', level: 'Beginner' },
 ];
 
-let imageId = 0;
+let webImageId = 0;
 export const portfolioWebImagesArray = [
   {
-    id: imageId++,
+    id: webImageId++,
     image: FullWeb1,
     alt: 'Web and app display',
   },
   {
-    id: imageId++,
+    id: webImageId++,
     image: FullWeb2,
     alt: 'Web and app display',
   },
   {
-    id: imageId++,
+    id: webImageId++,
     image: FullWeb1,
     alt: 'Web and app display',
   },
 ];
-
+let appImageId = 0;
 export const portfolioAppImagesArray = [
   {
-    id: imageId++,
+    id: appImageId++,
     image: CatApp1,
     alt: 'Web and app display',
   },
   {
-    id: imageId++,
+    id: appImageId++,
     image: CatApp1,
     alt: 'Web and app display',
   },
   {
-    id: imageId++,
+    id: appImageId++,
     image: CatApp1,
     alt: 'Web and app display',
   },
 ];
-
+let circuitImageId = 0;
 export const portfolioCircuitImagesArray = [
   {
-    id: imageId++,
+    id: circuitImageId++,
     image: FullWeb1,
     alt: 'Web and app display',
   },
   {
-    id: imageId++,
+    id: circuitImageId++,
     image: FullWeb2,
     alt: 'Web and app display',
   },
   {
-    id: imageId++,
+    id: circuitImageId++,
     image: FullWeb1,
     alt: 'Web and app display',
   },
