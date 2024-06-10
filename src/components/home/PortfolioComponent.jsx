@@ -17,7 +17,6 @@ function Portfolio() {
     portfolioWebImagesArray
   );
   const [displayType, setDisplayType] = useState('web'); // Track the display type
-  const [webFirstView, setWebFirstView] = useState(true); // Track if the web portfolio has been viewed
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -27,7 +26,7 @@ function Portfolio() {
           const imgContainer = entry.target.querySelector('.image-container');
           if (imgContainer) {
             // Check if imgContainer is not null and it's the web portfolio's first view
-            if (webFirstView && displayType === 'web') {
+            if (displayType === 'web') {
               imgContainer.classList.add('start-scrolling');
               imgContainer.scrollTo({
                 top: imgContainer.scrollHeight,
@@ -52,7 +51,7 @@ function Portfolio() {
     return () => {
       observer.disconnect();
     };
-  }, [displayType, webFirstView]);
+  }, [displayType]);
 
   const navigateToPage = (page) => {
     navigate(page, { replace: true });
@@ -61,20 +60,13 @@ function Portfolio() {
   const displayTypes = ['web', 'app', 'circuit'];
 
   const setDisplayContents = (type) => {
-    console.log('type: ' + type);
     setDisplayType(type); // Set the display type
     if (type === displayTypes[0]) {
       setPortfolioImages(portfolioWebImagesArray);
-      if (webFirstView) {
-        setWebFirstView(false); // Set to false after the first view
-      }
     } else if (type === displayTypes[1]) {
       setPortfolioImages(portfolioAppImagesArray);
     } else if (type === displayTypes[2]) {
       setPortfolioImages(portfolioCircuitImagesArray);
-    }
-    if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -130,7 +122,7 @@ function Portfolio() {
     <section
       ref={sectionRef}
       id='portfolio-section'
-      className='grid relative h-full min-h-screen lg:max-h-screen mt-10'
+      className='grid relative h-full min-h-screen lg:max-h-screen mt-10 lg:mb-28'
     >
       <div className='grid h-full w-full'>
         <div className='grid grid-rows-reg h-full'>

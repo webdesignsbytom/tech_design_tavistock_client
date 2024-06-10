@@ -88,6 +88,20 @@
   }
 }
 
+.scrolling-animation {
+  animation: scrollover 10s ease forwards;
+}
+
+@keyframes scrollover {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+
+  }
+}
+
 /* Scroll image */
 .image-container {
   position: relative;
