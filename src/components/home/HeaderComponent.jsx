@@ -67,7 +67,7 @@ function Header() {
             <section className='grid h-full lg:items-center animate-fade-in-move-up'>
               <div className='lg:h-fit'>
                 <div className='hidden lg:grid overflow-hidden '>
-                  <div className='grid mx-auto w-[400px] py-6 overflow-hidden'>
+                  <div className='grid mx-auto w-[400px] py-10 -mt-4 overflow-hidden'>
                     <img
                       src={CollageImage}
                       alt='Collage of tech'

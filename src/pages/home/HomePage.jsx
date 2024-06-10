@@ -7,13 +7,14 @@ import ServicesComponent from '../../components/portfolio/ServicesComponent';
 import HeaderComponent from '../../components/home/HeaderComponent';
 import PortfolioComponent from '../../components/home/PortfolioComponent';
 import FooterComponent from '../../components/footer/FooterComponent';
+import ContactCta from '../../components/global/ContactCta';
 
 function HomePage() {
   return (
     <div className='min-h-screen w-full overflow-hidden bg-main-bg'>
       <div className='grid w-full h-full overflow-y-scroll scrollbar-hidden'>
         {/* Header container */}
-        <div id='/' className='grid grid-rows-reg mb-16'>
+        <div id='/' className='grid grid-rows-reg mb-16 w-full'>
           {/* Navigation */}
           <Navbar />
           {/* Header */}
@@ -33,6 +34,9 @@ function HomePage() {
 
           {/* Third section of main */}
           <ServicesComponent />
+
+          {/* Contact CTA */}
+          <ContactCta />
 
           {/* Colour block */}
           <div className='w-full h-16 bg-main-bg overflow-hidden'></div>

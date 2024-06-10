@@ -197,15 +197,7 @@ function Portfolio() {
               </div>
             </section>
           </section>
-          <section className='grid w-full mx-auto mt-6 px-6'>
-            <div className='grid w-full mx-auto justify-items-center'>
-              <ButtonComponent
-                label='Contact Now'
-                onClick={() => navigateToPage('/contact')}
-                type='primary'
-              />
-            </div>
-          </section>
+
         </div>
       </div>
     </section>

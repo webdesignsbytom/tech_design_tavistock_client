@@ -12,9 +12,10 @@
   display: none;
   visibility: hidden;
 }
+
 /* Invisible scroll */
 .scrollbar-hidden {
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scrollbar-color: transparent transparent;
 }
 
