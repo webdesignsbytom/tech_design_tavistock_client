@@ -12,7 +12,7 @@ function ContactCta() {
 
   return (
     <section className='grid w-full mx-auto px-6'>
-      <div className='grid w-1/2 mx-auto justify-center'>
+      <div className='grid lg:w-1/2 mx-auto justify-center'>
         <div className='text-center my-8 lg:px-28'>
           <p className='text-text-main poppins_text'>
             <span className='font-semibold'>If</span> you have any Questions, ideas or projects you would

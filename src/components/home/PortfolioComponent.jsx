@@ -141,7 +141,7 @@ function Portfolio() {
             />
 
             <article className='mt-8 grid'>
-              <div className='grid w-full lg:w-1/2 mx-auto'>
+              <div className='grid w-full px-4 sm:px-8 lg:px-0 lg:w-1/2 mx-auto'>
                 <p className='text-text-main poppins_text'>We have prepared a number of sample product for you to view and be inspired by. Use the buttons to navigate between the device types. Hover over or use your mouse to scroll over any website image. Click on any image to be taken to a live example.</p>
               </div>
             </article>
