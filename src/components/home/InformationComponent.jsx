@@ -8,6 +8,7 @@ import InfoBox from '../global/InfoBox';
 import ButtonComponent from '../global/ButtonComponent';
 // Images
 import PcImage from '../../assets/images/sales/heros-expanding.png';
+import ComponentTitles from '../global/ComponentTitles';
 
 function InformationComponent() {
   const sectionRef = useRef(null);
@@ -79,16 +80,13 @@ function InformationComponent() {
             <div className='grid h-fit w-full overflow-hidden'>
               {/* Text */}
               <section className='grid h-fit'>
-                <div className='grid h-fit mt-10 lg:mt-0'>
-                  <div className='text-center'>
-                    <span className='text-sm font-semibold'>
-                      Serivce and Skills
-                    </span>
-                  </div>
-                  <h3 className='poppins_title text-4xl text-text-alt text-center'>
-                    What We Do!
-                  </h3>
+                <div className='mt-10 lg:mt-0'>
+                  <ComponentTitles
+                    title={'What We Do!'}
+                    subtitle={'Serivce and Skills'}
+                  />
                 </div>
+
                 <div className='lg:hidden px-8 py-8 my-2 lg:w-[300px]'>
                   <img
                     src={PcImage}

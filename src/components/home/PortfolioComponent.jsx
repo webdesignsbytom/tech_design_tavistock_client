@@ -8,6 +8,7 @@ import {
   portfolioAppImagesArray,
   portfolioCircuitImagesArray,
 } from '../../utils/PortfolioDataUtils';
+import ComponentTitles from '../global/ComponentTitles';
 
 function Portfolio() {
   const articleRefs = useRef([]);
@@ -60,6 +61,7 @@ function Portfolio() {
   const displayTypes = ['web', 'app', 'circuit'];
 
   const setDisplayContents = (type) => {
+    console.log('type: ' + type);
     setDisplayType(type); // Set the display type
     if (type === displayTypes[0]) {
       setPortfolioImages(portfolioWebImagesArray);
@@ -78,11 +80,11 @@ function Portfolio() {
 
   const getStyle = () => {
     if (displayType === 'web') {
-      return 'border-2 border-black border-solid rounded-lg h-full w-full scrollbar-hidden image-container overflow-x-hidden overflow-y-auto';
+      return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full scrollbar-hidden image-container overflow-x-hidden overflow-y-auto';
     } else if (displayType === 'app') {
-      return 'border-2 border-black border-solid rounded-lg h-full w-full overflow-hidden';
+      return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full overflow-hidden';
     } else if (displayType === 'circuit') {
-      return 'border-2 border-black border-solid rounded-lg h-full w-full overflow-hidden';
+      return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full overflow-hidden';
     } else {
       return '';
     }
@@ -102,11 +104,11 @@ function Portfolio() {
 
   const getContainerStyle = () => {
     if (displayType === 'web') {
-      return 'grid overflow-hidden h-[400px] px-2 lg:px-6';
+      return 'grid overflow-hidden h-[400px] lg:h-[450px] px-2 py-6 lg:px-6 opening-animation';
     } else if (displayType === 'app') {
-      return 'grid overflow-hidden h-[350px] lg:h-[400px] max-w-[210px] mx-auto lg:px-6';
+      return 'grid overflow-hidden py-6 h-[325px] lg:h-[400px] max-w-[190px] lg:max-w-[300px] mx-auto lg:px-6 opening-animation';
     } else if (displayType === 'circuit') {
-      return 'grid overflow-hidden h-[400px] px-2 lg:px-6';
+      return 'grid overflow-hidden py-6 h-[400px] px-2 lg:px-6 opening-animation';
     } else {
       return '';
     }
@@ -114,21 +116,13 @@ function Portfolio() {
 
   const getMainContainerStyle = () => {
     if (displayType === 'web') {
-      return 'grid md:grid-cols-3 h-fit gap-12 mt-6';
+      return 'grid md:grid-cols-3 h-fit gap-8 mt-2';
     } else if (displayType === 'app') {
-      return 'grid grid-cols-3 h-fit gap-2 lg:gap-4 mt-6';
+      return 'grid grid-cols-3 h-fit gap-2 lg:gap-4 mt-2';
     } else if (displayType === 'circuit') {
-      return 'grid md:grid-cols-3 h-fit gap-12 mt-6';
+      return 'grid md:grid-cols-3 h-fit gap-8 mt-2';
     } else {
       return '';
-    }
-  };
-
-  const getButtonContainerStyle = () => {
-    if (displayType === 'app') {
-      return 'grid grid-cols-3 md:px-8 mt-4 gap-2 overflow-hidden';
-    } else {
-      return 'grid grid-cols-3 md:px-8 mt-10 gap-2 overflow-hidden';
     }
   };
 
@@ -141,16 +135,54 @@ function Portfolio() {
       <div className='grid h-full w-full'>
         <div className='grid grid-rows-reg h-full'>
           <section className='my-8 h-fit'>
-            <div className='text-center'>
-              <span className='text-sm font-semibold'>Portfolio and Demos</span>
-            </div>
-            <h3 className='poppins_title text-4xl text-text-alt text-center'>
-              Our Products
-            </h3>
+            <ComponentTitles
+              title={'Developer Products'}
+              subtitle={'Portfolio and Demos'}
+            />
+
+            <article className='mt-8 grid'>
+              <div className='grid w-full lg:w-1/2 mx-auto'>
+                <p className='text-text-main poppins_text'>We have prepared a number of sample product for you to view and be inspired by. Use the buttons to navigate between the device types. Hover over or use your mouse to scroll over any website image. Click on any image to be taken to a live example.</p>
+              </div>
+            </article>
           </section>
 
           <section className='grid h-full w-[85%] mx-auto'>
-            <div className={getMainContainerStyle()}>
+            <section className='grid h-fit w-full'>
+              <div className='grid md:justify-end'>
+                <div className='grid grid-cols-3 bg-gray-300 gap-2 p-2 w-full md:w-fit mt-6'>
+                  <ButtonComponent
+                    label='Websites'
+                    onClick={() => setDisplayContents(displayTypes[0])}
+                    type={
+                      displayType === displayTypes[0]
+                        ? 'selected'
+                        : 'unselected'
+                    }
+                  />
+                  <ButtonComponent
+                    label='Apps'
+                    onClick={() => setDisplayContents(displayTypes[1])}
+                    type={
+                      displayType === displayTypes[1]
+                        ? 'selected'
+                        : 'unselected'
+                    }
+                  />
+                  <ButtonComponent
+                    label='Circuits'
+                    onClick={() => setDisplayContents(displayTypes[2])}
+                    type={
+                      displayType === displayTypes[2]
+                        ? 'selected'
+                        : 'unselected'
+                    }
+                  />
+                </div>
+              </div>
+            </section>
+
+            <div key={displayType} className={getMainContainerStyle()}>
               {portfolioImages.map((image, index) => {
                 return (
                   <article
@@ -169,35 +201,7 @@ function Portfolio() {
                 );
               })}
             </div>
-
-            {/* Cta buttons */}
-            <section className='grid w-full h-fit'>
-              <div className={getButtonContainerStyle()}>
-                <div className='grid w-full justify-items-center'>
-                  <ButtonComponent
-                    label='See Websites'
-                    onClick={() => setDisplayContents(displayTypes[0])}
-                    type='secondary'
-                  />
-                </div>
-                <div className='grid w-full justify-items-center'>
-                  <ButtonComponent
-                    label='See Apps'
-                    onClick={() => setDisplayContents(displayTypes[1])}
-                    type='primary'
-                  />
-                </div>
-                <div className='grid w-full justify-items-center'>
-                  <ButtonComponent
-                    label='See Circuits'
-                    onClick={() => setDisplayContents(displayTypes[2])}
-                    type='primary'
-                  />
-                </div>
-              </div>
-            </section>
           </section>
-
         </div>
       </div>
     </section>

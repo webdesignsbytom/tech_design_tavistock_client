@@ -3,11 +3,12 @@ import React, { useEffect, useRef, useState } from 'react';
 // Data
 import { businessInfo } from '../../utils/CompanyDataUtil';
 import { whyChooseUsItemsArray } from '../../utils/AboutPageDataUtils';
+import ComponentTitles from '../global/ComponentTitles';
 
 function WhyChooseUs() {
   const sectionRef = useRef(null);
 
-  const [dataArray] = useState(whyChooseUsItemsArray)
+  const [dataArray] = useState(whyChooseUsItemsArray);
 
   useEffect(() => {
     const sectionElement = sectionRef.current;
@@ -55,11 +56,17 @@ function WhyChooseUs() {
   }, [dataArray]);
 
   return (
-    <div id='why-choose-us' className='container mb-6 px-6 mx-auto lg:mt-32 lg:mb-24'>
+    <div
+      id='why-choose-us'
+      className='mb-6 px-6 mx-auto lg:px-20 lg:mt-32 lg:mb-24'
+    >
       <section className='text-gray-800 dark:text-gray-400'>
-        <h2 className='text-3xl font-bold mb-12 text-center text-text-alt poppins_title'>
-          Why {businessInfo.companyName} is for you!
-        </h2>
+        <div className='mb-12 w-full px-4 lg:w-1/2 mx-auto'>
+          <ComponentTitles
+            title={`Why ${businessInfo.companyName} is for you!`}
+            subtitle={'How we work'}
+          />
+        </div>
 
         <div className='flex flex-wrap items-center'>
           <section className='grow-0 shrink-0 basis-auto w-full lg:w-5/12 mb-12 lg:mb-0 md:px-6'>
@@ -85,12 +92,12 @@ function WhyChooseUs() {
                     </h3>
                     <p style={{ color: 'hsl(210, 12%, 80%)' }}>
                       Personally I have worked for years in the engineering and
-                      technology fields and bring a wealth of knowledge, practical thinking
-                      and solutions to problems. My goals have always been to
-                      produce excellent work that can be used to represent my
-                      skills. Teaming up with a number of skilled individuals
-                      from around the world only makes this company more useful
-                      to you.
+                      technology fields and bring a wealth of knowledge,
+                      practical thinking and solutions to problems. My goals
+                      have always been to produce excellent work that can be
+                      used to represent my skills. Teaming up with a number of
+                      skilled individuals from around the world only makes this
+                      company more useful to you.
                     </p>
                   </div>
                 </article>
@@ -104,9 +111,16 @@ function WhyChooseUs() {
             </div>
           </section>
 
-          <section ref={sectionRef} className='grow-0 shrink-0 basis-auto w-full lg:w-7/12 md:px-6'>
+          <section
+            ref={sectionRef}
+            className='grow-0 shrink-0 basis-auto w-full lg:w-7/12 md:px-6'
+          >
             {dataArray.map((item, index) => (
-              <div key={index} id={index + '_infoup_button'} className='flex mb-6 infoBox hidden-container'>
+              <div
+                key={index}
+                id={index + '_infoup_button'}
+                className='flex mb-6 infoBox hidden-container'
+              >
                 <div className='shrink-0'>
                   <div
                     className='p-4 rounded-md shadow-lg'

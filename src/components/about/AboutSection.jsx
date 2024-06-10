@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 // Images
-import DevicesImage from '../../assets/images/sales/devices.jpg'
-import CodeImage from '../../assets/images/sales/code3.jpg'
-import Heroes from '../../assets/images/sales/heros-expanding.png'
+import DevicesImage from '../../assets/images/sales/devices.jpg';
+import CodeImage from '../../assets/images/sales/code3.jpg';
+import Heroes from '../../assets/images/sales/heros-expanding.png';
 import { businessInfo } from '../../utils/CompanyDataUtil';
 import ButtonComponent from '../global/ButtonComponent';
 
@@ -629,20 +629,21 @@ function AboutSection() {
                 Modern and fully customisable App design
               </h2>
               <p className='mb-8 text-base'>
-                Your dream website or app can come to life with our help. Producing beautiful results designed with the
-                latest search engine optimisation tactics and features as
-                standard.
+                Your dream website or app can come to life with our help.
+                Producing beautiful results designed with the latest search
+                engine optimisation tactics and features as standard.
               </p>
               <p className='mb-3 text-base'>
-                We are a few full time people and serveral freelancers working together to produce quality code to a deadline.
+                We are a few full time people and serveral freelancers working
+                together to produce quality code to a deadline.
               </p>
               <p className='mb-3 text-base'>
-                We offer a range of affordable websites, apps and other software and can complete any
-                custom build you imagine.
+                We offer a range of affordable websites, apps and other software
+                and can complete any custom build you imagine.
               </p>
               {/* CTA BUTTONS */}
-              <section className='grid p-2 md:p-0 md:mb-12 md:flex gap-3 w-full'>
-              <div className='grid w-full justify-items-center'>
+              <section className='grid p-2 md:p-0 md:mb-12 md:flex gap-3 w-full mt-8'>
+                <div className='grid w-full justify-items-center'>
                   <ButtonComponent
                     label='Contact Now'
                     onClick={() => navigateToPage('/contact')}
@@ -657,11 +658,8 @@ function AboutSection() {
                   />
                 </div>
                 <div className='grid w-full justify-items-center'>
-                <a href="#why-choose-us" className='w-full'>
-                    <ButtonComponent
-                      label='See More!'
-                      type='primary'
-                    />
+                  <a href='#why-choose-us' className='w-full'>
+                    <ButtonComponent label='See More!' type='primary' />
                   </a>
                 </div>
               </section>

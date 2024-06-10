@@ -11,8 +11,8 @@ export const servicesDataArray = [
       'User friendly layouts',
       'Testing and collecting user experience data',
       'Colour and style options. Hue matching and pallet building tools.',
-      'Root set styles for speedy changes througout project.'
-    ]
+      'Root set styles for speedy changes througout project.',
+    ],
   },
   {
     title: 'Software/App Development',
@@ -25,8 +25,8 @@ export const servicesDataArray = [
       'Social medias supporting post/sharing dynamic',
       'Video, webcam and chat communication services',
       'Smart home and wireless connectivity',
-      'Restful API services'
-    ]
+      'Restful API services',
+    ],
   },
   {
     title: 'Other Skills',
@@ -38,11 +38,10 @@ export const servicesDataArray = [
       'CI/CD development',
       'Documentation and auditing',
       'Mechanical maintainance',
-      '3D printer models'
-    ]
-  }
+      '3D printer models',
+    ],
+  },
 ];
-
 
 export const pricingTableData = [
   {
@@ -187,56 +186,35 @@ export const pricingTableData = [
   },
 ];
 
-export const basicListItems = [
-  {
-    text: `Up to 10 pages`,
-  },
-  {
-    text: `10 GB of storage`,
-  },
-  {
-    text: `Hosting from £3.99 pm`,
-  },
-  {
-    text: `3 Months free testing`,
-  },
-  {
-    text: `SSL Certificates`,
-  },
-];
+export const websiteDataItem = {
+  title: 'WEBSITE',
+  basicListItems: [
+    { text: `Up to 10 pages` },
+    { text: `10 GB of storage` },
+    { text: `Hosting from £3.99 pm` },
+    { text: `3 Months free testing` },
+    { text: `SSL Certificates` },
+  ],
+};
 
-export const shopListItems = [
-  {
-    text: `Hundreds of store products`,
-  },
-  {
-    text: `Individual product pages`,
-  },
-  {
-    text: `Stripe, Paypal or Visa payments`,
-  },
-  {
-    text: `Purchasing and thank you pages`,
-  },
-  {
-    text: `Update products admin area`,
-  },
-];
+export const appDataItem = {
+  title: 'APP',
+  basicListItems: [
+    { text: `Hundreds of store products` },
+    { text: `Individual product pages` },
+    { text: `Stripe, Paypal or Visa payments` },
+    { text: `Purchasing and thank you pages` },
+    { text: `Update products admin area` },
+  ],
+};
 
-export const fullstackListItems = [
-  {
-    text: `Intergrated restful API's`,
-  },
-  {
-    text: `Custom database deisgns`,
-  },
-  {
-    text: `Developer and admin tools`,
-  },
-  {
-    text: `Fully customized components`,
-  },
-  {
-    text: `User features`,
-  },
-];
+export const circuitDataItem = {
+  title: 'TECH',
+  basicListItems: [
+    { text: `Intergrated restful API's` },
+    { text: `Custom database deisgns` },
+    { text: `Developer and admin tools` },
+    { text: `Fully customized components` },
+    { text: `User features` },
+  ],
+};

@@ -2,25 +2,22 @@ import React from 'react';
 // Icons
 import { BsCheck2Circle } from 'react-icons/bs';
 
-function DisplayCard({ title, price, listItems, buttonId, buttonColor }) {
+function DisplayCard({ data, buttonId, buttonColor }) {
   return (
     <div>
       <div className='p-8 bg-gray-900 rounded'>
         <div className='mb-4 text-center'>
           <p className='text-xl font-medium tracking-wide text-white'>
-            {title}
-          </p>
-          <p className='text-sm font-semibold text-white dark:text-white'>
-            from
+            {data.title}
           </p>
           <div className='flex items-center justify-center'>
             <p className='mr-2 text-5xl font-semibold text-white lg:text-6xl'>
-              £{price}
+              YOU GET
             </p>
           </div>
         </div>
         <ul className='mb-8 space-y-2'>
-          {listItems.map((item, index) => (
+          {data.basicListItems.map((item, index) => (
             <ListItem key={index} text={item.text} />
           ))}
         </ul>
