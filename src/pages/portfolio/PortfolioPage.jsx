@@ -23,9 +23,7 @@ function ProjectsPage() {
         <PortfolioDisplay />
         <PortfolioComponent />
         <ExperienceComponent />
-        <PurchaseOptions />
         <ServicesComponent />
-        <ReviewsComponent />
         <PortfolioCta />
       </main>
       <FooterComponent />
