@@ -21,6 +21,7 @@ module.exports = {
       gridTemplateRows: {
         reg: 'auto 1fr',
         rev: '1fr auto',
+        a1a: 'auto 1fr auto',
       },
       gridTemplateColumns: {
         reg: 'auto 1fr',

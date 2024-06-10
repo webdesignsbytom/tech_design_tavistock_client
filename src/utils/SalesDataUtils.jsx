@@ -1,3 +1,9 @@
+// Icons
+import ComputerIcon from '../assets/images/device/computer.svg'
+import MobileIcon from '../assets/images/device/mobile.svg'
+import WebsiteIcon from '../assets/images/device/website.svg'
+import CircuitBoardIcon from '../assets/images/device/circuit-board.svg'
+
 export const initAlert = { status: '', content: '' };
 
 export const servicesDataArray = [
@@ -42,6 +48,63 @@ export const servicesDataArray = [
     ],
   },
 ];
+
+export const salesAppTypes = [
+  {
+    label: 'Web',
+    name: 'web',
+    image: WebsiteIcon
+  },
+  {
+    label: 'App',
+    name: 'app',
+    image: MobileIcon
+  },
+  {
+    label: 'Software',
+    name: 'software',
+    image: ComputerIcon
+  },
+  {
+    label: 'Tech',
+    name: 'tech',
+    image: CircuitBoardIcon
+  },
+]
+
+export const websiteDataItem = {
+  title: 'WEBSITE',
+  basicListItems: [
+    { text: `Up to 10 pages` },
+    { text: `10 GB of storage` },
+    { text: `Hosting from £3.99 pm` },
+    { text: `3 Months free testing` },
+    { text: `SSL Certificates` },
+  ],
+};
+
+export const appDataItem = {
+  title: 'APP',
+  basicListItems: [
+    { text: `Hundreds of store products` },
+    { text: `Individual product pages` },
+    { text: `Stripe, Paypal or Visa payments` },
+    { text: `Purchasing and thank you pages` },
+    { text: `Update products admin area` },
+  ],
+};
+
+export const circuitDataItem = {
+  title: 'TECH',
+  basicListItems: [
+    { text: `Intergrated restful API's` },
+    { text: `Custom database deisgns` },
+    { text: `Developer and admin tools` },
+    { text: `Fully customized components` },
+    { text: `User features` },
+  ],
+};
+
 
 export const pricingTableData = [
   {
@@ -185,36 +248,3 @@ export const pricingTableData = [
     },
   },
 ];
-
-export const websiteDataItem = {
-  title: 'WEBSITE',
-  basicListItems: [
-    { text: `Up to 10 pages` },
-    { text: `10 GB of storage` },
-    { text: `Hosting from £3.99 pm` },
-    { text: `3 Months free testing` },
-    { text: `SSL Certificates` },
-  ],
-};
-
-export const appDataItem = {
-  title: 'APP',
-  basicListItems: [
-    { text: `Hundreds of store products` },
-    { text: `Individual product pages` },
-    { text: `Stripe, Paypal or Visa payments` },
-    { text: `Purchasing and thank you pages` },
-    { text: `Update products admin area` },
-  ],
-};
-
-export const circuitDataItem = {
-  title: 'TECH',
-  basicListItems: [
-    { text: `Intergrated restful API's` },
-    { text: `Custom database deisgns` },
-    { text: `Developer and admin tools` },
-    { text: `Fully customized components` },
-    { text: `User features` },
-  ],
-};

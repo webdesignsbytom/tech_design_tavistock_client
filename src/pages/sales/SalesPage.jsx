@@ -3,21 +3,21 @@ import React from 'react';
 import Navbar from '../../components/nav/Navbar';
 import ServicesComponent from '../../components/portfolio/ServicesComponent';
 import PurchaseOptions from '../../components/sales/PurchaseOptions';
+import SelectAppOptions from '../../components/sales/SelectAppOptions';
 
 function SalesPage() {
   return (
-    <div className='min-h-screen w-full overflow-hidden'>
-      <div className='grid w-full h-full '>
-        {/* Header container */}
-        <div className='grid grid-rows-reg h-screen w-full overflow-hidden bg-main-bg overflow-y-scroll scrollbar-hidden'>
+    <div className='grid'>
+      <div className='grid'>
+        <div id='/' className='grid min-h-screen lg:max-h-screen grid-rows-reg overflow-hidden'>
           {/* Navigation */}
           <Navbar />
-          <main>
-            SalesPage
-            <PurchaseOptions />
-            <ServicesComponent />
-          </main>
+          <SelectAppOptions />
         </div>
+        <main>
+          {/* <PurchaseOptions /> */}
+          {/* <ServicesComponent /> */}
+        </main>
       </div>
     </div>
   );
