@@ -89,6 +89,33 @@
 }
 
 
+.fade-out {
+  animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    scale: 0.1;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.move-center {
+  animation: moveCenter 5s forwards;
+}
+
+@keyframes moveCenter {
+  to {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+
 /* Scroll image */
 .image-container {
   position: relative;
