@@ -5,7 +5,7 @@ function ReviewItem({ review }) {
 
   return (
     <li>
-      <article className='grid bg-white border-2 text-sm lg:text-base shadow-lg border-black border-solid p-1 rounded w-full'>
+      <article className='grid bg-white border-2 text-sm lg:text-base shadow-lg border-black border-solid p-1 rounded h-full w-full'>
         <div className='grid justify-center md:flex md:justify-between w-full'>
           <div className='flex gap-1 justify-center w-full'>⭐⭐⭐⭐⭐</div>
         </div>
@@ -24,7 +24,7 @@ function ReviewItem({ review }) {
               {url}
             </a>
           </h4>
-          <p className='text-xs md:text-base md:leading-5 dark:text-gray-100'>
+          <p className='text-xs md:text-base md:leading-5'>
             {desc}
           </p>
         </article>

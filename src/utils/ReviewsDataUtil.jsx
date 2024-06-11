@@ -32,7 +32,7 @@ export const reviewsDataArray = [
         id: reviewId++,
         title: 'Myecoapp.org',
         desc: 'Tom built a beautiful site for us and brings most of the ideas about improvements and modernisations.',
-        url: 'http://',
+        url: 'www.myecoapp.org',
         imageUrl: MyeaLogo
     }
 ]
