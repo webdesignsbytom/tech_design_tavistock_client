@@ -26,7 +26,7 @@ function PortfolioComponent() {
           if (imgContainers && imgContainers.length > 0 && displayType === 'web') {
             if (!activeContainer) {
               activeContainer = imgContainers[0];
-              setAutoScroll(activeContainer, 20); // Apply auto-scroll to the first container
+              // setAutoScroll(activeContainer, 20); // Apply auto-scroll to the first container
             }
           }
         }

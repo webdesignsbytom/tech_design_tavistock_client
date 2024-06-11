@@ -19,7 +19,7 @@ function FooterComponent() {
   ];
 
   return (
-    <footer className='grid h-fit w-full'>
+    <footer className='grid h-fit w-full mt-10'>
       <div className='grid bg-alt-colour h-fit text-white pt-4'>
         {/* Large */}
         <div className='grid grid-rows-rev h-full'>

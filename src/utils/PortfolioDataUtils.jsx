@@ -51,7 +51,13 @@ import WDBTNav from '../assets/images/projects/wdbt-nav-sm.png';
 // Images portfolio component
 import FullWeb1 from '../assets/images/projects/fullpage_2.png';
 import FullWeb2 from '../assets/images/projects/fullpage_1.png';
-import CatApp1 from '../assets/images/projects/cat_app_1.jpg';
+import FullWeb3 from '../assets/images/projects/fullpage_4.png';
+import App1 from '../assets/images/projects/cat_app_1.png';
+import App2 from '../assets/images/projects/app_6.png';
+import App3 from '../assets/images/projects/space_invaders_1.png';
+import Circuit1 from '../assets/images/projects/arduplot_1.png';
+import Circuit2 from '../assets/images/projects/circuit_1.png';
+import Circuit3 from '../assets/images/projects/arduplot_2.png';
 
 export const initialData = {
   id: 1,
@@ -104,44 +110,46 @@ export const portfolioWebImagesArray = [
   },
   {
     id: webImageId++,
-    image: FullWeb1,
+    image: FullWeb3,
     alt: 'Web and app display',
   },
 ];
+
 let appImageId = 0;
 export const portfolioAppImagesArray = [
   {
     id: appImageId++,
-    image: CatApp1,
-    alt: 'Web and app display',
+    image: App1,
+    alt: 'App display',
   },
   {
     id: appImageId++,
-    image: CatApp1,
-    alt: 'Web and app display',
+    image: App2,
+    alt: 'App display',
   },
   {
     id: appImageId++,
-    image: CatApp1,
-    alt: 'Web and app display',
+    image: App3,
+    alt: 'App display',
   },
 ];
+
 let circuitImageId = 0;
 export const portfolioCircuitImagesArray = [
   {
     id: circuitImageId++,
-    image: FullWeb1,
-    alt: 'Web and app display',
+    image: Circuit1,
+    alt: 'Circuit display',
   },
   {
     id: circuitImageId++,
-    image: FullWeb2,
-    alt: 'Web and app display',
+    image: Circuit2,
+    alt: 'Circuit display',
   },
   {
     id: circuitImageId++,
-    image: FullWeb1,
-    alt: 'Web and app display',
+    image: Circuit3,
+    alt: 'Circuit display',
   },
 ];
 
