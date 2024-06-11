@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { salesAppTypes } from '../../utils/SalesDataUtils';
 import { businessInfo } from '../../utils/CompanyDataUtil';
 
-function SelectAppOptions({ selectAppType, salesOptionSelected, thisRef }) {
+function SelectAppOptions({ selectAppType, thisRef }) {
   const [salesOptions] = useState(salesAppTypes);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -13,7 +13,7 @@ function SelectAppOptions({ selectAppType, salesOptionSelected, thisRef }) {
   };
 
   return (
-    <div className='grid w-full h-full overflow-hidden'>
+    <div className='grid w-full h-full overflow-hidden p-2 lg:px-4'>
       <div className='grid grid-rows-a1a'>
         <section className='grid pt-4 my-2 text-center'>
           <span className='text-primary block text-lg font-semibold'>

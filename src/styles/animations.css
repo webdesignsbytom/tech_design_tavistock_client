@@ -115,6 +115,18 @@
   }
 }
 
+.transition-max-height {
+  transition: max-height 0.5s ease-in-out;
+}
+
+.max-h-32 {
+  max-height: 8rem; /* adjust as necessary */
+}
+
+.max-h-screen {
+  max-height: 100vh; /* or a high enough value to show all content */
+}
+
 
 /* Scroll image */
 .image-container {
