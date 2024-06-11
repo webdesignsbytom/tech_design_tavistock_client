@@ -6,6 +6,7 @@ import Logo from '../../assets/images/logos/wdbt-white.svg';
 import { navbarLinksArray } from '../../utils/NavbarDataUtils';
 // Icons
 import { IoMdMenu } from 'react-icons/io';
+import useNavigateToPage from '../../hooks/useNavigateToPage';
 
 function Navbar() {
   const [navOptions] = useState(navbarLinksArray);
@@ -13,13 +14,9 @@ function Navbar() {
   const [animationClass, setAnimationClass] = useState('');
   const animationInProgress = useRef(false);
 
+  const navigateToPage = useNavigateToPage();
+
   const location = useLocation();
-
-  let navigate = useNavigate();
-
-  const navigateToPage = (page) => {
-    navigate(page, { replace: true });
-  };
 
   const openPhoneNav = () => {
     if (animationInProgress.current) {
@@ -46,13 +43,13 @@ function Navbar() {
   return (
     <div className='relative w-full h-[62px] md:overflow-hidden'>
       <nav className='grid grid-cols-reg relative z-50 w-full h-full bg-alt-colour'>
-        <section className='grid w-fit pl-4'>
-          <div className='grid items-center justify-center active:scale-95'>
+        <section className='grid w-fit pl-4 items-center'>
+          <div className='grid h-fit items-center justify-center'>
             <img
               src={Logo}
               onClick={() => navigateToPage('/')}
               alt='Tech design by Tom logo'
-              className='w-12 h-12 cursor-pointer'
+              className='w-12 h-12 cursor-pointer active:scale-95'
             />
           </div>
         </section>
