@@ -23,7 +23,7 @@ function PortfolioPageHeader() {
               Tom Brockington
             </h1>
           </div>
-          <div>
+          <div className='lg:w-1/2 mx-auto'>
             <div>
               <p>
                 I am the creator and manager of {businessInfo.companyName} where

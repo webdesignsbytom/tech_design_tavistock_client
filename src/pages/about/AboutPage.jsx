@@ -7,6 +7,7 @@ import PurchaseOptions from '../../components/sales/PurchaseOptions';
 import ReviewsComponent from '../../components/reviews/ReviewsComponent';
 import FooterComponent from '../../components/footer/FooterComponent';
 import ContactCta from '../../components/global/ContactCta';
+
 function AboutPage() {
   return (
     <div className='h-full w-full'>

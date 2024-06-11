@@ -1,37 +1,32 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// Components
 import ButtonComponent from '../global/ButtonComponent';
-// Data
 import {
   portfolioWebImagesArray,
   portfolioAppImagesArray,
   portfolioCircuitImagesArray,
 } from '../../utils/PortfolioDataUtils';
 import ComponentTitles from '../global/ComponentTitles';
+import { setAutoScroll } from '../utils/autoScroll'; // Import the auto-scroll function
 
-function Portfolio() {
+function PortfolioComponent() {
   const articleRefs = useRef([]);
-  const sectionRef = useRef(null); // Reference for the section
-  const [portfolioImages, setPortfolioImages] = useState(
-    portfolioWebImagesArray
-  );
-  const [displayType, setDisplayType] = useState('web'); // Track the display type
+  const sectionRef = useRef(null);
+  const [portfolioImages, setPortfolioImages] = useState(portfolioWebImagesArray);
+  const [displayType, setDisplayType] = useState('web');
   let navigate = useNavigate();
 
   useEffect(() => {
+    let activeContainer = null;
+
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const imgContainer = entry.target.querySelector('.image-container');
-          if (imgContainer) {
-            // Check if imgContainer is not null and it's the web portfolio's first view
-            if (displayType === 'web') {
-              imgContainer.classList.add('start-scrolling');
-              imgContainer.scrollTo({
-                top: imgContainer.scrollHeight,
-                behavior: 'smooth',
-              });
+          const imgContainers = entry.target.querySelectorAll('.image-container');
+          if (imgContainers && imgContainers.length > 0 && displayType === 'web') {
+            if (!activeContainer) {
+              activeContainer = imgContainers[0];
+              setAutoScroll(activeContainer, 20); // Apply auto-scroll to the first container
             }
           }
         }
@@ -53,6 +48,23 @@ function Portfolio() {
     };
   }, [displayType]);
 
+  useEffect(() => {
+    const handleUserInteraction = (event) => {
+      if (event.target.closest('.image-container')) {
+        const imgContainer = event.target.closest('.image-container');
+        setAutoScroll(imgContainer, 20); // Apply auto-scroll to the interacted container
+      }
+    };
+
+    window.addEventListener('wheel', handleUserInteraction);
+    window.addEventListener('mouseover', handleUserInteraction);
+
+    return () => {
+      window.removeEventListener('wheel', handleUserInteraction);
+      window.removeEventListener('mouseover', handleUserInteraction);
+    };
+  }, []);
+
   const navigateToPage = (page) => {
     navigate(page, { replace: true });
   };
@@ -60,7 +72,7 @@ function Portfolio() {
   const displayTypes = ['web', 'app', 'circuit'];
 
   const setDisplayContents = (type) => {
-    setDisplayType(type); // Set the display type
+    setDisplayType(type);
     if (type === displayTypes[0]) {
       setPortfolioImages(portfolioWebImagesArray);
     } else if (type === displayTypes[1]) {
@@ -72,7 +84,7 @@ function Portfolio() {
 
   const getStyle = () => {
     if (displayType === 'web') {
-      return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full scrollbar-hidden image-container overflow-x-hidden overflow-y-auto';
+      return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full scrollbar-hidden overflow-x-hidden overflow-y-auto image-container';
     } else if (displayType === 'app') {
       return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full overflow-hidden';
     } else if (displayType === 'circuit') {
@@ -200,4 +212,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default PortfolioComponent;

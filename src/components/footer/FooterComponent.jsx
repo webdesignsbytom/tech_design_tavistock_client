@@ -87,7 +87,7 @@ function FooterComponent() {
 
             <section className='mb-4'>
               <p className='text-center'>
-                Copyright webdesignsbytom{' '}
+                Copyright {businessInfo.companyName}{' '}
                 <span className='font-bold'>&copy;</span> {today.getFullYear()}
               </p>
             </section>
