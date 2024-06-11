@@ -1,208 +1,69 @@
 import React, { useState } from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
-// Data
-import { emptyContactFormData } from '../../utils/ContactFormDataUtils';
+import ContactForm from '../../components/contact/ContactForm';
+import ComponentTitles from '../../components/global/ComponentTitles';
+import { businessInfo } from '../../utils/CompanyDataUtil';
+// Icons
+import { MdOutlineEmail } from 'react-icons/md';
 
 function ContactPage() {
-  const [formData, setFormData] = useState(emptyContactFormData);
-
-  const [errors, setErrors] = useState({});
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const validateForm = () => {
-    const newErrors = {};
-    if (!formData.firstName) newErrors.firstName = 'First name is required';
-    if (!formData.lastName) newErrors.lastName = 'Last name is required';
-    if (!formData.email) newErrors.email = 'Email is required';
-    if (!formData.message) newErrors.message = 'Message is required';
-    return newErrors;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const validationErrors = validateForm();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-    } else {
-      // Handle form submission logic here
-      console.log('Form data submitted:', formData);
-      // Clear the form and errors
-      setFormData(emptyContactFormData);
-      setErrors({});
-    }
-  };
-
   return (
     <div className='min-h-screen w-full'>
       <div className='grid w-full h-full'>
         {/* Header container */}
-        <div className='grid grid-rows-reg w-full overflow-y-scroll scrollbar-hidden bg-main-bg'>
+        <div className='grid grid-rows-reg lg:h-screen w-full overflow-y-scroll scrollbar-hidden lg:overflow-y-hidden bg-main-bg'>
           {/* Navigation */}
           <Navbar />
-          <main className='flex flex-col items-center justify-center p-4'>
-            <h1 className='text-4xl font-bold mb-8'>Contact Us</h1>
-            <form
-              onSubmit={handleSubmit}
-              className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-lg'
-            >
-              <div className='mb-4'>
-                <label
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='firstName'
-                >
-                  First Name <span className='text-red-500'>*</span>
-                </label>
-                <input
-                  type='text'
-                  id='firstName'
-                  name='firstName'
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                    errors.firstName ? 'border-red-500' : ''
-                  }`}
-                  required
-                />
-                {errors.firstName && (
-                  <p className='text-red-500 text-xs italic'>
-                    {errors.firstName}
-                  </p>
-                )}
+          <main className='grid justify-center p-4 lg:overflow-hidden lg:grid-cols-2'>
+
+            {/* Text */}
+            <section className='grid max-w-lg items-center text-center pt-8 dark:text-gray-400 lg:h-fit lg:my-auto lg:justify-center'>
+              <div>
+                <span className='text-primary !text-start mb-2 block text-xl !font-semibold poppins_title lg:pl-4'>
+                  Lets chat
+                </span>
+                <h2 className='mb-8 text-3xl font-bold sm:text-5xl text-text-alt poppins_title'>
+                  Tell me about your <br className='hidden lg:block' /> project and goals.
+                </h2>
+                <h3 className='poppins_text text-sm text-text-main'>
+                  Lets see what we can create!
+                </h3>
               </div>
-              <div className='mb-4'>
-                <label
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='lastName'
-                >
-                  Last Name <span className='text-red-500'>*</span>
-                </label>
-                <input
-                  type='text'
-                  id='lastName'
-                  name='lastName'
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                    errors.lastName ? 'border-red-500' : ''
-                  }`}
-                  required
-                />
-                {errors.lastName && (
-                  <p className='text-red-500 text-xs italic'>
-                    {errors.lastName}
-                  </p>
-                )}
+
+              <div className='px-4 mt-4 max-w-lg lg:max-w-2xl mx-auto'>
+                <article className='grid grid-cols-reg gap-2 lg:gap-4 h-full w-full bg-white shadow-md rounded py-1 px-2 lg:px-4 lg:py-4'>
+                  <section className='grid items-center justify-center'>
+                    <div className='text-text-main p-2 bg-gray-300 rounded text-center '>
+                      <MdOutlineEmail size={25} />
+                    </div>
+                  </section>
+                  <section className='grid justify-start poppins_text w-full grid-rows-2 !text-start'>
+                    <div className='text-text-alt grid font-semibold w-full'>
+                      Mail me at
+                    </div>
+                    <div>
+                      <a
+                        className='text-sm'
+                        href={`mailto:${businessInfo.emailAddress}`}
+                      >
+                        {businessInfo.emailAddress}
+                      </a>
+                    </div>
+                  </section>
+                </article>
               </div>
-              <div className='mb-4'>
-                <label
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='email'
-                >
-                  Email <span className='text-red-500'>*</span>
-                </label>
-                <input
-                  type='email'
-                  id='email'
-                  name='email'
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                    errors.email ? 'border-red-500' : ''
-                  }`}
-                  required
-                />
-                {errors.email && (
-                  <p className='text-red-500 text-xs italic'>{errors.email}</p>
-                )}
+
+              <div className='my-6 lg:hidden'>
+                <span className='poppins_text text-text-main text-xl !font-semibold'>
+                  ~ OR ~
+                </span>
               </div>
-              <div className='mb-4'>
-                <label
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='phoneNumber'
-                >
-                  Phone Number (optional)
-                </label>
-                <input
-                  type='text'
-                  id='phoneNumber'
-                  name='phoneNumber'
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                />
-              </div>
-              <div className='mb-4'>
-                <label
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='location'
-                >
-                  Location (optional)
-                </label>
-                <input
-                  type='text'
-                  id='location'
-                  name='location'
-                  value={formData.location}
-                  onChange={handleChange}
-                  className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                />
-              </div>
-              <div className='mb-4'>
-                <label
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='businessName'
-                >
-                  Business Name (optional)
-                </label>
-                <input
-                  type='text'
-                  id='businessName'
-                  name='businessName'
-                  value={formData.businessName}
-                  onChange={handleChange}
-                  className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-                />
-              </div>
-              <div className='mb-6'>
-                <label
-                  className='block text-gray-700 text-sm font-bold mb-2'
-                  htmlFor='message'
-                >
-                  Message <span className='text-red-500'>*</span>
-                </label>
-                <textarea
-                  id='message'
-                  name='message'
-                  value={formData.message}
-                  onChange={handleChange}
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
-                    errors.message ? 'border-red-500' : ''
-                  }`}
-                  required
-                />
-                {errors.message && (
-                  <p className='text-red-500 text-xs italic'>
-                    {errors.message}
-                  </p>
-                )}
-              </div>
-              <div className='flex items-center justify-between'>
-                <button
-                  type='submit'
-                  className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-                >
-                  Send
-                </button>
-              </div>
-            </form>
+            </section>
+
+            <section className='lg:overflow-hidden'>
+              <ContactForm />
+            </section>
           </main>
         </div>
       </div>

@@ -8,7 +8,7 @@ function ServicesComponent() {
 
   return (
     <section id='experience-section' className='grid mb-10 mt-10'>
-      <section className='text-center py-8 dark:text-gray-400'>
+      <section className='text-center py-8'>
         <ComponentTitles
           title={'Services and Assistance'}
           subtitle={'What Is Offered'}
