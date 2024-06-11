@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { salesAppTypes } from '../../utils/SalesDataUtils';
 import { businessInfo } from '../../utils/CompanyDataUtil';
 
-function SelectAppOptions({ selectAppType }) {
+function SelectAppOptions({ selectAppType, salesOptionSelected, thisRef }) {
   const [salesOptions] = useState(salesAppTypes);
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -48,22 +48,22 @@ function SelectAppOptions({ selectAppType }) {
           </section>
         </div>
 
-        <section className='grid my-2 w-full'>
-          <div className='grid justify-center pb-4'>
-            <ul className='flex gap-6'>
-              {salesOptions.map((type, index) => (
-                <li key={index}>
-                  <span
-                    onClick={() => handleClick(type)}
-                    className='poppins_text text-text-main hover:brightness-75 cursor-pointer'
-                  >
-                    {type.label}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+          <section ref={thisRef} className='grid my-2 w-full'>
+            <div className='grid justify-center pb-4'>
+              <ul className='flex gap-6'>
+                {salesOptions.map((type, index) => (
+                  <li key={index}>
+                    <span
+                      onClick={() => handleClick(type)}
+                      className='poppins_text text-text-main hover:brightness-75 cursor-pointer'
+                    >
+                      {type.label}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
       </div>
     </div>
   );

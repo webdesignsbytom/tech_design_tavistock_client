@@ -90,20 +90,20 @@
 
 
 .fade-out {
-  animation: fadeOut 5s forwards;
+  animation: fadeOut 3s forwards;
 }
 
 @keyframes fadeOut {
   to {
     opacity: 0;
-    scale: 0.1;
+    scale: 0.3;
     display: none;
     visibility: hidden;
   }
 }
 
 .move-center {
-  animation: moveCenter 5s forwards;
+  animation: moveCenter 3s forwards;
 }
 
 @keyframes moveCenter {
