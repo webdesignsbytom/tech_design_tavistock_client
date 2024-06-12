@@ -84,11 +84,11 @@ function PortfolioComponent() {
 
   const getStyle = () => {
     if (displayType === 'web') {
-      return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full scrollbar-hidden overflow-x-hidden overflow-y-auto image-container';
+      return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]  h-full w-full scrollbar-hidden overflow-x-hidden overflow-y-auto image-container';
     } else if (displayType === 'app') {
-      return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full overflow-hidden';
+      return 'rounded-2xl shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full overflow-hidden';
     } else if (displayType === 'circuit') {
-      return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full overflow-hidden';
+      return 'rounded-2xl shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] outline outline-2 outline-gray-300 h-full w-full overflow-hidden';
     } else {
       return '';
     }
@@ -98,9 +98,9 @@ function PortfolioComponent() {
     if (displayType === 'web') {
       return 'h-auto w-full';
     } else if (displayType === 'app') {
-      return 'h-full w-full object:contain sm:object-cover';
+      return 'h-full w-full object-cover';
     } else if (displayType === 'circuit') {
-      return 'h-auto w-full';
+      return 'h-full w-full object-cover';
     } else {
       return '';
     }
@@ -108,11 +108,11 @@ function PortfolioComponent() {
 
   const getContainerStyle = () => {
     if (displayType === 'web') {
-      return 'grid overflow-hidden h-[400px] lg:h-[450px] px-2 py-6 lg:px-6 opening-animation';
+      return 'grid overflow-hidden h-[400px] lg:h-[500px] 2xl:lg:h-[530px] px-2 py-6 lg:px-6 opening-animation';
     } else if (displayType === 'app') {
-      return 'grid overflow-hidden py-6 h-[325px] lg:h-[400px] max-w-[190px] lg:max-w-[300px] mx-auto lg:px-6 opening-animation';
+      return 'grid overflow-hidden py-6 h-[325px] h-full w-full max-w-[190px] lg:max-w-[300px] mx-auto lg:px-6 opening-animation';
     } else if (displayType === 'circuit') {
-      return 'grid overflow-hidden py-6 h-[400px] px-2 lg:px-6 opening-animation';
+      return 'grid overflow-hidden py-6 h-[400px] lg:h-[500px] 2xl:lg:h-[530px] px-2 lg:px-6 opening-animation';
     } else {
       return '';
     }

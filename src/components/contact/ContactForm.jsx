@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // Data
 import { emptyContactFormData } from '../../utils/ContactFormDataUtils';
+import ButtonComponent from '../global/ButtonComponent';
 
 function ContactForm() {
   const [formData, setFormData] = useState(emptyContactFormData);
@@ -142,11 +143,21 @@ function ContactForm() {
               onChange={handleChange}
               className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             >
-              <option value='web' className="bg-white">Web</option>
-              <option value='app' className="bg-white">App</option>
-              <option value='software' className="bg-white">Software</option>
-              <option value='circuits' className="bg-white">Circuits</option>
-              <option value='other' className="bg-white">Other</option>
+              <option value='web' className='bg-white'>
+                Web
+              </option>
+              <option value='app' className='bg-white'>
+                App
+              </option>
+              <option value='software' className='bg-white'>
+                Software
+              </option>
+              <option value='circuits' className='bg-white'>
+                Circuits
+              </option>
+              <option value='other' className='bg-white'>
+                Other
+              </option>
             </select>
           </div>
         </section>
@@ -205,13 +216,13 @@ function ContactForm() {
             <p className='text-red-500 text-xs italic'>{errors.message}</p>
           )}
         </div>
-        <div className='flex items-center justify-between'>
-          <button
-            type='submit'
-            className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-          >
-            Send
-          </button>
+        <div className='flex items-center justify-end'>
+          <ButtonComponent
+            label='Submit'
+            type='primary'
+            btnType='submit'
+            btnValue='Submit'
+          />
         </div>
       </form>
     </div>

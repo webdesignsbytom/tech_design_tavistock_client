@@ -47,7 +47,7 @@ function SalesPage() {
           />
         </div>
           <main>
-            <div ref={sectionRef} className='hidden-container'>
+            <div ref={sectionRef} className='hidden-container mb-10'>
               <SalesOptionCard type={salesOptionSelected} />
             </div>
           </main>
