@@ -31,6 +31,7 @@ import { AiFillLayout, AiOutlineTwitter } from 'react-icons/ai';
 import { HiBookOpen } from 'react-icons/hi';
 import { TbMathFunction } from 'react-icons/tb';
 import { BsFillChatDotsFill, BsPeopleFill } from 'react-icons/bs';
+import { BsFillPatchCheckFill } from 'react-icons/bs';
 // Images
 import TavyEpoxy from '../assets/images/projects/tavyepoxyMd.png';
 import BioClicker from '../assets/images/projects/bioclickerMd.png';
@@ -76,24 +77,28 @@ export const initialData = {
 
 // Skill Data
 export const frontendSkills = [
-  { name: 'HTML5', level: 'Experienced' },
-  { name: 'CSS3', level: 'Experienced' },
-  { name: 'Javascript', level: 'Experienced' },
-  { name: 'React', level: 'Experienced' },
-  { name: 'Tailwind CSS', level: 'Experienced' },
-  { name: 'Typescript', level: 'Beginner' },
-  { name: 'Wordpress/wix', level: 'Experienced' },
-  { name: 'C#', level: 'Beginner' },
+  { name: 'Go', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'CSS3', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'JavaScript', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'TypeScript', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'React JS', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'Next JS', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'Python', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'Wordpress/Wix', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'C#', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'C++', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
 ];
 
 export const backendSkills = [
-  { name: 'Express', level: 'Experienced' },
-  { name: 'Node.js', level: 'Experienced' },
-  { name: 'MySQL', level: 'Experienced' },
-  { name: 'PostgreSQL', level: 'Experienced' },
-  { name: 'Prisma', level: 'Experienced' },
-  { name: 'MongoDB', level: 'Experienced' },
-  { name: 'PHP', level: 'Beginner' },
+  { name: 'Express', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'Node.js', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'MySQL', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'PostgreSQL', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'Prisma', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'MongoDB', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'Linux', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: 'AWS', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  { name: `VM's`, icon: <BsFillPatchCheckFill />, level: 'Experienced' },
 ];
 
 let webImageId = 0;

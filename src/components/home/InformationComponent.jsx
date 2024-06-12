@@ -9,13 +9,15 @@ import ButtonComponent from '../global/ButtonComponent';
 // Images
 import PcImage from '../../assets/images/sales/heros-expanding.png';
 import ComponentTitles from '../global/ComponentTitles';
+// Hooks
+import useNavigateToPage from '../../hooks/useNavigateToPage';
 
 function InformationComponent() {
   const sectionRef = useRef(null);
 
   const [infoBoxDisplay] = useState(infoBoxDataArray);
 
-  let navigate = useNavigate();
+  const navigateToPage = useNavigateToPage();
 
   useEffect(() => {
     const sectionElement = sectionRef.current;
@@ -61,10 +63,6 @@ function InformationComponent() {
       };
     }
   }, [infoBoxDisplay]);
-
-  const navigateToPage = (page) => {
-    navigate(page, { replace: true });
-  };
 
   return (
     <section

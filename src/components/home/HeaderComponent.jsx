@@ -1,21 +1,59 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useRef, useState } from 'react';
 // Data
 import { businessInfo } from '../../utils/CompanyDataUtil';
 import { headerInfoArray } from '../../utils/HomePageDataUtils';
 // Icons
 import { FiCheckCircle } from 'react-icons/fi';
-import ButtonComponent from '../global/ButtonComponent';
 // Images
 import CollageImage from '../../assets/images/portfolio/collage1.png';
+// Hooks
+import useNavigateToPage from '../../hooks/useNavigateToPage';
+// Components
+import ButtonComponent from '../global/ButtonComponent';
 
-function Header() {
+function HeaderComponent() {
+  const sectionRef = useRef(null);
+
   const [headerDataArray] = useState(headerInfoArray);
-  let navigate = useNavigate();
 
-  const navigateToPage = (page) => {
-    navigate(page, { replace: true });
-  };
+  const navigateToPage = useNavigateToPage();
+
+  useEffect(() => {
+    const sectionElement = sectionRef.current;
+    console.log('sectionElement', sectionElement);
+    const handleMouseOver = () => {
+      sectionElement.classList.remove('hidden-container');
+      sectionElement.classList.add('animate-fade-in-move-up');
+    };
+
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          handleMouseOver();
+          observer.disconnect();
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1,
+    });
+
+    if (sectionElement) {
+      observer.observe(sectionElement);
+      sectionElement.addEventListener('mouseover', handleMouseOver);
+      sectionElement.addEventListener('touchstart', handleMouseOver);
+
+      // Cleanup function to remove the event listener
+      return () => {
+        sectionElement.removeEventListener('mouseover', handleMouseOver);
+        sectionElement.removeEventListener('touchstart', handleMouseOver);
+        observer.disconnect();
+      };
+    }
+  }, []);
 
   return (
     <div className='grid h-full min-h-screen mt-6 lg:mt-0 lg:overflow-hidden'>
@@ -64,7 +102,7 @@ function Header() {
             </section>
 
             {/* Right */}
-            <section className='grid h-full lg:items-center animate-fade-in-move-up'>
+            <section ref={sectionRef} className='grid h-full lg:items-center hidden-container'>
               <div className='lg:h-fit'>
                 <div className='hidden lg:grid overflow-hidden '>
                   <div className='grid mx-auto w-[400px] py-10 -mt-4 overflow-hidden'>
@@ -119,4 +157,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderComponent;
