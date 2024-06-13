@@ -17,59 +17,59 @@ function PortfolioComponent() {
   );
   const [displayType, setDisplayType] = useState('web');
 
-  useEffect(() => {
-    let activeContainer = null;
+  // useEffect(() => {
+  //   let activeContainer = null;
 
-    const handleIntersection = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const imgContainers =
-            entry.target.querySelectorAll('.image-container');
-          if (
-            imgContainers &&
-            imgContainers.length > 0 &&
-            displayType === 'web'
-          ) {
-            if (!activeContainer) {
-              activeContainer = imgContainers[0];
-              // setAutoScroll(activeContainer, 20); // Apply auto-scroll to the first container
-            }
-          }
-        }
-      });
-    };
+  //   const handleIntersection = (entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         const imgContainers =
+  //           entry.target.querySelectorAll('.image-container');
+  //         if (
+  //           imgContainers &&
+  //           imgContainers.length > 0 &&
+  //           displayType === 'web'
+  //         ) {
+  //           if (!activeContainer) {
+  //             activeContainer = imgContainers[0];
+  //             // setAutoScroll(activeContainer, 20); // Apply auto-scroll to the first container
+  //           }
+  //         }
+  //       }
+  //     });
+  //   };
 
-    const observer = new IntersectionObserver(handleIntersection, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5,
-    });
+  //   const observer = new IntersectionObserver(handleIntersection, {
+  //     root: null,
+  //     rootMargin: '0px',
+  //     threshold: 0.5,
+  //   });
 
-    articleRefs.current.forEach((article) => {
-      if (article) observer.observe(article);
-    });
+  //   articleRefs.current.forEach((article) => {
+  //     if (article) observer.observe(article);
+  //   });
 
-    return () => {
-      observer.disconnect();
-    };
-  }, [displayType]);
+  //   return () => {
+  //     observer.disconnect();
+  //   };
+  // }, [displayType]);
 
-  useEffect(() => {
-    const handleUserInteraction = (event) => {
-      if (event.target.closest('.image-container')) {
-        const imgContainer = event.target.closest('.image-container');
-        setAutoScroll(imgContainer, 20); // Apply auto-scroll to the interacted container
-      }
-    };
+  // useEffect(() => {
+  //   const handleUserInteraction = (event) => {
+  //     if (event.target.closest('.image-container')) {
+  //       const imgContainer = event.target.closest('.image-container');
+  //       setAutoScroll(imgContainer, 20); // Apply auto-scroll to the interacted container
+  //     }
+  //   };
 
-    window.addEventListener('wheel', handleUserInteraction);
-    window.addEventListener('mouseover', handleUserInteraction);
+  //   window.addEventListener('wheel', handleUserInteraction);
+  //   window.addEventListener('mouseover', handleUserInteraction);
 
-    return () => {
-      window.removeEventListener('wheel', handleUserInteraction);
-      window.removeEventListener('mouseover', handleUserInteraction);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('wheel', handleUserInteraction);
+  //     window.removeEventListener('mouseover', handleUserInteraction);
+  //   };
+  // }, []);
 
   const displayTypes = ['web', 'app', 'circuit'];
 
@@ -88,7 +88,7 @@ function PortfolioComponent() {
     if (displayType === 'web') {
       return 'rounded-bl-lg rounded-br-lg shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]  h-full w-full scrollbar-hidden overflow-x-hidden overflow-y-auto image-container';
     } else if (displayType === 'app') {
-      return 'rounded-2xl shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] h-full w-full overflow-hidden';
+      return 'rounded-2xl shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] bg-white h-full w-full overflow-hidden';
     } else if (displayType === 'circuit') {
       return 'rounded-2xl shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] outline outline-2 outline-gray-300 h-full w-full overflow-hidden';
     } else {

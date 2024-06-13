@@ -3,11 +3,15 @@ import React, { useEffect, useState } from 'react';
 import ButtonComponent from '../global/ButtonComponent';
 // Data
 import { salesAppTypes } from '../../utils/SalesDataUtils';
+// Hooks
+import useNavigateToPage from '../../hooks/useNavigateToPage';
 
 function SalesOptionCard({ type, changeDisplayedProduct }) {
   const [showAll, setShowAll] = useState(false);
   const [displayedServices, setDisplayedServices] = useState([]);
   const [salesOptions] = useState(salesAppTypes);
+
+  const navigateToPage = useNavigateToPage();
 
   useEffect(() => {
     if (type && type.services) {
@@ -17,22 +21,6 @@ function SalesOptionCard({ type, changeDisplayedProduct }) {
 
   return (
     <div className='grid relative lg:w-3/4 mx-auto px-4 h-full'>
-      <section className='grid sm:hidden items-center pr-4 w-full'>
-        <div className='grid justify-center'>
-          <ul className='flex gap-6'>
-            {salesOptions.map((type, index) => (
-              <li key={index} title={`View ${type.label} information`}>
-                <span
-                  onClick={() => changeDisplayedProduct(type)}
-                  className='poppins_text text-text-main hover:brightness-75 cursor-pointer'
-                >
-                  {type.label}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
       <section className='grid lg:grid-rows-reg gap-4 px-2 lg:px-4 py-4 my-auto lg:h-[85%] overflow-hidden bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg'>
         <div className='grid bg-alt-colour h-fit shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg px-2 py-2'>
           <article className='grid grid-flow-col items-center h-fit overflow-hidden'>
@@ -106,12 +94,21 @@ function SalesOptionCard({ type, changeDisplayedProduct }) {
                 </ul>
               </div>
 
-              <div className='grid mx-auto w-full justify-items-center mt-4 mb-2'>
-                <ButtonComponent
-                  label={showAll ? 'Show Less' : 'Show More'}
-                  onClick={() => setShowAll(!showAll)}
-                  type={showAll ? 'secondary' : 'primary'}
-                />
+              <div className='grid mx-auto w-full h-fit gap-2 mt-4 mb-2'>
+                <div className='grid w-full justify-items-center'>
+                  <ButtonComponent
+                    label={showAll ? 'Show Less' : 'Show More'}
+                    onClick={() => setShowAll(!showAll)}
+                    type={showAll ? 'secondary' : 'primary'}
+                  />
+                </div>
+                <div className='grid w-full justify-items-center'>
+                  <ButtonComponent
+                    label='Contact Now'
+                    onClick={() => navigateToPage('/contact')}
+                    type='secondary'
+                  />
+                </div>
               </div>
             </div>
           </article>

@@ -9,6 +9,7 @@ import PortfolioComponent from '../../components/home/PortfolioComponent';
 import FooterComponent from '../../components/footer/FooterComponent';
 import ContactCta from '../../components/global/ContactCta';
 import PortfolioCta from '../../components/global/PortfolioCta';
+import BackToTopButton from '../../components/global/BackToTopButton';
 
 function HomePage() {
   return (
@@ -50,7 +51,10 @@ function HomePage() {
           {/* Forth section of main */}
           <ReviewsComponent />
         </main>
-
+        
+        <div>
+          <BackToTopButton />
+        </div>
         {/* Footer */}
         <FooterComponent />
       </div>

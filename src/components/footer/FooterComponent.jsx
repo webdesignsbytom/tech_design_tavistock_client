@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 // Components
 import SocialBar from '../social/SocialBar';
 // Data
@@ -7,11 +6,14 @@ import { businessInfo } from '../../utils/CompanyDataUtil';
 import { navbarLinksArray } from '../../utils/NavbarDataUtils';
 // Images
 import Logo from '../../assets/images/logos/wdbt-white.svg';
+// Hooks
+import useNavigateToPage from '../../hooks/useNavigateToPage';
 
 function FooterComponent() {
   const today = new Date();
+  const navigateToPage = useNavigateToPage();
 
-  const [navLinks] = useState(navbarLinksArray)
+  const [navLinks] = useState(navbarLinksArray);
 
   const contactDetails = [
     { type: 'Phone', value: businessInfo.phoneNumber },
@@ -30,7 +32,9 @@ function FooterComponent() {
                 <ul className='grid w-full justify-between px-4 mt-4 mb-6'>
                   {navLinks.map((link, index) => (
                     <li key={index}>
-                      <Link to={link.url}>{link.label}</Link>
+                      <button onClick={() => navigateToPage(index.link)}>
+                        {link.label}
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -40,7 +44,8 @@ function FooterComponent() {
             <section className='flex w-full px-2 justify-center'>
               <img
                 src={Logo}
-                className='w-20'
+                className='w-20 cursor-pointer'
+                onClick={() => navigateToPage('/')}
                 alt='footer logo for web design by tom'
               />
             </section>
@@ -70,7 +75,9 @@ function FooterComponent() {
                 <ul className='flex w-full justify-between px-4 mt-6 mb-6'>
                   {navLinks.map((link, index) => (
                     <li key={index}>
-                      <Link to={link.url}>{link.label}</Link>
+                      <button onClick={() => navigateToPage(index.link)}>
+                        {link.label}
+                      </button>
                     </li>
                   ))}
                 </ul>

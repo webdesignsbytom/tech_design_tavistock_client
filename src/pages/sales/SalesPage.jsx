@@ -25,7 +25,7 @@ function SalesPage() {
     const contactElement = contactRef.current;
 
     sectionElement.classList.remove('hidden-container')
-    textElement.classList.add('hidden-container')
+    textElement.classList.add('lg:hidden-container')
     contactElement.classList.remove('hidden-container')
     sectionRef.current.scrollIntoView({ behavior: 'smooth' });
   };
@@ -50,11 +50,11 @@ function SalesPage() {
           />
         </div>
           <main>
-            <div ref={sectionRef} className='hidden-container mb-10 h-screen'>
+            <div ref={sectionRef} className='hidden-container mb-8 lg:mb-2 lg:h-screen'>
               <SalesOptionCard type={salesOptionSelected} changeDisplayedProduct={changeDisplayedProduct} />
             </div>
 
-            <div ref={contactRef} className='my-8 hidden-container'>
+            <div ref={contactRef} className='my-6 hidden-container'>
               <ContactCta />
             </div>
           </main>
