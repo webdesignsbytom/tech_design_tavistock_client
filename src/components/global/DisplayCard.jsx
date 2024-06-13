@@ -1,8 +1,12 @@
 import React from 'react';
 // Icons
 import { BsCheck2Circle } from 'react-icons/bs';
+// Hooks
+import useNavigateToPage from '../../hooks/useNavigateToPage';
 
 function DisplayCard({ data, buttonId, buttonColor }) {
+  const navigateToPage = useNavigateToPage();
+
   return (
     <div>
       <div className='p-8 bg-gray-900 rounded'>
@@ -23,6 +27,7 @@ function DisplayCard({ data, buttonId, buttonColor }) {
         </ul>
         <button
           id={buttonId}
+          onClick={() => navigateToPage('/contact')}
           className={`inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md ${buttonColor} focus:shadow-outline focus:outline-none`}
         >
           Get Now

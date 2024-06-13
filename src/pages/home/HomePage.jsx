@@ -8,6 +8,7 @@ import HeaderComponent from '../../components/home/HeaderComponent';
 import PortfolioComponent from '../../components/home/PortfolioComponent';
 import FooterComponent from '../../components/footer/FooterComponent';
 import ContactCta from '../../components/global/ContactCta';
+import PortfolioCta from '../../components/global/PortfolioCta';
 
 function HomePage() {
   return (
@@ -36,8 +37,13 @@ function HomePage() {
           <ServicesComponent />
 
           {/* Contact CTA */}
+          <div className='my-4'>
           <ContactCta />
+          </div>
 
+          <div className='my-4'>
+            <PortfolioCta />
+          </div>
           {/* Colour block */}
           <div className='w-full h-16 bg-main-bg overflow-hidden'></div>
 
