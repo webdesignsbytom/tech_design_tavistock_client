@@ -1,36 +1,39 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
-import ServicesComponent from '../../components/portfolio/ServicesComponent';
-import PurchaseOptions from '../../components/sales/PurchaseOptions';
 import SelectAppOptions from '../../components/sales/SelectAppOptions';
-// Data
-import { salesAppTypes } from '../../utils/SalesDataUtils';
 import SalesOptionCard from '../../components/sales/SalesOptionCard';
+import ContactCta from '../../components/global/ContactCta';
 
 function SalesPage() {
   const sectionRef = useRef(null);
+  const contactRef = useRef(null);
   const textRef = useRef(null);
   const [salesOptionSelected, setSalesOptionSelected] = useState({});
 
   const selectAppType = (appType) => {
     setSalesOptionSelected(appType);
 
-    
     setTimeout(() => {
       animateChange();
-    }, 3000);
+    }, 2000);
   };
 
   const animateChange = () => {
     const sectionElement = sectionRef.current;
     const textElement = textRef.current;
+    const contactElement = contactRef.current;
 
     sectionElement.classList.remove('hidden-container')
     textElement.classList.add('hidden-container')
+    contactElement.classList.remove('hidden-container')
     sectionRef.current.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const changeDisplayedProduct = (option) => {
+    setSalesOptionSelected(option)
+  }
+  
   return (
     <div className='grid'>
       <div className='grid bg-shape-bg-1 bg-no-repeat bg-cover'>
@@ -47,8 +50,12 @@ function SalesPage() {
           />
         </div>
           <main>
-            <div ref={sectionRef} className='hidden-container mb-10'>
-              <SalesOptionCard type={salesOptionSelected} />
+            <div ref={sectionRef} className='hidden-container mb-10 h-screen'>
+              <SalesOptionCard type={salesOptionSelected} changeDisplayedProduct={changeDisplayedProduct} />
+            </div>
+
+            <div ref={contactRef} className='my-8 hidden-container'>
+              <ContactCta />
             </div>
           </main>
 

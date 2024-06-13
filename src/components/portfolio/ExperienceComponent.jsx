@@ -47,10 +47,10 @@ function ExperienceComponent() {
 
 // SkillItem Component
 const SkillItem = ({ skill, icon, level }) => (
-  <article className='flex justify-center py-1 px-2'>
-    <div className='grid justify-center lg:grid-cols-item w-fit'>
-      <section className='flex items-center justify-center my-2 lg:pr-4'>
-        <div className='text-text-alt'>{icon}</div>
+  <article className='flex justify-center'>
+    <div className='grid justify-center'>
+      <section className='grid items-center justify-center'>
+        <div className='text-white items-center justify-center'>{icon}</div>
       </section>
       <section className='h-min'>
         <h4 className='font-semibold'>{skill}</h4>
@@ -62,7 +62,7 @@ const SkillItem = ({ skill, icon, level }) => (
 
 // SkillCard Component
 const SkillCard = ({ title, skills, bg }) => (
-  <section className='bg-alt-colour rounded-xl text-center text-white p-4 w-full h-full'>
+  <section className='bg-alt-colour rounded-xl md:w-2/3 md:mx-auto lg:w-full lg:mx-0 text-center text-white p-4 w-full h-full'>
     <div className={`px-4 py-8 outline-4 outline ${bg} rounded-lg h-full`}>
       <div className='mb-6 text-2xl font-semibold'>
         <h3>{title}</h3>

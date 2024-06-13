@@ -1,11 +1,12 @@
 import React, { useState, useRef } from 'react';
-import { useLocation, Link, useNavigate } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 // Images
 import Logo from '../../assets/images/logos/wdbt-white.svg';
 // Components
 import { navbarLinksArray } from '../../utils/NavbarDataUtils';
 // Icons
 import { IoMdMenu } from 'react-icons/io';
+// Hooks
 import useNavigateToPage from '../../hooks/useNavigateToPage';
 
 function Navbar() {

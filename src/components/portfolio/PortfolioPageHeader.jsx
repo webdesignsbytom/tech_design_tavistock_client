@@ -1,16 +1,18 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 // Components
 import SocialBar from '../social/SocialBar';
 import ButtonComponent from '../global/ButtonComponent';
 // Data
 import { businessInfo } from '../../utils/CompanyDataUtil';
+import useNavigateToPage from '../../hooks/useNavigateToPage';
 
-function PortfolioPageHeader() {
-  let navigate = useNavigate();
+function PortfolioPageHeader({ portfolioDisplayRef }) {
+  const navigateToPage = useNavigateToPage();
 
-  const navigateToPage = (page) => {
-    navigate(page, { replace: true });
+  const onClickSeeMore = () => {
+    const ref = portfolioDisplayRef.current;
+    console.log('ref', ref);
+    ref.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -20,7 +22,7 @@ function PortfolioPageHeader() {
           <div className='my-6'>
             <h4 className='font-semibold'>Hello I am</h4>
             <h1 className='text-3xl lg:text-5xl font-semibold text-text-alt poppins_title'>
-              Tom Brockington
+              {businessInfo.owner}
             </h1>
           </div>
           <div className='lg:w-1/2 mx-auto'>
@@ -62,7 +64,7 @@ function PortfolioPageHeader() {
           <div className=''>
             <ButtonComponent
               label='See More'
-              onClick={() => navigateToPage('/contact')}
+              onClick={onClickSeeMore}
               type='secondary'
             />
           </div>

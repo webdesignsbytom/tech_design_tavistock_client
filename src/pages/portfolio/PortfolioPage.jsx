@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
 import PortfolioPageHeader from '../../components/portfolio/PortfolioPageHeader';
@@ -6,18 +6,19 @@ import PortfolioDisplay from '../../components/portfolio/PortfolioDisplay';
 import ExperienceComponent from '../../components/portfolio/ExperienceComponent';
 import ServicesComponent from '../../components/portfolio/ServicesComponent';
 import FooterComponent from '../../components/footer/FooterComponent';
-import PortfolioComponent from '../../components/home/PortfolioComponent'
+import PortfolioComponent from '../../components/home/PortfolioComponent';
 
 function ProjectsPage() {
+  const portfolioDisplayRef = useRef();
 
   return (
     <div className='h-full w-full overflow-hidden bg-main-bg'>
       <div className='grid grid-rows-reg min-h-screen'>
         <Navbar />
-        <PortfolioPageHeader />
+        <PortfolioPageHeader portfolioDisplayRef={portfolioDisplayRef} />
       </div>
       <main>
-        <PortfolioDisplay />
+        <PortfolioDisplay portfolioDisplayRef={portfolioDisplayRef} />
         <PortfolioComponent />
         <ExperienceComponent />
         <ServicesComponent />

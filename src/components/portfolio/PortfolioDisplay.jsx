@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 // Utils
 import { portfolioDataArray } from '../../utils/PortfolioDataUtils';
 
-function PortfolioDisplay() {
+function PortfolioDisplay({ portfolioDisplayRef }) {
   const [portfolioData] = useState(portfolioDataArray)
 
   const navigate = useNavigate();
@@ -17,6 +17,7 @@ function PortfolioDisplay() {
   return (
     <section
       id='portfolio-display'
+      ref={portfolioDisplayRef}
       className='grid lg:grid-rows-reg py-10 dark:text-gray-400'
     >
       <section className='text-center mt-8 mb-4'>

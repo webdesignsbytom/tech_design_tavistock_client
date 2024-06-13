@@ -1,14 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 // Components
 import ButtonComponent from './ButtonComponent';
+// Hooks
+import useNavigateToPage from '../../hooks/useNavigateToPage';
 
 function ContactCta() {
-  let navigate = useNavigate();
+  const navigateToPage = useNavigateToPage();
 
-  const navigateToPage = (page) => {
-    navigate(page, { replace: true });
-  };
 
   return (
     <section className='grid w-full mx-auto px-6'>

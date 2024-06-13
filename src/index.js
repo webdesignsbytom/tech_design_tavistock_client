@@ -8,12 +8,10 @@ import './styles/index.css';
 import './styles/backgrounds.css';
 import './styles/animations.css';
 import './styles/fonts.css';
-import ScrollToTop from './components/utils/ScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <ScrollToTop />
     <App />
   </BrowserRouter>
 );
