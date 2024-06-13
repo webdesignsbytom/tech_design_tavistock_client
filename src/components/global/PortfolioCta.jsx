@@ -1,14 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 // Components
 import ButtonComponent from './ButtonComponent';
+// Hooks
+import useNavigateToPage from '../../hooks/useNavigateToPage';
 
 function PortfolioCta() {
-  let navigate = useNavigate();
-
-  const navigateToPage = (page) => {
-    navigate(page, { replace: true });
-  };
+  const navigateToPage = useNavigateToPage();
 
   return (
     <section className='grid w-full mx-auto px-6'>

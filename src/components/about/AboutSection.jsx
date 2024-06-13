@@ -1,19 +1,18 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
 // Images
 import DevicesImage from '../../assets/images/sales/devices.jpg';
 import CodeImage from '../../assets/images/sales/code3.jpg';
 import Heroes from '../../assets/images/sales/heros-expanding.png';
+// Data
 import { businessInfo } from '../../utils/CompanyDataUtil';
+// Components
 import ButtonComponent from '../global/ButtonComponent';
+// Hooks
+import useNavigateToPage from '../../hooks/useNavigateToPage';
 
 function AboutSection() {
-  let navigate = useNavigate();
-
-  const navigateToPage = (page) => {
-    navigate(page, { replace: true });
-  };
-
+  const navigateToPage = useNavigateToPage();
+  
   return (
     <section className='grid overflow-hidden dark:text-gray-100 mt-6 md:mt-0 mb-12 mx-4'>
       <div className='container mx-auto'>

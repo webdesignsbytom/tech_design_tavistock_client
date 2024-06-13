@@ -11,7 +11,7 @@ function PortfolioPageHeader({ portfolioDisplayRef }) {
 
   const onClickSeeMore = () => {
     const ref = portfolioDisplayRef.current;
-    console.log('ref', ref);
+
     ref.scrollIntoView({ behavior: 'smooth' });
   };
 

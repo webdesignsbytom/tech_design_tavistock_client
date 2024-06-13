@@ -7,7 +7,6 @@ import useNavigateToPage from '../../hooks/useNavigateToPage';
 function ContactCta() {
   const navigateToPage = useNavigateToPage();
 
-
   return (
     <section className='grid w-full mx-auto px-6'>
       <div className='grid lg:w-1/2 mx-auto justify-center'>

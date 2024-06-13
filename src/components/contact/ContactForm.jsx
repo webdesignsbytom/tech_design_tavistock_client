@@ -58,6 +58,7 @@ function ContactForm() {
               name='firstName'
               value={formData.firstName}
               onChange={handleChange}
+              autoComplete="on"
               className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                 errors.firstName ? 'border-red-500' : ''
               }`}
@@ -80,6 +81,7 @@ function ContactForm() {
               name='lastName'
               value={formData.lastName}
               onChange={handleChange}
+              autoComplete="on"
               className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                 errors.lastName ? 'border-red-500' : ''
               }`}
@@ -103,6 +105,7 @@ function ContactForm() {
             name='email'
             value={formData.email}
             onChange={handleChange}
+            autoComplete="on"
             className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
               errors.email ? 'border-red-500' : ''
             }`}
@@ -170,7 +173,7 @@ function ContactForm() {
               Phone Number (optional)
             </label>
             <input
-              type='text'
+              type='tel'
               id='phoneNumber'
               name='phoneNumber'
               value={formData.phoneNumber}

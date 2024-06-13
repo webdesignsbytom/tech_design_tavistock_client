@@ -20,7 +20,7 @@ function HeaderComponent() {
 
   useEffect(() => {
     const sectionElement = sectionRef.current;
-    console.log('sectionElement', sectionElement);
+
     const handleMouseOver = () => {
       sectionElement.classList.remove('hidden-container');
       sectionElement.classList.add('animate-fade-in-move-up');
