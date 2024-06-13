@@ -12,9 +12,10 @@ import { setAutoScroll } from '../utils/autoScroll'; // Import the auto-scroll f
 function PortfolioComponent() {
   const articleRefs = useRef([]);
   const sectionRef = useRef(null);
-  const [portfolioImages, setPortfolioImages] = useState(portfolioWebImagesArray);
+  const [portfolioImages, setPortfolioImages] = useState(
+    portfolioWebImagesArray
+  );
   const [displayType, setDisplayType] = useState('web');
-  let navigate = useNavigate();
 
   useEffect(() => {
     let activeContainer = null;
@@ -22,8 +23,13 @@ function PortfolioComponent() {
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const imgContainers = entry.target.querySelectorAll('.image-container');
-          if (imgContainers && imgContainers.length > 0 && displayType === 'web') {
+          const imgContainers =
+            entry.target.querySelectorAll('.image-container');
+          if (
+            imgContainers &&
+            imgContainers.length > 0 &&
+            displayType === 'web'
+          ) {
             if (!activeContainer) {
               activeContainer = imgContainers[0];
               // setAutoScroll(activeContainer, 20); // Apply auto-scroll to the first container
@@ -64,10 +70,6 @@ function PortfolioComponent() {
       window.removeEventListener('mouseover', handleUserInteraction);
     };
   }, []);
-
-  const navigateToPage = (page) => {
-    navigate(page, { replace: true });
-  };
 
   const displayTypes = ['web', 'app', 'circuit'];
 
@@ -112,7 +114,7 @@ function PortfolioComponent() {
     } else if (displayType === 'app') {
       return 'grid overflow-hidden py-6 h-[325px] h-full w-full max-w-[190px] lg:max-w-[300px] mx-auto lg:px-6 opening-animation';
     } else if (displayType === 'circuit') {
-      return 'grid overflow-hidden py-6 h-[400px] lg:h-[500px] 2xl:lg:h-[530px] px-2 lg:px-6 opening-animation';
+      return 'grid overflow-hidden py-6 h-[230px] lg:h-[250px] 2xl:lg:h-[280px] px-2 lg:px-6 opening-animation';
     } else {
       return '';
     }
@@ -124,7 +126,7 @@ function PortfolioComponent() {
     } else if (displayType === 'app') {
       return 'grid grid-cols-3 h-fit gap-2 lg:gap-4 mt-2';
     } else if (displayType === 'circuit') {
-      return 'grid md:grid-cols-3 h-fit gap-8 mt-2';
+      return 'grid md:grid-rows-2 md:grid-cols-3 h-fit gap-x-8 gap-y-4 mt-2';
     } else {
       return '';
     }
@@ -146,7 +148,13 @@ function PortfolioComponent() {
 
             <article className='mt-8 grid'>
               <div className='grid w-full px-4 sm:px-8 lg:px-0 lg:w-1/2 mx-auto'>
-                <p className='text-text-main poppins_text'>We have prepared a number of sample product for you to view and be inspired by. Use the buttons to navigate between the device types. Hover over or use your mouse to scroll over any website image. Click on any image to be taken to a live example.</p>
+                <p className='text-text-main poppins_text'>
+                  We have prepared a number of sample product for you to view
+                  and be inspired by. Use the buttons to navigate between the
+                  device types. Hover over or use your mouse to scroll over any
+                  website image. Click on any image to be taken to a live
+                  example.
+                </p>
               </div>
             </article>
           </section>
@@ -195,11 +203,23 @@ function PortfolioComponent() {
                     ref={(el) => (articleRefs.current[index] = el)}
                   >
                     <div className={getStyle()}>
-                      <img
-                        src={image.image}
-                        alt={image.alt}
-                        className={getImgStyle()}
-                      />
+                      {displayType === 'app' && index === 1 ? (
+                        <video
+                          src={image.video}
+                          className={getImgStyle()}
+                          autoPlay
+                          muted
+                          autoFocus={true}
+                        >
+                          Your browser does not support the video tag.
+                        </video>
+                      ) : (
+                        <img
+                          src={image.image}
+                          alt={image.alt}
+                          className={getImgStyle()}
+                        />
+                      )}
                     </div>
                   </article>
                 );

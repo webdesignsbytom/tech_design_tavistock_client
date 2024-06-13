@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 // Images
 import Logo from '../../assets/images/logos/wdbt-white.svg';
@@ -13,11 +13,17 @@ function Navbar() {
   const [navOptions] = useState(navbarLinksArray);
   const [phoneNavIsOpen, setPhoneNavIsOpen] = useState(false);
   const [animationClass, setAnimationClass] = useState('');
+
   const animationInProgress = useRef(false);
 
   const navigateToPage = useNavigateToPage();
 
   const location = useLocation();
+
+  useEffect(() => {
+    // Reset animation class when location changes
+    setAnimationClass('');
+  }, [location]);
 
   const openPhoneNav = () => {
     if (animationInProgress.current) {
@@ -31,13 +37,13 @@ function Navbar() {
       setTimeout(() => {
         setPhoneNavIsOpen(false);
         animationInProgress.current = false;
-      }, 1500); // Duration of the closeNav animation
+      }, 1200); // Duration of the closeNav animation
     } else {
       setAnimationClass('animate_open_nav');
       setPhoneNavIsOpen(true);
       setTimeout(() => {
         animationInProgress.current = false;
-      }, 1500); // Duration of the openNav animation
+      }, 1200); // Duration of the openNav animation
     }
   };
 
@@ -59,9 +65,9 @@ function Navbar() {
           <section className='grid md:hidden pr-4 items-center justify-end h-full'>
             <button
               onClick={openPhoneNav}
-              className='grid w-fit h-fit items-center justify-center text-4xl text-white active:scale-50 active:brightness-90'
+              className='grid w-fit p-1 h-fit items-center justify-center text-4xl text-white active:brightness-90'
             >
-              <IoMdMenu />
+              <IoMdMenu className='active:scale-50 ' />
             </button>
           </section>
 

@@ -20,7 +20,9 @@ function ProjectsPage() {
       <main>
         <PortfolioDisplay portfolioDisplayRef={portfolioDisplayRef} />
         <PortfolioComponent />
-        <ExperienceComponent />
+        <div className='my-6 lg:my-16'>
+          <ExperienceComponent />
+        </div>
         <ServicesComponent />
       </main>
       <FooterComponent />

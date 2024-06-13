@@ -54,11 +54,14 @@ import FullWeb1 from '../assets/images/projects/fullpage_2.png';
 import FullWeb2 from '../assets/images/projects/fullpage_1.png';
 import FullWeb3 from '../assets/images/projects/fullpage_4.png';
 import App1 from '../assets/images/projects/cat_app_1.png';
-import App2 from '../assets/images/projects/app_6.png';
 import App3 from '../assets/images/projects/space_invaders_1.png';
 import Circuit1 from '../assets/images/projects/arduplot_1.png';
 import Circuit2 from '../assets/images/projects/circuit_1.png';
 import Circuit3 from '../assets/images/projects/arduplot_2.png';
+import Circuit4 from '../assets/images/projects/circuit_2.png';
+import Circuit5 from '../assets/images/projects/blender.png';
+// Video
+import CatAppVideo from '../assets/video/device/cat_app_video.mp4';
 
 export const initialData = {
   id: 1,
@@ -129,7 +132,7 @@ export const portfolioAppImagesArray = [
   },
   {
     id: appImageId++,
-    image: App2,
+    video: CatAppVideo, // Ensure the second item has a video property
     alt: 'App display',
   },
   {
@@ -144,6 +147,21 @@ export const portfolioCircuitImagesArray = [
   {
     id: circuitImageId++,
     image: Circuit1,
+    alt: 'Circuit display',
+  },
+  {
+    id: circuitImageId++,
+    image: Circuit2,
+    alt: 'Circuit display',
+  },
+  {
+    id: circuitImageId++,
+    image: Circuit4,
+    alt: 'Circuit display',
+  },
+  {
+    id: circuitImageId++,
+    image: Circuit5,
     alt: 'Circuit display',
   },
   {

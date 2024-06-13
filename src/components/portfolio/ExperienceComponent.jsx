@@ -1,11 +1,11 @@
 import React from 'react';
 // Components
 import OrbitAnimation from '../utils/OrbitAnimation';
+import ComponentTitles from '../global/ComponentTitles';
 // Data
 import { frontendSkills, backendSkills } from '../../utils/PortfolioDataUtils';
 // Styles
 import '../../styles/orbitAnimation.css';
-import ComponentTitles from '../global/ComponentTitles';
 
 function ExperienceComponent() {
   return (
