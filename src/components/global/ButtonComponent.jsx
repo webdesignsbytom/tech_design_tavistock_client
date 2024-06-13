@@ -1,7 +1,7 @@
 // Button.js
 import React from 'react';
 
-const ButtonComponent = ({ label, onClick, type, btnType, btnValue }) => {
+const ButtonComponent = ({ label, onClick, type, btnType, btnValue, href }) => {
   let styles = '';
 
   let btnTypeSelected = btnType || '';
@@ -29,6 +29,14 @@ const ButtonComponent = ({ label, onClick, type, btnType, btnValue }) => {
       break;
     default:
       styles = '';
+  }
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={`${styles}`}>
+        {label}
+      </a>
+    );
   }
 
   return (

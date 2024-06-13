@@ -68,7 +68,7 @@ export const initialData = {
   image: '',
   title: '',
   github: '',
-  demo: '',
+  demoUrl: '',
   icons: ['', ''],
   images: ['', '', ''],
   skills: ['', '', ''],
@@ -87,7 +87,11 @@ export const frontendSkills = [
   { name: 'React JS', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
   { name: 'Next JS', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
   { name: 'Python', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
-  { name: 'Wordpress/Wix', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
+  {
+    name: 'Wordpress/Wix',
+    icon: <BsFillPatchCheckFill />,
+    level: 'Experienced',
+  },
   { name: 'C#', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
   { name: 'C++', icon: <BsFillPatchCheckFill />, level: 'Experienced' },
 ];
@@ -176,16 +180,16 @@ export const portfolioCircuitImagesArray = [
   },
 ];
 
+let portfolioDataId = 0;
+
 export const portfolioDataArray = [
   {
-    id: 1,
+    id: portfolioDataId++,
     image: MBSHome,
     url: 'matched-betting-simulator',
-    prevUrl: 'tavyepoxy',
-    nextUrl: 'worlds-smartest-quiz',
     title: 'Matched Betting Simulator',
     github: 'https://github.com/webdesignsbytom/matched-betting-simulator',
-    demo: 'https://clever-rolypoly-136b82.netlify.app/',
+    demoUrl: 'https://clever-rolypoly-136b82.netlify.app/',
     icons: [Javascript, ReactIcon, TailwindIcon, Expressjs, Prisma],
     images: [MatchedbettingPhone, Calculator, Calculator],
     skills: [
@@ -203,14 +207,12 @@ export const portfolioDataArray = [
     liveSite: 'https://clever-rolypoly-136b82.netlify.app/',
   },
   {
-    id: 2,
+    id: portfolioDataId++,
     image: WSHome,
     title: 'Worlds Smartest Quiz',
     url: 'worlds-smartest-quiz',
-    prevUrl: 'matched-betting-simulator',
-    nextUrl: 'myecoapp',
     github: 'https://github.com/webdesignsbytom/worlds-smartest-frontend',
-    demo: 'https://main--silly-vacherin-3026f4.netlify.app/',
+    demoUrl: 'https://main--silly-vacherin-3026f4.netlify.app/',
     icons: [Javascript, HTML5Icon, PythonIcon, TailwindIcon, Expressjs, Prisma],
     images: [WSHomeSm, WSHome, WSOverview],
     skills: [
@@ -226,14 +228,12 @@ export const portfolioDataArray = [
     liveSite: 'https://main--silly-vacherin-3026f4.netlify.app/',
   },
   {
-    id: 3,
+    id: portfolioDataId++,
     image: Myecoapp,
     title: 'Myecoapp',
     url: 'myecoapp',
-    prevUrl: 'worlds-smartest-quiz',
-    nextUrl: 'bio-clicker',
     github: 'https://github.com/webdesignsbytom/myecoapp-deploy',
-    demo: 'https://dazzling-biscuit-b01617.netlify.app/',
+    demoUrl: 'https://dazzling-biscuit-b01617.netlify.app/',
     icons: [Javascript, ReactIcon, TailwindIcon, Expressjs, Prisma],
     images: [MyecoappPhone, Myecoapp, Myecoapp],
     skills: [
@@ -251,14 +251,12 @@ export const portfolioDataArray = [
     liveSite: 'https://dazzling-biscuit-b01617.netlify.app/',
   },
   {
-    id: 4,
+    id: portfolioDataId++,
     image: BioClicker,
     url: 'bio-clicker',
-    prevUrl: 'myecoapp',
-    nextUrl: 'webdesignsbytom',
     title: 'Idle-Clicker game',
     github: 'https://github.com/webdesignsbytom/react-idle-clicker',
-    demo: 'https://rococo-kleicha-53fa88.netlify.app/',
+    demoUrl: 'https://rococo-kleicha-53fa88.netlify.app/',
     icons: [Javascript, ReactIcon, Prisma, TailwindIcon],
     images: [BioCLickerPhone, BioClicker, BioClicker],
     skills: [
@@ -285,14 +283,12 @@ export const portfolioDataArray = [
     liveSite: 'https://rococo-kleicha-53fa88.netlify.app/',
   },
   {
-    id: 5,
+    id: portfolioDataId++,
     image: WDBTMain,
     title: 'Web Designs By Tom',
     url: 'webdesignsbytom',
-    prevUrl: 'bio-clicker',
-    nextUrl: 'tavyepoxy',
     github: 'https://github.com/webdesignsbytom/webdesignsbytom-app',
-    demo: 'https://webdesignsbytom.com',
+    demoUrl: 'https://webdesignsbytom.com',
     icons: [Javascript, ReactIcon, TailwindIcon, Expressjs, Prisma],
     images: [WDBTNav, WDBTMain, WDBTPortfolio],
     skills: [
@@ -322,14 +318,12 @@ export const portfolioDataArray = [
     liveSite: 'https://webdesignsbytom.com/',
   },
   {
-    id: 5,
+    id: portfolioDataId++,
     image: TavyEpoxy,
     title: 'TavyEpoxy Furniture',
     url: 'tavyepoxy',
-    prevUrl: 'webdesignsbytom',
-    nextUrl: 'matched-betting-simulator',
     github: 'https://github.com/webdesignsbytom/tavy_epoxy',
-    demo: 'https://strong-tulumba-d852ca.netlify.app/',
+    demoUrl: 'https://strong-tulumba-d852ca.netlify.app/',
     icons: [Javascript, ReactIcon, CSS3icon, Expressjs, Prisma],
     images: [TavyepoxyPhone, TavyEpoxy, TavyEpoxy],
     skills: [

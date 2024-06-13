@@ -1,27 +1,20 @@
 import React from 'react';
-import CatBG from '../../assets/images/pages/404cat.png';
 
-function PhoneDevices() {
+function PhoneDevices({ portfolioItem }) {
   return (
-    <div className='relative grid h-full w-full shadow-lg'>
-      <div className='relative grid bg-white w-full h-full border-4 border-solid border-alt-colour rounded-xl shadow-xl overflow-hidden'>
-        {/* Phone display */}
-        <div className='grid w-full h-full overflow-hidden'>
+    <div className='grid  w-full items-center justify-center'>
+      <div className='bg-black grid h-[160px] w-[88px] rounded-lg p-1 border-2 border-solid border-gray-600'>
+        <div className='bg-gray-600 relative overflow-hidden rounded-lg border-2 border-solid border-gray-600'>
           <img
-            src={CatBG}
-            alt='lost cat'
-            className='w-full h-full object-cover'
+            className='w-full h-full'
+            src={portfolioItem.images[0]}
+            alt='phone display'
           />
+          <div className='grid absolute justify-center bottom-1 w-full'>
+            <div className='h-[15px] w-[15px] border-2 border-solid border-gray-600 rounded-full'></div>
+          </div>
         </div>
-
-        {/* Front button */}
-        <div className='absolute left-1/2 transform -translate-x-1/2 bottom-2 outline outline-1 outline-alt-colour rounded-full w-4 h-4'></div>
       </div>
-      {/* Side buttons */}
-      <div className='absolute -left-[2px] top-4 bg-alt-colour rounded-lg w-1 h-4'></div>
-
-      <div className='absolute -left-[2px] top-8 bg-alt-colour rounded-lg w-1 h-4'></div>
-      <div className='absolute -left-[2px] top-16 bg-alt-colour rounded-lg w-1 h-4'></div>
     </div>
   );
 }

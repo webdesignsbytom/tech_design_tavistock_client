@@ -66,7 +66,7 @@ function PortfolioDisplay({ portfolioDisplayRef }) {
                   Github
                 </a>
                 <a
-                  href={item.demo}
+                  href={item.demoUrl}
                   target='_blank'
                   rel='noreferrer'
                   className='bg-gray-900 font-semibold grid justify-center p-2 text-yellow-500 text-sm leading-snug uppercase rounded shadow-md hover:shadow-xl focus:shadow-lg focus:outline-none focus:ring-0 active:bg-colour-dark active:shadow-xl transition duration-150 ease-in-out w-full items-center hover:bg-slate-200 outline-2 outline group-hover:outline-yellow-500'
