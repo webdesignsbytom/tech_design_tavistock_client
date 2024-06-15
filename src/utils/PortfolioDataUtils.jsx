@@ -55,13 +55,16 @@ import FullWeb2 from '../assets/images/projects/fullpage_1.png';
 import FullWeb3 from '../assets/images/projects/fullpage_4.png';
 import App1 from '../assets/images/projects/cat_app_1.png';
 import App3 from '../assets/images/projects/space_invaders_1.png';
+// Images - curcuit prortfolio
 import Circuit1 from '../assets/images/projects/arduplot_1.png';
 import Circuit2 from '../assets/images/projects/circuit_1.png';
 import Circuit3 from '../assets/images/projects/arduplot_2.png';
 import Circuit4 from '../assets/images/projects/circuit_2.png';
 import Circuit5 from '../assets/images/projects/blender.png';
+import ArduWeb from '../assets/images/projects/arduplot.png';
 // Video
 import CatAppVideo from '../assets/video/device/cat_app_video.mp4';
+import ArduplotVideo from '../assets/video/device/arduplot.mp4';
 
 export const initialData = {
   id: 1,
@@ -343,3 +346,14 @@ export const portfolioDataArray = [
     liveSite: 'https://strong-tulumba-d852ca.netlify.app/',
   },
 ];
+
+export const circuitDisplayItemData = {
+  mainImage: Circuit1,
+  images: [Circuit1, Circuit4, ArduWeb, Circuit3, Circuit1, Circuit4, ArduWeb, Circuit3],
+  video: ArduplotVideo,
+  desc: [
+    `This robot is 100% custom designed and built to serve a purpose to simplify life. It is programmed to play a game on a mobile phone. The arm moves along a grid and presses down the finger on the Z axis when instructed. The arm is programmed via a website where you can plot points on a phone display to move as and when you desire. `,
+    `The project is a great example of automation and modern methods of controlling and programming the machine without needing technical skill. This technology can be adapted in hundreds of ways to suit your needs. It can be equipped with cameras and more arms or fingers.`,
+    `Cheap to make coming in at under £400 in parts and materials and printing power.`,
+  ],
+};

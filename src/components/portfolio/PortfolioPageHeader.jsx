@@ -70,11 +70,11 @@ function PortfolioPageHeader({ portfolioDisplayRef }) {
           </div>
         </section>
       </section>
-      <section className='absolute bottom-10 flex justify-between w-full px-10'>
-        <div className='hidden lg:grid'>
+      <section className='absolute hidden lg:flex bottom-10 justify-between w-full px-10'>
+        <div className=''>
           <SocialBar
-            background={'bg-white dark:bg-black'}
-            icons={'text-main-colour dark:text-gray-300'}
+            background='bg-white'
+            icons='text-main-colour'
           />
         </div>
         <div className='text-center grid justify-center'>
@@ -82,7 +82,7 @@ function PortfolioPageHeader({ portfolioDisplayRef }) {
             href={`mailto:${businessInfo.emailAddress}`}
             rel='noreferrer'
             target='_blank'
-            className='text-xs md:text-base'
+            className='text-base'
           >
             {businessInfo.emailAddress}
           </a>

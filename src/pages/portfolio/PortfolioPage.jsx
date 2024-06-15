@@ -7,6 +7,7 @@ import ExperienceComponent from '../../components/portfolio/ExperienceComponent'
 import ServicesComponent from '../../components/portfolio/ServicesComponent';
 import FooterComponent from '../../components/footer/FooterComponent';
 import PortfolioComponent from '../../components/home/PortfolioComponent';
+import CircuitDisplayComponent from '../../components/portfolio/CircuitDisplayComponent';
 
 function ProjectsPage() {
   const portfolioDisplayRef = useRef();
@@ -20,6 +21,9 @@ function ProjectsPage() {
       <main>
         <PortfolioDisplay portfolioDisplayRef={portfolioDisplayRef} />
         <PortfolioComponent />
+        <div className='my-52'>
+          <CircuitDisplayComponent />
+        </div>
         <div className='my-6 lg:my-16'>
           <ExperienceComponent />
         </div>
