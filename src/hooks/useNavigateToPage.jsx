@@ -7,7 +7,7 @@ const useNavigateToPage = () => {
     window.scrollTo(0, 0);
     setTimeout(() => {
       navigate(page, { replace: true });
-    }, 100);
+    }, 300);
   };
 
   return navigateToPage;

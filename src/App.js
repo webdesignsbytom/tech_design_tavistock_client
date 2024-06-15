@@ -7,6 +7,7 @@ import ContactPage from './pages/contact/ContactPage';
 import AboutPage from './pages/about/AboutPage';
 import SalesPage from './pages/sales/SalesPage';
 import PortfolioItemPage from './pages/portfolio/PortfolioItemPage';
+import ImageDisplayPage from './pages/Image/ImageDisplayPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/' index element={<HomePage />} />
       <Route path='/portfolio' element={<PortfolioPage />} />
       <Route path='/portfolio-item/:itemId' element={<PortfolioItemPage />} />
+      <Route path="/image-display/:id" element={<ImageDisplayPage />} /> {/* New route */}
       <Route path='/about' element={<AboutPage />} />
       <Route path='/contact' element={<ContactPage />} />
       <Route path='/sales' element={<SalesPage />} />

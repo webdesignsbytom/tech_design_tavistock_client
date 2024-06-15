@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 // Components
 import ComponentTitles from '../global/ComponentTitles';
 // Data
@@ -6,7 +7,12 @@ import { circuitDisplayItemData } from '../../utils/PortfolioDataUtils';
 
 function CircuitDisplayComponent() {
   const [displayItem] = useState(circuitDisplayItemData);
-  
+  const navigate = useNavigate();
+
+  const handleImageClick = (image, index) => {
+    navigate(`/image-display/${index}`, { state: { image } });
+  };
+
   return (
     <section className='grid w-full h-full lg:h-screen bg-gray-300'>
       <div className='grid px-4 lg:grid-cols-2 lg:w-[90%] lg:gap-8 lg:h-[90%] lg:my-auto lg:mx-auto'>
@@ -54,12 +60,13 @@ function CircuitDisplayComponent() {
             <section className='grid overflow-x-scroll'>
               <div className='grid grid-flow-col gap-4 px-4 pb-4'>
                 {displayItem.images.map((image, index) => (
-                  <div className='grid h-[100px] w-[200px]'>
+                  <div key={index} className='grid items-center min-h-[100px] min-w-[200px]'>
                     <img
                       key={index}
                       src={image}
+                      onClick={() => handleImageClick(image, index)}
                       alt={`Circuit ${index + 1}`}
-                      className='w-full h-full object-cover'
+                      className='w-full h-full object-contain'
                     />
                   </div>
                 ))}
