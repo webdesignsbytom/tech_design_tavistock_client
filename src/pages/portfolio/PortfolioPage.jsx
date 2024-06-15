@@ -8,6 +8,7 @@ import ServicesComponent from '../../components/portfolio/ServicesComponent';
 import FooterComponent from '../../components/footer/FooterComponent';
 import PortfolioComponent from '../../components/home/PortfolioComponent';
 import CircuitDisplayComponent from '../../components/portfolio/CircuitDisplayComponent';
+import BackToTopButton from '../../components/global/BackToTopButton';
 
 function ProjectsPage() {
   const portfolioDisplayRef = useRef();
@@ -29,6 +30,11 @@ function ProjectsPage() {
         </div>
         <ServicesComponent />
       </main>
+      
+      <div>
+        <BackToTopButton />
+      </div>
+
       <FooterComponent />
     </div>
   );

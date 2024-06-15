@@ -1,6 +1,6 @@
 import React from 'react';
 // Images
-import TreeBG from '../../assets/images/pages/404cat.png';
+import CatImage from '../../assets/images/pages/404cat.png';
 // Components
 import Navbar from '../../components/nav/Navbar';
 
@@ -8,8 +8,8 @@ import Navbar from '../../components/nav/Navbar';
 function Error404() {
 
   return (
-    <div className='h-screen overflow-hidden grid bg-gray-50 dark:bg-black dark:text-gray-100'>
-      <section className='grid h-full overflow-hidden grid-rows-reg lg:grid-rows-none lg:grid-rows-reg'>
+    <div className='h-screen overflow-hidden grid bg-gray-50'>
+      <section className='grid h-full overflow-hidden grid-rows-reg lg:grid-rows-reg'>
         <Navbar />
         <div className='font-poppins'>
           <main className='relative h-full w-full'>
@@ -27,7 +27,7 @@ function Error404() {
               </section>
             </section>
             <section className='flex lg:justify-end lg:mr-20'>
-              <img src={TreeBG} alt='lost cat' />
+              <img src={CatImage} alt='lost cat' />
             </section>
           </main>
         </div>

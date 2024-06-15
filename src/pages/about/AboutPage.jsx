@@ -8,6 +8,7 @@ import ReviewsComponent from '../../components/reviews/ReviewsComponent';
 import FooterComponent from '../../components/footer/FooterComponent';
 import ContactCta from '../../components/global/ContactCta';
 import PortfolioCta from '../../components/global/PortfolioCta';
+import BackToTopButton from '../../components/global/BackToTopButton';
 
 function AboutPage() {
   return (
@@ -25,6 +26,10 @@ function AboutPage() {
         </div>
         <ReviewsComponent />
       </main>
+
+      <div>
+        <BackToTopButton />
+      </div>
       <FooterComponent />
     </div>
   );
