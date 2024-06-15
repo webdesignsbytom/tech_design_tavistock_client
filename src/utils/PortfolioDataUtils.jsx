@@ -54,6 +54,7 @@ import FullWeb1 from '../assets/images/projects/fullpage_2.png';
 import FullWeb2 from '../assets/images/projects/fullpage_1.png';
 import FullWeb3 from '../assets/images/projects/fullpage_4.png';
 import App1 from '../assets/images/projects/cat_app_1.png';
+import App2 from '../assets/images/projects/shopping_app.jpg';
 import App3 from '../assets/images/projects/space_invaders_1.png';
 // Images - curcuit prortfolio
 import Circuit1 from '../assets/images/projects/arduplot_1.png';
@@ -64,12 +65,14 @@ import Circuit5 from '../assets/images/projects/blender.png';
 import ArduWeb from '../assets/images/projects/arduplot.png';
 // Video
 import CatAppVideo from '../assets/video/device/cat_app_video.mp4';
+import ShoppingAppVideo from '../assets/video/device/shopping_app.mp4';
 import ArduplotVideo from '../assets/video/device/arduplot.mp4';
 
 export const initialData = {
-  id: 1,
+  id: 0,
   image: '',
   title: '',
+  url: '',
   github: '',
   demoUrl: '',
   icons: ['', ''],
@@ -134,17 +137,20 @@ let appImageId = 0;
 export const portfolioAppImagesArray = [
   {
     id: appImageId++,
-    image: App1,
+    image: App2,
+    video: ShoppingAppVideo,
     alt: 'App display',
   },
   {
     id: appImageId++,
+    image: App1,
     video: CatAppVideo, // Ensure the second item has a video property
     alt: 'App display',
   },
   {
     id: appImageId++,
     image: App3,
+    video: '',
     alt: 'App display',
   },
 ];
@@ -186,6 +192,29 @@ export const portfolioCircuitImagesArray = [
 let portfolioDataId = 0;
 
 export const portfolioDataArray = [
+  {
+    id: portfolioDataId++,
+    image: ArduWeb,
+    title: 'ArduPlot3D',
+    url: 'arduplot-3d',
+    github: 'https://github.com/webdesignsbytom/arduPlot3D',
+    demoUrl: 'https://arduplot3d.netlify.app',
+    icons: [Javascript, ReactIcon, TailwindIcon, Expressjs, Prisma],
+    images: [ArduWeb, Circuit1, Circuit2],
+    skills: [
+      { name: 'Advanced Algorithms', icon: <TbMathFunction size={20} /> },
+      { name: 'Interactive Tutorial', icon: <HiBookOpen size={20} /> },
+      { name: 'Forum/media functions', icon: <MdForum size={20} /> },
+      { name: 'User Authentication', icon: <GrUserAdmin size={20} /> },
+      { name: 'Graphical language', icon: <FaUserAlt size={20} /> },
+      { name: 'Personal Profiles', icon: <FaUserAlt size={20} /> },
+    ],
+    headline: 'Programming robots on how to move.',
+    desc: 'This website works with the ArduPlot robot built using arduino technologies.',
+    featuredComponent: 'Plotting Canvas',
+    featuredDisplay: '',
+    liveSite: 'https://clever-rolypoly-136b82.netlify.app/',
+  },
   {
     id: portfolioDataId++,
     image: MBSHome,
@@ -349,7 +378,16 @@ export const portfolioDataArray = [
 
 export const circuitDisplayItemData = {
   mainImage: Circuit1,
-  images: [Circuit1, Circuit4, ArduWeb, Circuit3, Circuit1, Circuit4, ArduWeb, Circuit3],
+  images: [
+    Circuit1,
+    Circuit4,
+    ArduWeb,
+    Circuit3,
+    Circuit1,
+    Circuit4,
+    ArduWeb,
+    Circuit3,
+  ],
   video: ArduplotVideo,
   desc: [
     `This robot is 100% custom designed and built to serve a purpose to simplify life. It is programmed to play a game on a mobile phone. The arm moves along a grid and presses down the finger on the Z axis when instructed. The arm is programmed via a website where you can plot points on a phone display to move as and when you desire. `,
