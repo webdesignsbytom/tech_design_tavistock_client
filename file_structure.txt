@@ -1,0 +1,263 @@
+.
+|____.env
+|____.gitignore
+|____file_structure.txt
+|____package-lock.json
+|____package.json
+|____public
+| |____favicon.ico
+| |____index.html
+| |____logo192.png
+| |____logo512.png
+| |____manifest.json
+| |____robots.txt
+|____README.md
+|____src
+| |____App.js
+| |____assets
+| | |____images
+| | | |____device
+| | | | |____circuit-board.svg
+| | | | |____computer.svg
+| | | | |____mobile.svg
+| | | | |____website.svg
+| | | |____logos
+| | | | |____logo.png
+| | | | |____myea_logo.jpg
+| | | | |____RVS_logo.jpg
+| | | | |____turnbull_review.jpeg
+| | | | |____wdbt-black.svg
+| | | | |____wdbt-white.svg
+| | | | |____wervings.png
+| | | |____pages
+| | | | |____404cat.png
+| | | | |____iso_bg.png
+| | | | |____shapes_1.jpg
+| | | |____portfolio
+| | | | |____collage1.png
+| | | | |____collage2.png
+| | | | |____collage_hoz1.png
+| | | |____projects
+| | | | |____app_1.png
+| | | | |____app_2.png
+| | | | |____app_3.png
+| | | | |____app_4.png
+| | | | |____app_5.png
+| | | | |____app_6.png
+| | | | |____arduplot.png
+| | | | |____arduplot_1.png
+| | | | |____arduplot_2.png
+| | | | |____bioclickerMd.png
+| | | | |____bioclickerSm.png
+| | | | |____blender.png
+| | | | |____building-page.png
+| | | | |____calculatorMd.png
+| | | | |____cat_app_1.png
+| | | | |____circuit_1.png
+| | | | |____circuit_2.png
+| | | | |____fullpage_1.png
+| | | | |____fullpage_2.png
+| | | | |____fullpage_3.png
+| | | | |____fullpage_4.png
+| | | | |____fullpage_5.png
+| | | | |____fullpage_6.png
+| | | | |____fullpage_7.png
+| | | | |____fullpage_8.png
+| | | | |____fullpage_9.png
+| | | | |____heromap-black.png
+| | | | |____loginSm.jpg
+| | | | |____matchedbettingPhone.jpg
+| | | | |____mbs-calculator-md.png
+| | | | |____mbs-home-md.png
+| | | | |____mbs-lessons-md.png
+| | | | |____mbs-simulator-sm.png
+| | | | |____myeaDarkSm.jpg
+| | | | |____myeaMd.png
+| | | | |____myeaSm.jpg
+| | | | |____phone_app1.png
+| | | | |____pokerMd.png
+| | | | |____rapid_van_sm.jpg
+| | | | |____shiny_card.png
+| | | | |____shopping_app.jpg
+| | | | |____space_invaders_1.png
+| | | | |____tavyepoxyfull.png
+| | | | |____tavyepoxyMd.png
+| | | | |____tavyepoxyPhone.jpg
+| | | | |____tavyepoxySm.png
+| | | | |____wdbt-account-sm.png
+| | | | |____wdbt-buttons-md.png
+| | | | |____wdbt-main-md.png
+| | | | |____wdbt-nav-sm.png
+| | | | |____wdbt-portfolio-md.png
+| | | | |____ws-home-md.png
+| | | | |____ws-home-sm.png
+| | | | |____ws-overview-md.png
+| | | |____sales
+| | | | |____code1.png
+| | | | |____code2.png
+| | | | |____code3.jpg
+| | | | |____devices.jpg
+| | | | |____header_img.png
+| | | | |____heros-expanding.png
+| | | | |____particles.png
+| | | | |____wdbt1.png
+| | | | |____working-code.jpg
+| | | | |____working-lady.jpg
+| | | |____tech
+| | | | |____arduino.png
+| | | | |____raspberry_pi.png
+| | |____svg
+| | | |____accountIcon-white.svg
+| | | |____adminIcon-white.svg
+| | | |____archive-cabinet-drawer-svgrepo-com.svg
+| | | |____backArrow.svg
+| | | |____bin.svg
+| | | |____build-svgrepo-com.svg
+| | | |____changeIcon.svg
+| | | |____checkIcon.svg
+| | | |____closeCross.svg
+| | | |____closedEye.svg
+| | | |____code-optimization-svgrepo-com.svg
+| | | |____code-svgrepo-com.svg
+| | | |____contactIcon-white.svg
+| | | |____contactIcon.svg
+| | | |____control-multimedia-player-svgrepo-com.svg
+| | | |____css3.svg
+| | | |____designIcon-white.svg
+| | | |____developerIcon-white.svg
+| | | |____eventsIcon-white.svg
+| | | |____expressjs.svg
+| | | |____eye.svg
+| | | |____file_type_light_prisma.svg
+| | | |____floppyDisk.svg
+| | | |____github-black.svg
+| | | |____heart.svg
+| | | |____homeIcon-white.svg
+| | | |____html5.svg
+| | | |____infinityIcon.svg
+| | | |____javascript.svg
+| | | |____loginIcon-white.svg
+| | | |____logoutIcon-white.svg
+| | | |____messageIcon-white.svg
+| | | |____newFile.svg
+| | | |____nodejs-icon.svg
+| | | |____nodejs.svg
+| | | |____notificationIcon-white.svg
+| | | |____plusIcon.svg
+| | | |____plusIconReg.svg
+| | | |____portfolioIcon-white.svg
+| | | |____program-svgrepo-com.svg
+| | | |____python-icon.svg
+| | | |____questionMark.svg
+| | | |____reactjs-icon.svg
+| | | |____registerIcon-white.svg
+| | | |____searchIcon-white.svg
+| | | |____social
+| | | | |____github.svg
+| | | | |____instagram.svg
+| | | | |____linkedin.svg
+| | | | |____twitter.svg
+| | | |____spinner.svg
+| | | |____storeIcon-white.svg
+| | | |____tailwindcss-icon.svg
+| | | |____team-3-svgrepo-com.svg
+| | | |____team-add-svgrepo-com.svg
+| | | |____team-svgrepo-com.svg
+| | | |____testIcon-white.svg
+| | | |____undo.svg
+| | |____video
+| | | |____device
+| | | | |____arduplot.mp4
+| | | | |____cat_app_video.mp4
+| | | | |____Screen_Recording_20240603_204019.mp4
+| | | | |____Screen_Recording_20240603_204204_Samsung Internet.mp4
+| | | | |____shopping_app.mp4
+| |____components
+| | |____about
+| | | |____AboutSection.jsx
+| | | |____WhyChooseUs.jsx
+| | |____contact
+| | | |____ContactForm.jsx
+| | |____devices
+| | | |____DesktopDevices.jsx
+| | | |____LaptopDevice.jsx
+| | | |____MonitorDevices.jsx
+| | | |____PhoneDevices.jsx
+| | | |____TabletDevices.jsx
+| | |____footer
+| | | |____FooterComponent.jsx
+| | |____global
+| | | |____BackToTopButton.jsx
+| | | |____ButtonComponent.jsx
+| | | |____ComponentTitles.jsx
+| | | |____ContactButtons.jsx
+| | | |____ContactCta.jsx
+| | | |____DisplayCard.jsx
+| | | |____InfoBox.jsx
+| | | |____PortfolioCta.jsx
+| | |____home
+| | | |____HeaderComponent.jsx
+| | | |____InformationComponent.jsx
+| | | |____MiniGameComponent.jsx
+| | | |____PortfolioComponent.jsx
+| | |____nav
+| | | |____Navbar.jsx
+| | |____portfolio
+| | | |____CircuitDisplayComponent.jsx
+| | | |____ExperienceComponent.jsx
+| | | |____PortfolioDisplay.jsx
+| | | |____PortfolioPageHeader.jsx
+| | | |____ServicesComponent.jsx
+| | |____reviews
+| | | |____ReviewItem.jsx
+| | | |____ReviewsComponent.jsx
+| | |____sales
+| | | |____PriceTable.jsx
+| | | |____PurchaseOptions.jsx
+| | | |____SalesOptionCard.jsx
+| | | |____SelectAppOptions.jsx
+| | |____social
+| | | |____SocialBar.jsx
+| | |____svg
+| | | |____CodeLangSvg.jsx
+| | |____utils
+| | | |____autoScroll.js
+| | | |____LoadingSpinner.jsx
+| | | |____OrbitAnimation.jsx
+| | | |____ScrollToTop.jsx
+| |____hooks
+| | |____useNavigateToPage.jsx
+| |____index.js
+| |____pages
+| | |____about
+| | | |____AboutPage.jsx
+| | |____contact
+| | | |____ContactPage.jsx
+| | |____error
+| | | |____Error404.jsx
+| | |____home
+| | | |____HomePage.jsx
+| | |____Image
+| | | |____ImageDisplayPage.jsx
+| | |____portfolio
+| | | |____PortfolioItemPage.jsx
+| | | |____PortfolioPage.jsx
+| | |____sales
+| | | |____SalesPage.jsx
+| |____styles
+| | |____animations.css
+| | |____backgrounds.css
+| | |____components.css
+| | |____fonts.css
+| | |____index.css
+| | |____orbitAnimation.css
+| |____utils
+| | |____AboutPageDataUtils.jsx
+| | |____CompanyDataUtil.jsx
+| | |____ContactFormDataUtils.jsx
+| | |____HomePageDataUtils.jsx
+| | |____NavbarDataUtils.jsx
+| | |____PortfolioDataUtils.jsx
+| | |____ReviewsDataUtil.jsx
+| | |____SalesDataUtils.jsx
+|____tailwind.config.js
