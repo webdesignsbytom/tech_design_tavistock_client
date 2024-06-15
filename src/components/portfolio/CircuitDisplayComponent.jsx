@@ -41,7 +41,7 @@ function CircuitDisplayComponent() {
           </div>
         </section>
 
-        <section className='grid w-full h-full mt-10 lg:mt-0'>
+        <section className='grid w-full h-full mt-10 lg:mt-0 pb-20 lg:pb-0'>
           <div className='grid h-fit my-auto'>
             {/* Video player */}
             <div className='mb-8 p-6'>
