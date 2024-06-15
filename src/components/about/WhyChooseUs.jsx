@@ -80,6 +80,7 @@ function WhyChooseUs() {
                 src='https://mdbootstrap.com/img/new/textures/full/98.jpg'
                 className='w-full max-h-[500px]'
                 alt='design classics'
+                loading='lazy'
               />
               <div
                 className='absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed'

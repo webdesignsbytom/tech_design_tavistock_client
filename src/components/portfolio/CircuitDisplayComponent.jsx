@@ -29,6 +29,7 @@ function CircuitDisplayComponent() {
                 <img
                   src={displayItem.mainImage}
                   alt='Circuit main'
+                  loading='lazy'
                   className='w-full h-full object-cover'
                 />
               </div>
@@ -66,6 +67,7 @@ function CircuitDisplayComponent() {
                       src={image}
                       onClick={() => handleImageClick(image, index)}
                       alt={`Circuit ${index + 1}`}
+                      loading='lazy'
                       className='w-full h-full object-contain'
                     />
                   </div>

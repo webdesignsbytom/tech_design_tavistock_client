@@ -48,7 +48,7 @@ function SalesOptionCard({ type, changeDisplayedProduct }) {
               </section>
               {/* Image */}
               <div className='p-2 bg-white w-12 h-12 rounded-xl m-1 shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]'>
-                <img src={type.image} alt='object-cover' />
+                <img src={type.image} alt='object-cover' loading='lazy's />
               </div>
             </section>
           </article>

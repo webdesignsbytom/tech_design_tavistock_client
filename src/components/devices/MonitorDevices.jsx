@@ -9,6 +9,7 @@ function MonitorDevices({ portfolioItem }) {
             className='w-full h-full'
             src={portfolioItem.images[2]}
             alt='phone display'
+            loading='lazy'
           />
         </div>
         <div className='grid grid-flow-col items-center py-1 pr-4 gap-2 justify-end'>

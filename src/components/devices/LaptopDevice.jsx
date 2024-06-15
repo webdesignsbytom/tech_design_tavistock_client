@@ -10,6 +10,7 @@ function LaptopDevice({ portfolioItem }) {
               className='h-full w-full'
               src={portfolioItem.images[1]}
               alt='laptop display'
+              loading='lazy'
             />
           </div>
         </div>

@@ -41,12 +41,13 @@ function PortfolioDisplay({ portfolioDisplayRef }) {
                   src={item.image}
                   onClick={() => displayInfo(item)}
                   alt='portfolio item'
+                  loading='lazy'
                 />
         
                 <div className='flex absolute top-2 right-2 py-1 px-2 bg-transparent-white rounded-full'>
                   {item.icons.map((icon, index) => {
                     return (
-                      <img className='w-6 max-w-6' key={index} src={icon} alt='icon' />
+                      <img loading='lazy' className='w-6 max-w-6' key={index} src={icon} alt='icon' />
                     );
                   })}
                 </div>

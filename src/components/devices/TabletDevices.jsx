@@ -11,6 +11,7 @@ function TabletDevices() {
             src={CatBG}
             alt='lost cat'
             className='w-full h-full object-contain'
+            loading='lazy'
           />
         </div>
 

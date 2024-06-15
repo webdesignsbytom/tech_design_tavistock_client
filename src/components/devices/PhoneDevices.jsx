@@ -9,6 +9,7 @@ function PhoneDevices({ portfolioItem }) {
             className='w-full h-full'
             src={portfolioItem.images[0]}
             alt='phone display'
+            loading='lazy'
           />
           <div className='grid absolute justify-center bottom-1 w-full'>
             <div className='h-[15px] w-[15px] border-2 border-solid border-gray-600 rounded-full'></div>

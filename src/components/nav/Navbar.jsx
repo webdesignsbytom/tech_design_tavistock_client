@@ -57,6 +57,7 @@ function Navbar() {
               onClick={() => navigateToPage('/')}
               alt='Tech design by Tom logo'
               className='w-12 h-12 cursor-pointer active:scale-95'
+              loading='lazy'
             />
           </div>
         </section>

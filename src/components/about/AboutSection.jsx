@@ -24,6 +24,7 @@ function AboutSection() {
                 <div className='py-3 sm:py-4'>
                   <img
                     src={Heroes}
+                    loading='lazy'
                     alt='heroes expanding out of screen'
                     className='w-full bg-gray-300 rounded-2xl mt-4'
                   />
@@ -31,6 +32,7 @@ function AboutSection() {
                 <div className='py-3 sm:py-4'>
                   <img
                     src={CodeImage}
+                    loading='lazy'
                     alt='code on screen'
                     className='w-full rounded-2xl'
                   />
@@ -40,6 +42,7 @@ function AboutSection() {
                 <div className='relative z-10 my-4'>
                   <img
                     src={DevicesImage}
+                    loading='lazy'
                     alt='mutliple devices on table'
                     className='w-full rounded-2xl'
                   />

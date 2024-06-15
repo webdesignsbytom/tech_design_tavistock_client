@@ -27,7 +27,7 @@ function Error404() {
               </section>
             </section>
             <section className='flex lg:justify-end lg:mr-20'>
-              <img src={CatImage} alt='lost cat' />
+              <img src={CatImage} alt='lost cat' loading='lazy' />
             </section>
           </main>
         </div>

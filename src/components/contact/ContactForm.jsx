@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // Data
 import { emptyContactFormData } from '../../utils/ContactFormDataUtils';
 import ButtonComponent from '../global/ButtonComponent';
+import client from '../../api/client';
 
 function ContactForm() {
   const [formData, setFormData] = useState(emptyContactFormData);
@@ -27,17 +28,26 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      // Handle form submission logic here
-      console.log('Form data submitted:', formData);
-      // Clear the form and errors
+      client
+        .post('/contact/contact-submit', formData, false)
+        .then((res) => {
+          console.log('res', res.data.data.response);
+        })
+
+        .catch((err) => {
+          console.error('Unable to submit', err);
+        });
+
       setFormData(emptyContactFormData);
       setErrors({});
     }
   };
+
   return (
     <div>
       <form
@@ -58,7 +68,7 @@ function ContactForm() {
               name='firstName'
               value={formData.firstName}
               onChange={handleChange}
-              autoComplete="on"
+              autoComplete='on'
               className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                 errors.firstName ? 'border-red-500' : ''
               }`}
@@ -81,7 +91,7 @@ function ContactForm() {
               name='lastName'
               value={formData.lastName}
               onChange={handleChange}
-              autoComplete="on"
+              autoComplete='on'
               className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                 errors.lastName ? 'border-red-500' : ''
               }`}
@@ -105,7 +115,7 @@ function ContactForm() {
             name='email'
             value={formData.email}
             onChange={handleChange}
-            autoComplete="on"
+            autoComplete='on'
             className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
               errors.email ? 'border-red-500' : ''
             }`}

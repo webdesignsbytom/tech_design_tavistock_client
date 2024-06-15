@@ -47,6 +47,7 @@ function FooterComponent() {
                 className='w-20 cursor-pointer'
                 onClick={() => navigateToPage('/')}
                 alt='footer logo for web design by tom'
+                loading='lazy'
               />
             </section>
 
@@ -89,6 +90,7 @@ function FooterComponent() {
                 src={Logo}
                 className='w-10'
                 alt='footer logo for web design by tom'
+                loading='lazy'
               />
             </section>
 

@@ -218,6 +218,7 @@ function PortfolioComponent() {
                           src={image.image}
                           alt={image.alt}
                           className={getImgStyle()}
+                          loading='lazy'
                         />
                       )}
                     </div>

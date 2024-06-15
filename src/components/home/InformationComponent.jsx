@@ -89,6 +89,7 @@ function InformationComponent() {
                   <img
                     src={PcImage}
                     alt='PC demo'
+                    loading='lazy'
                     className='w-full h-full object-contain'
                   />
                 </div>
@@ -109,6 +110,7 @@ function InformationComponent() {
                       <img
                         src={PcImage}
                         alt='PC demo'
+                        loading='lazy'
                         className='w-full h-full object-contain'
                       />
                     </div>

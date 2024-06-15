@@ -3,13 +3,17 @@ import CatBG from '../../assets/images/pages/404cat.png';
 
 function DesktopDevices() {
   return (
-    <div id='pc-design' className='relative grid h-full w-full shadow-lg overflow-hidden'>
+    <div
+      id='pc-design'
+      className='relative grid h-full w-full shadow-lg overflow-hidden'
+    >
       <div className='relative grid z-20 bg-white w-full h-full border-4 border-solid border-alt-colour rounded-sm shadow-xl overflow-hidden'>
         {/* PC display */}
         <div className='grid w-full h-full overflow-hidden'>
           <img
             src={CatBG}
             alt='lost cat'
+            loading='lazy'
             className='w-full h-full object-contain'
           />
         </div>

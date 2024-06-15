@@ -92,7 +92,7 @@ function PortfolioItemPage() {
                   {portfolioItem.icons.map((icon, index) => {
                     return (
                       <li key={index} className=''>
-                        <img className='w-8' src={icon} alt='icon' />
+                        <img className='w-8' loading='lazy' src={icon} alt='icon' />
                       </li>
                     );
                   })}

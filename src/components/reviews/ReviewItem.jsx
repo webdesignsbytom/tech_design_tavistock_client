@@ -15,6 +15,7 @@ function ReviewItem({ review }) {
               className='h-20 w-20 rounded-full shadow-lg'
               src={imageUrl}
               alt='Componay logo for review'
+              loading='lazy'
             />
           </a>
         </article>

@@ -39,7 +39,7 @@ function SelectAppOptions({ selectAppType, thisRef }) {
                     className={`rounded-xl bg-white max-w-[280px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] active:scale-95 cursor-pointer duration-200 ${fadeClass} ${moveClass}`}
                   >
                     <div className='p-6'>
-                      <img src={type.image} alt='' />
+                      <img src={type.image} alt={type.label} loading='lazy' />
                     </div>
                   </section>
                 );
