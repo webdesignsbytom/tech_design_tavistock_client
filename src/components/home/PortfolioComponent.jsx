@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useRef, useState } from 'react';
 import ButtonComponent from '../global/ButtonComponent';
 import {
   portfolioWebImagesArray,
@@ -7,7 +6,6 @@ import {
   portfolioCircuitImagesArray,
 } from '../../utils/PortfolioDataUtils';
 import ComponentTitles from '../global/ComponentTitles';
-import { setAutoScroll } from '../utils/autoScroll'; // Import the auto-scroll function
 
 function PortfolioComponent() {
   const articleRefs = useRef([]);

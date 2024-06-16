@@ -1,5 +1,5 @@
 import React from 'react';
-import CatBG from '../../assets/images/pages/404cat.png';
+import CatBG from '../../assets/images/pages/404-page-not-found-cat.png';
 
 function DesktopDevices() {
   return (

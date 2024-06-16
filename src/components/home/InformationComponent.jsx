@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 // Utils
 import { infoBoxDataArray } from '../../utils/HomePageDataUtils';
 import { businessInfo } from '../../utils/CompanyDataUtil';
 // Components
 import InfoBox from '../global/InfoBox';
 import ButtonComponent from '../global/ButtonComponent';
+import ComponentTitles from '../global/ComponentTitles';
 // Images
 import PcImage from '../../assets/images/sales/heros-expanding.png';
-import ComponentTitles from '../global/ComponentTitles';
 // Hooks
 import useNavigateToPage from '../../hooks/useNavigateToPage';
 

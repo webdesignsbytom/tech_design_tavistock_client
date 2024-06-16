@@ -51,23 +51,23 @@ import MatchedbettingPhone from '../assets/images/projects/matchedbettingPhone.j
 import WSHomeSm from '../assets/images/projects/ws-home-sm.png';
 import WDBTNav from '../assets/images/projects/wdbt-nav-sm.png';
 // Images portfolio component
-import FullWeb1 from '../assets/images/projects/fullpage_2.png';
-import FullWeb2 from '../assets/images/projects/fullpage_1.png';
-import FullWeb3 from '../assets/images/projects/fullpage_4.png';
-import App1 from '../assets/images/projects/cat_app_1.png';
-import App2 from '../assets/images/projects/shopping_app.jpg';
-import App3 from '../assets/images/projects/space_invaders_1.png';
+import FullWeb1 from '../assets/images/projects/fullpage-modern-website-display-personal-site.png';
+import FullWeb2 from '../assets/images/projects/myecoapp-fullpage-demo-website-modern-design.png';
+import FullWeb3 from '../assets/images/projects/blog-website-demo-image-modern-design.png';
+import App1 from '../assets/images/projects/cat-app-mobile-app-home-screen.png';
+import App2 from '../assets/images/projects/e-commerce-shopping-app-home-page.jpg';
+import App3 from '../assets/images/projects/space-invaders-mobile-game.png';
 // Images - curcuit prortfolio
-import Circuit1 from '../assets/images/projects/arduplot_1.png';
-import Circuit2 from '../assets/images/projects/circuit_1.png';
-import Circuit3 from '../assets/images/projects/arduplot_2.png';
-import Circuit4 from '../assets/images/projects/circuit_2.png';
-import Circuit5 from '../assets/images/projects/blender.png';
-import ArduWeb from '../assets/images/projects/arduplot.png';
+import Circuit1 from '../assets/images/projects/arduplot-3d-printed-robot.png';
+import Circuit2 from '../assets/images/projects/circuit-board-design-arduino-mega.png';
+import Circuit3 from '../assets/images/projects/arduplot-3d-printed-robot-arm.png';
+import Circuit4 from '../assets/images/projects/arduplot-circuit-board-and-housing.png';
+import Circuit5 from '../assets/images/projects/blender-cad-parts-design.png';
+import ArduWeb from '../assets/images/projects/arduplot-website-programming-controller.png';
 // Video
-import CatAppVideo from '../assets/video/device/cat_app_video.mp4';
-import ShoppingAppVideo from '../assets/video/device/shopping_app.mp4';
-import ArduplotVideo from '../assets/video/device/arduplot.mp4';
+import CatAppVideo from '../assets/video/device/cat_app_video_demo_mobile_app.mp4';
+import ShoppingAppVideo from '../assets/video/device/shopping_app_mobile_app_video_demo.mp4';
+import ArduplotVideo from '../assets/video/device/arduplot_robot_demo_working_product.mp4';
 
 export const initialData = {
   id: 0,

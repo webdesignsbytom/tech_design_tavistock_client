@@ -1,8 +1,8 @@
 // Images
-import WervingsLogo from '../assets/images/logos/wervings.png';
-import RVSLogo from '../assets/images/logos/RVS_logo.jpg';
-import MusicLogo from '../assets/images/logos/turnbull_review.jpeg';
-import MyeaLogo from '../assets/images/logos/myea_logo.jpg';
+import WervingsLogo from '../assets/images/logos/wervings-syrups-logo-for-review.png';
+import RVSLogo from '../assets/images/logos/rapid-van-solutions-logo-for-review.jpg';
+import MusicLogo from '../assets/images/logos/turnbull-music-review-image.jpeg';
+import MyeaLogo from '../assets/images/logos/myecoapp-logo-for-review.jpg';
 
 let reviewId = 0;
 

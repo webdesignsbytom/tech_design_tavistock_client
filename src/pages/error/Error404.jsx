@@ -1,6 +1,6 @@
 import React from 'react';
 // Images
-import CatImage from '../../assets/images/pages/404cat.png';
+import CatImage from '../../assets/images/pages/404-page-not-found-cat.png';
 // Components
 import Navbar from '../../components/nav/Navbar';
 

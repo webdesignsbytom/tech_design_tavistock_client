@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'shape-bg-1': "url('../assets/images/pages/shapes_1.jpg')",
+        'shape-bg-1': "url('../assets/images/pages/background-wavy-lines.jpg')",
       },
       colors: {
         'main-bg': '#f7fafc',
