@@ -52,7 +52,7 @@ function CircuitDisplayComponent() {
           <div className='grid h-fit my-auto'>
             {/* Video player */}
             <div className='mb-8 p-6'>
-              <video width='100%' controls muted>
+              <video width='100%' controls muted loading="lazy">
                 <source src={displayItem.video} type='video/mp4' />
                 Your browser does not support the video tag.
               </video>

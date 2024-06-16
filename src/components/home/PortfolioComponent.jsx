@@ -208,6 +208,7 @@ function PortfolioComponent() {
                           src={image.video}
                           className={getImgStyle()}
                           autoPlay
+                          loading="lazy"
                           muted
                           autoFocus={true}
                         >
