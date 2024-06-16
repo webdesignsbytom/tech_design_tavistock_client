@@ -110,7 +110,6 @@ function HeaderComponent() {
                       src={CollageImage}
                       alt='Collage of tech'
                       className='w-full h-full object-contain rounded-2xl'
-                      loading='lazy'
                     />
                   </div>
                 </div>
