@@ -62,6 +62,7 @@ function PortfolioDisplay({ portfolioDisplayRef }) {
                   href={item.github}
                   target='_blank'
                   rel='noreferrer'
+                  aria-label='Go to GitHub code repository'
                   className='bg-gray-900 font-semibold grid justify-center p-2 text-purple-600 text-sm leading-snug uppercase rounded shadow-md hover:shadow-xl focus:shadow-lg focus:outline-none focus:ring-0 active:bg-colour-dark active:shadow-xl outline-2 outline transition duration-150 ease-in-out w-full items-center hover:bg-slate-200 group-hover:outline-purple-600'
                 >
                   Github
@@ -70,12 +71,14 @@ function PortfolioDisplay({ portfolioDisplayRef }) {
                   href={item.demoUrl}
                   target='_blank'
                   rel='noreferrer'
+                  aria-label='Open live demo of site'
                   className='bg-gray-900 font-semibold grid justify-center p-2 text-yellow-500 text-sm leading-snug uppercase rounded shadow-md hover:shadow-xl focus:shadow-lg focus:outline-none focus:ring-0 active:bg-colour-dark active:shadow-xl transition duration-150 ease-in-out w-full items-center hover:bg-slate-200 outline-2 outline group-hover:outline-yellow-500'
                 >
                   Live Demo
                 </a>
                 <button
                   onClick={() => displayInfo(item)}
+                  aria-label='See more info'
                   className='bg-gray-900 grid font-semibold justify-center p-2 text-green-600 text-sm leading-snug uppercase rounded shadow-md hover:shadow-xl focus:shadow-lg focus:outline-none focus:ring-0 active:bg-colour-dark active:shadow-xl transition duration-150 ease-in-out w-full items-center hover:bg-slate-200 outline-2 outline group-hover:outline-green-600'
                 >
                   More Info

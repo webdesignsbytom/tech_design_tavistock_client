@@ -67,7 +67,6 @@ import ArduWeb from '../assets/images/projects/arduplot-website-programming-cont
 import Arduino from '../assets/images/tech/arduino-circuit-board-design.png';
 // Video
 import CatAppVideo from '../assets/video/device/cat_app_video_demo_mobile_app.mp4';
-import ShoppingAppVideo from '../assets/video/device/shopping_app_mobile_app_video_demo.mp4';
 import ArduplotVideo from '../assets/video/device/arduplot_robot_demo_working_product.mp4';
 
 export const initialData = {
@@ -140,7 +139,6 @@ export const portfolioAppImagesArray = [
   {
     id: appImageId++,
     image: App2,
-    video: ShoppingAppVideo,
     alt: 'App display',
   },
   {

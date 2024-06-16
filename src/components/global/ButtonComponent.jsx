@@ -56,6 +56,7 @@ const ButtonComponent = ({ label, onClick, type, btnType, btnValue, href, loadin
       className={`${styles}`}
       type={btnTypeSelected}
       value={btnValueSelected}
+      aria-label={label}
     >
       {loading ? <LoadingSpinner width={'w-[12px]'} height={'h-[12px]'} /> : <span>{label}</span> }
     </button>

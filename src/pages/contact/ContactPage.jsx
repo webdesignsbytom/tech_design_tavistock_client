@@ -59,14 +59,14 @@ function ContactPage() {
             </div>
 
             <section className='my-auto grid relative lg:justify-center'>
-            <div className='grid lg:hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-        {messageModalOpen && (
-          <MessageModal
-            hasSubmissionFailed={hasSubmissionFailed}
-            closeModal={closeModal}
-          />
-        )}
-      </div>
+              <div className='grid lg:hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+                {messageModalOpen && (
+                  <MessageModal
+                    hasSubmissionFailed={hasSubmissionFailed}
+                    closeModal={closeModal}
+                  />
+                )}
+              </div>
               <ContactForm
                 setHasSubmissionFailed={setHasSubmissionFailed}
                 setMessageModalOpen={setMessageModalOpen}

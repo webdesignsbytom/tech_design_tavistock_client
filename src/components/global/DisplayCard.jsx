@@ -28,6 +28,7 @@ function DisplayCard({ data, buttonId, buttonColor }) {
         <button
           id={buttonId}
           onClick={() => navigateToPage('/contact')}
+          aria-label='Contact us link button'
           className={`inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md ${buttonColor} focus:shadow-outline focus:outline-none`}
         >
           Get Now

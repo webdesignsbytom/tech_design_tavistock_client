@@ -67,24 +67,6 @@ select {
   font: inherit;
 }
 
-/* style type for unordered list */
-@counter-style custom-unordered {
-  system: cyclic;
-  symbols: '🤖' '🕹️' 'ᯤ' '⚙️' ;
-  suffix: ' ';
-}
-
-/* style type for ordered list */
-@counter-style custom-ordered {
-  system: fixed;
-  symbols: '➡️' '😀' '👍';
-  suffix: ' ';
-}
-
-.custom__list__style {
-  list-style: custom-unordered
-}
-
 
 /* Media Queries (MEDIUM DEVICES) */
 @media screen and (max-width: 1024px) {

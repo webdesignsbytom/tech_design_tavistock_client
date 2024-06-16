@@ -66,6 +66,7 @@ function Navbar() {
           <section className='grid md:hidden pr-4 items-center justify-end h-full'>
             <button
               onClick={openPhoneNav}
+              aria-label='Toggle navigation menu'
               className='grid w-fit p-1 h-fit items-center justify-center text-4xl text-white active:brightness-90'
             >
               <IoMdMenu className='active:scale-50 ' />
