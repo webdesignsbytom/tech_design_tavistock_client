@@ -32,6 +32,7 @@ import { HiBookOpen } from 'react-icons/hi';
 import { TbMathFunction } from 'react-icons/tb';
 import { BsFillChatDotsFill, BsPeopleFill } from 'react-icons/bs';
 import { BsFillPatchCheckFill } from 'react-icons/bs';
+import { TbTransformPointTopRight } from 'react-icons/tb';
 // Images
 import TavyEpoxy from '../assets/images/projects/tavyepoxyMd.png';
 import BioClicker from '../assets/images/projects/bioclickerMd.png';
@@ -204,16 +205,19 @@ export const portfolioDataArray = [
     skills: [
       { name: 'Advanced Algorithms', icon: <TbMathFunction size={20} /> },
       { name: 'Interactive Tutorial', icon: <HiBookOpen size={20} /> },
-      { name: 'Forum/media functions', icon: <MdForum size={20} /> },
-      { name: 'User Authentication', icon: <GrUserAdmin size={20} /> },
-      { name: 'Graphical language', icon: <FaUserAlt size={20} /> },
-      { name: 'Personal Profiles', icon: <FaUserAlt size={20} /> },
+      { name: 'Plotting canvas', icon: <MdForum size={20} /> },
+      { name: 'Bluetooth/WiFi', icon: <GrUserAdmin size={20} /> },
+      {
+        name: 'Graphical language',
+        icon: <TbTransformPointTopRight size={20} />,
+      },
+      { name: 'Robot design', icon: <FaUserAlt size={20} /> },
     ],
     headline: 'Programming robots on how to move.',
-    desc: 'This website works with the ArduPlot robot built using arduino technologies.',
+    desc: 'This website works with the ArduPlot robot built using arduino technologies. Using the canvas element to create a plotting grid the size of a mobile phone. The user can create various types of plot points using the buttons to select from. Tap, drag, timeout, move and pinching movements. The website converts this plot data to a grahpical plotting laugauge we custom made. This tells the machine how and where to move and at what speeds. You can transfer the data via SD card, bluetooth or wifi with certain models.',
     featuredComponent: 'Plotting Canvas',
     featuredDisplay: '',
-    liveSite: 'https://clever-rolypoly-136b82.netlify.app/',
+    liveSite: 'https://arduplot3d.netlify.app',
   },
   {
     id: portfolioDataId++,
@@ -265,7 +269,7 @@ export const portfolioDataArray = [
     title: 'Myecoapp',
     url: 'myecoapp',
     github: 'https://github.com/webdesignsbytom/myecoapp-deploy',
-    demoUrl: 'https://dazzling-biscuit-b01617.netlify.app/',
+    demoUrl: 'https://www.myecoapp.org',
     icons: [Javascript, ReactIcon, TailwindIcon, Expressjs, Prisma],
     images: [MyecoappPhone, Myecoapp, Myecoapp],
     skills: [
@@ -280,7 +284,7 @@ export const portfolioDataArray = [
     headline: 'A environmental project to use traffic to earn funds',
     desc: 'A organizations front page and information to promote green causes. This site has multiple purposes but its main content is a description of the green energy goals it has. It was built to modern popular designs. A colour scheme was picked. It was also the first I designed using Tailwind CSS. Its main features a smoothly laid out pages with varieties for data.',
     featuredComponent: 'Hero Section',
-    liveSite: 'https://dazzling-biscuit-b01617.netlify.app/',
+    liveSite: 'https://www.myecoapp.org',
   },
   {
     id: portfolioDataId++,

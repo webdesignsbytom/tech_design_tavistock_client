@@ -22,7 +22,7 @@ function ProjectsPage() {
       <main>
         <PortfolioDisplay portfolioDisplayRef={portfolioDisplayRef} />
         <PortfolioComponent />
-        <div className='my-52'>
+        <div className='mb-10 mt-10 lg:mt-52'>
           <CircuitDisplayComponent />
         </div>
         <div className='my-6 lg:my-16'>

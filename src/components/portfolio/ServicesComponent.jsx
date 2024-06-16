@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+// Icons
 import { BsCheck2Circle } from 'react-icons/bs';
+// Data
 import { servicesDataArray } from '../../utils/SalesDataUtils';
+// Components
 import ComponentTitles from '../global/ComponentTitles';
 
 function ServicesComponent() {

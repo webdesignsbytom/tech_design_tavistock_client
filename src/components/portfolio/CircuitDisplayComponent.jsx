@@ -51,25 +51,32 @@ function CircuitDisplayComponent() {
         <section className='grid w-full h-full mt-10 lg:mt-0 pb-20 lg:pb-0'>
           <div className='grid h-fit my-auto'>
             {/* Video player */}
-            <div className='mb-8 p-6'>
-              <video width='100%' controls muted loading="lazy">
-                <source src={displayItem.video} type='video/mp4' />
-                Your browser does not support the video tag.
-              </video>
+            <div className='mb-8 px-6 py-4 '>
+              <div className='outline outline-1 outline-black rounded bg-white p-1 shadow-lg'>
+                <video width='100%' controls muted loading='lazy'>
+                  <source src={displayItem.video} type='video/mp4' />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
             {/* Images in cols */}
             <section className='grid overflow-x-scroll'>
-              <div className='grid grid-flow-col gap-4 px-4 pb-4'>
+              <div className='grid grid-flow-col gap-4 px-4 pb-4 py-1'>
                 {displayItem.images.map((image, index) => (
-                  <div key={index} className='grid items-center min-h-[100px] min-w-[200px]'>
-                    <img
-                      key={index}
-                      src={image}
-                      onClick={() => handleImageClick(image, index)}
-                      alt={`Circuit ${index + 1}`}
-                      loading='lazy'
-                      className='w-full h-full object-contain'
-                    />
+                  <div
+                    key={index}
+                    className='grid items-center min-h-[100px] min-w-[200px]'
+                  >
+                    <div className='outline outline-1 outline-black rounded bg-white p-1 shadow-lg'>
+                      <img
+                        key={index}
+                        src={image}
+                        onClick={() => handleImageClick(image, index)}
+                        alt={`Circuit ${index + 1}`}
+                        loading='lazy'
+                        className='w-full h-full object-contain rounded'
+                      />
+                    </div>
                   </div>
                 ))}
               </div>

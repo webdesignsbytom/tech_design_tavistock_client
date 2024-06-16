@@ -116,7 +116,7 @@ function Navbar() {
                   <Link
                     to={item.url}
                     className={`grid items-end h-fit ${
-                      isActive ? 'text-red-700' : 'text-white'
+                      isActive ? 'text-text-alt' : 'text-white'
                     } duration-300`}
                   >
                     <div className='grid justify-center items-end h-fit'>
