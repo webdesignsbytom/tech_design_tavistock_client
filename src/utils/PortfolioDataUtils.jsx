@@ -181,7 +181,7 @@ export const portfolioCircuitImagesArray = [
   },
   {
     id: circuitImageId++,
-    image: Circuit2,
+    image: ArduWeb,
     alt: 'Circuit display',
   },
   {
