@@ -1,49 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Tech Design Tavistock. Website development and creating modern applications online."
-    />
 
-    <!-- Open Graph Meta Tags for Social Media Sharing -->
-    <meta property="og:title" content="Tech Design Tavistock" />
-    <meta property="og:description" content="Website development and creating modern applications online." />
-    <meta property="og:image" content="%PUBLIC_URL%/logo192.png" />
-    <meta property="og:url" content="https://www.webdesignsbytom.com" />
-    <meta property="og:type" content="website" />
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description"
+    content="Tech Design Tavistock. Website development and creating modern applications online." />
 
-    <!-- Twitter Meta Tags for Social Media Sharing -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tech Design Tavistock" />
-    <meta name="twitter:description" content="Website development and creating modern applications online." />
-    <meta name="twitter:image" content="%PUBLIC_URL%/logo192.png" />
+  <!-- Open Graph Meta Tags for Social Media Sharing -->
+  <meta property="og:title" content="Tech Design Tavistock" />
+  <meta property="og:description" content="Website development and creating modern applications online." />
+  <meta property="og:image" content="%PUBLIC_URL%/logo192.png" />
+  <meta property="og:url" content="https://www.webdesignsbytom.com" />
+  <meta property="og:type" content="website" />
 
-    <!-- Preconnect to required origins for faster DNS resolution -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Twitter Meta Tags for Social Media Sharing -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tech Design Tavistock" />
+  <meta name="twitter:description" content="Website development and creating modern applications online." />
+  <meta name="twitter:image" content="%PUBLIC_URL%/logo192.png" />
 
-    <!-- Preload important resources -->
-    <!-- <link rel="preload" href="%PUBLIC_URL%/static/css/main.css" as="style" />
+  <!-- Preconnect to required origins for faster DNS resolution -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Preload important resources -->
+  <!-- <link rel="preload" href="%PUBLIC_URL%/static/css/main.css" as="style" />
     <link rel="preload" href="%PUBLIC_URL%/static/js/main.js" as="script" /> -->
 
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Tech Design Tavistock</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- Optional: Analytics script -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Tech Design Tavistock</title>
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Tech Design Tavistock",
+        "url": "https://www.example.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.example.com/search?query={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+      </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- Optional: Analytics script -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-XXXXX-Y');
     </script> -->
-  </body>
+</body>
+
 </html>

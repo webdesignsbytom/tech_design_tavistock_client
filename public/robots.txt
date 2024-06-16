@@ -1,8 +1,9 @@
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
 Allow: /
 
-# Disallow web crawlers from accessing specific directories
+# Disallow web crawlers from accessing specific directories (if they exist)
 Disallow: /admin/
 Disallow: /user/
 
@@ -11,4 +12,4 @@ User-agent: BadBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://www.webdesignsbytom.com/sitemap.xml

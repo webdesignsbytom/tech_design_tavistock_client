@@ -2,6 +2,7 @@
 |____.env
 |____.gitignore
 |____file_structure.txt
+|____generate-sitemap.js
 |____package-lock.json
 |____package.json
 |____public
@@ -11,101 +12,66 @@
 | |____logo512.png
 | |____manifest.json
 | |____robots.txt
+| |____sitemap.xml
 |____README.md
 |____src
+| |____api
+| | |____client.js
 | |____App.js
 | |____assets
 | | |____images
 | | | |____device
-| | | | |____circuit-board.svg
-| | | | |____computer.svg
-| | | | |____mobile.svg
-| | | | |____website.svg
+| | | | |____circuit-board-design-option-icon.svg
+| | | | |____computer-app-design-option-icon.svg
+| | | | |____mobile-app-design-option-icon.svg
+| | | | |____website-design-option-icon.svg
 | | | |____logos
-| | | | |____logo.png
-| | | | |____myea_logo.jpg
-| | | | |____RVS_logo.jpg
-| | | | |____turnbull_review.jpeg
-| | | | |____wdbt-black.svg
-| | | | |____wdbt-white.svg
-| | | | |____wervings.png
+| | | | |____myecoapp-logo-for-review.jpg
+| | | | |____rapid-van-solutions-logo-for-review.jpg
+| | | | |____tech-design-tavistock-logo-black.svg
+| | | | |____tech-design-tavistock-logo-white.svg
+| | | | |____turnbull-music-review-image.jpeg
+| | | | |____wervings-syrups-logo-for-review.png
 | | | |____pages
-| | | | |____404cat.png
-| | | | |____iso_bg.png
-| | | | |____shapes_1.jpg
+| | | | |____404-page-not-found-cat.png
+| | | | |____background-wavy-lines.jpg
 | | | |____portfolio
-| | | | |____collage1.png
-| | | | |____collage2.png
-| | | | |____collage_hoz1.png
+| | | | |____design-cloud-of-tech-items.png
 | | | |____projects
-| | | | |____app_1.png
-| | | | |____app_2.png
-| | | | |____app_3.png
-| | | | |____app_4.png
-| | | | |____app_5.png
-| | | | |____app_6.png
-| | | | |____arduplot.png
-| | | | |____arduplot_1.png
-| | | | |____arduplot_2.png
-| | | | |____bioclickerMd.png
-| | | | |____bioclickerSm.png
-| | | | |____blender.png
-| | | | |____building-page.png
-| | | | |____calculatorMd.png
-| | | | |____cat_app_1.png
-| | | | |____circuit_1.png
-| | | | |____circuit_2.png
-| | | | |____fullpage_1.png
-| | | | |____fullpage_2.png
-| | | | |____fullpage_3.png
-| | | | |____fullpage_4.png
-| | | | |____fullpage_5.png
-| | | | |____fullpage_6.png
-| | | | |____fullpage_7.png
-| | | | |____fullpage_8.png
-| | | | |____fullpage_9.png
-| | | | |____heromap-black.png
-| | | | |____loginSm.jpg
-| | | | |____matchedbettingPhone.jpg
-| | | | |____mbs-calculator-md.png
-| | | | |____mbs-home-md.png
-| | | | |____mbs-lessons-md.png
-| | | | |____mbs-simulator-sm.png
-| | | | |____myeaDarkSm.jpg
-| | | | |____myeaMd.png
-| | | | |____myeaSm.jpg
-| | | | |____phone_app1.png
-| | | | |____pokerMd.png
-| | | | |____rapid_van_sm.jpg
-| | | | |____shiny_card.png
-| | | | |____shopping_app.jpg
-| | | | |____space_invaders_1.png
-| | | | |____tavyepoxyfull.png
-| | | | |____tavyepoxyMd.png
-| | | | |____tavyepoxyPhone.jpg
-| | | | |____tavyepoxySm.png
-| | | | |____wdbt-account-sm.png
-| | | | |____wdbt-buttons-md.png
-| | | | |____wdbt-main-md.png
-| | | | |____wdbt-nav-sm.png
-| | | | |____wdbt-portfolio-md.png
-| | | | |____ws-home-md.png
-| | | | |____ws-home-sm.png
-| | | | |____ws-overview-md.png
+| | | | |____arduplot-3d-printed-robot-arm.png
+| | | | |____arduplot-3d-printed-robot.png
+| | | | |____arduplot-circuit-board-and-housing.png
+| | | | |____arduplot-website-programming-controller.png
+| | | | |____bioclicker-game-website-main-page-medium-size.png
+| | | | |____bioclicker-online-game-mobile-version.png
+| | | | |____blender-cad-parts-design.png
+| | | | |____blog-website-demo-image-modern-design.png
+| | | | |____cat-app-mobile-app-home-screen.png
+| | | | |____circuit-board-design-arduino-mega.png
+| | | | |____e-commerce-shopping-app-home-page.jpg
+| | | | |____fullpage-modern-website-display-personal-site.png
+| | | | |____matched-betting-calculator-website-large-size.png
+| | | | |____matched-betting-simulator-calculator-mobile-version.png
+| | | | |____matched-betting-simulator-website-home-page.png
+| | | | |____myeacoapp-mobile-version-home-page-dark-mode.jpg
+| | | | |____myecoapp-fullpage-demo-website-modern-design.png
+| | | | |____myecoapp-home-page-website-medium-size.png
+| | | | |____space-invaders-mobile-game.png
+| | | | |____tavy-epoxy-mobile-version-home-page.jpg
+| | | | |____tavy-epoxy-website-portfolio-example-medium-size.png
+| | | | |____web-design-website-about-page-example.png
+| | | | |____web-design-website-account-page-mobile-version.png
+| | | | |____web-design-website-portfolio-page-example.png
+| | | | |____worlds-smartest-online-quiz-website-home-page.png
+| | | | |____worlds-smartest-online-quiz-website-scores-page.png
+| | | | |____worlds-smartest-quiz-app-mobile-version.png
 | | | |____sales
-| | | | |____code1.png
-| | | | |____code2.png
-| | | | |____code3.jpg
-| | | | |____devices.jpg
-| | | | |____header_img.png
-| | | | |____heros-expanding.png
-| | | | |____particles.png
-| | | | |____wdbt1.png
-| | | | |____working-code.jpg
-| | | | |____working-lady.jpg
+| | | | |____example-of-code-we-made.jpg
+| | | | |____hero-image-pc-variety-of-programs.png
+| | | | |____working-people-at-table-in-office.jpg
 | | | |____tech
-| | | | |____arduino.png
-| | | | |____raspberry_pi.png
+| | | | |____arduino-circuit-board-design.png
+| | | | |____raspberry-pi-circuit-design.png
 | | |____svg
 | | | |____accountIcon-white.svg
 | | | |____adminIcon-white.svg
@@ -167,23 +133,23 @@
 | | | |____undo.svg
 | | |____video
 | | | |____device
-| | | | |____arduplot.mp4
-| | | | |____cat_app_video.mp4
+| | | | |____arduplot_robot_demo_working_product.mp4
+| | | | |____cat_app_video_demo_mobile_app.mp4
 | | | | |____Screen_Recording_20240603_204019.mp4
 | | | | |____Screen_Recording_20240603_204204_Samsung Internet.mp4
-| | | | |____shopping_app.mp4
+| | | | |____shopping_app_mobile_app_video_demo.mp4
 | |____components
 | | |____about
 | | | |____AboutSection.jsx
 | | | |____WhyChooseUs.jsx
 | | |____contact
 | | | |____ContactForm.jsx
+| | | |____MessageModal.jsx
 | | |____devices
 | | | |____DesktopDevices.jsx
 | | | |____LaptopDevice.jsx
 | | | |____MonitorDevices.jsx
 | | | |____PhoneDevices.jsx
-| | | |____TabletDevices.jsx
 | | |____footer
 | | | |____FooterComponent.jsx
 | | |____global
