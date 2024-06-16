@@ -51,8 +51,8 @@ function InformationComponent() {
 
     if (sectionElement) {
       observer.observe(sectionElement);
-      sectionElement.addEventListener('mouseover', handleMouseOver);
-      sectionElement.addEventListener('touchstart', handleMouseOver);
+      sectionElement.addEventListener('mouseover', handleMouseOver, {passive: true});
+      sectionElement.addEventListener('touchstart', handleMouseOver, {passive: true});
 
       // Cleanup function to remove the event listener
       return () => {

@@ -15,59 +15,6 @@ function PortfolioComponent() {
   );
   const [displayType, setDisplayType] = useState('web');
 
-  // useEffect(() => {
-  //   let activeContainer = null;
-
-  //   const handleIntersection = (entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         const imgContainers =
-  //           entry.target.querySelectorAll('.image-container');
-  //         if (
-  //           imgContainers &&
-  //           imgContainers.length > 0 &&
-  //           displayType === 'web'
-  //         ) {
-  //           if (!activeContainer) {
-  //             activeContainer = imgContainers[0];
-  //             // setAutoScroll(activeContainer, 20); // Apply auto-scroll to the first container
-  //           }
-  //         }
-  //       }
-  //     });
-  //   };
-
-  //   const observer = new IntersectionObserver(handleIntersection, {
-  //     root: null,
-  //     rootMargin: '0px',
-  //     threshold: 0.5,
-  //   });
-
-  //   articleRefs.current.forEach((article) => {
-  //     if (article) observer.observe(article);
-  //   });
-
-  //   return () => {
-  //     observer.disconnect();
-  //   };
-  // }, [displayType]);
-
-  // useEffect(() => {
-  //   const handleUserInteraction = (event) => {
-  //     if (event.target.closest('.image-container')) {
-  //       const imgContainer = event.target.closest('.image-container');
-  //       setAutoScroll(imgContainer, 20); // Apply auto-scroll to the interacted container
-  //     }
-  //   };
-
-  //   window.addEventListener('wheel', handleUserInteraction);
-  //   window.addEventListener('mouseover', handleUserInteraction);
-
-  //   return () => {
-  //     window.removeEventListener('wheel', handleUserInteraction);
-  //     window.removeEventListener('mouseover', handleUserInteraction);
-  //   };
-  // }, []);
 
   const displayTypes = ['web', 'app', 'circuit'];
 
