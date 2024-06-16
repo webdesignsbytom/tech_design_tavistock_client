@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 // Data
 import { emptyContactFormData } from '../../utils/ContactFormDataUtils';
 import ButtonComponent from '../global/ButtonComponent';
+// Api
 import client from '../../api/client';
-const host = process.env.REACT_APP_API_URL;
 
 function ContactForm({ setMessageModalOpen, setHasSubmissionFailed }) {
   const [formData, setFormData] = useState(emptyContactFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
-      console.log('{host}{path}', `${host}`);
   
   const [errors, setErrors] = useState({});
 
@@ -39,7 +38,6 @@ function ContactForm({ setMessageModalOpen, setHasSubmissionFailed }) {
       client
         .post('/contact/contact-submit', formData, false)
         .then((res) => {
-          console.log('res', res.data.data);
         })
 
         .catch((err) => {

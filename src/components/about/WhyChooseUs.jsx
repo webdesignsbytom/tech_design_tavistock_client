@@ -3,7 +3,10 @@ import React, { useEffect, useRef, useState } from 'react';
 // Data
 import { businessInfo } from '../../utils/CompanyDataUtil';
 import { whyChooseUsItemsArray } from '../../utils/AboutPageDataUtils';
+// Components
 import ComponentTitles from '../global/ComponentTitles';
+// Images 
+import GenImage from '../../assets/images/portfolio/computer-device-image-cloud-for-design.png'
 
 function WhyChooseUs() {
   const sectionRef = useRef(null);
@@ -71,27 +74,27 @@ function WhyChooseUs() {
         <div className='flex flex-wrap items-center'>
           <section className='grow-0 shrink-0 basis-auto w-full lg:w-5/12 mb-12 lg:mb-0 md:px-6'>
             <div
-              className='relative overflow-hidden bg-no-repeat bg-cover rounded-lg shadow-lg'
+              className='overflow-hidden rounded-lg shadow-lg p-4'
               data-mdb-ripple='true'
               data-mdb-ripple-color='light'
               style={{ backgroundPosition: '50%' }}
             >
               <img
-                src='https://mdbootstrap.com/img/new/textures/full/98.jpg'
-                className='w-full max-h-[500px]'
+                src={GenImage}
+                className='w-full max-h-[500px] lg:max-h-[700px]'
                 alt='design classics'
                 loading='lazy'
               />
               <div
-                className='absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed'
-                style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
+                className='w-full h-full mt-10 lg:mt-6 overflow-hidden bg-fixed'
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
               >
                 <article className='flex justify-center items-center h-full'>
-                  <div className='px-6 py-12 md:px-12 text-white text-center'>
+                  <div className='px-6 py-12 md:px-12 md:py-6 text-white text-center'>
                     <h3 className='text-2xl uppercase font-bold mb-6'>
                       Years of experience delivering quality{' '}
                     </h3>
-                    <p style={{ color: 'hsl(210, 12%, 80%)' }}>
+                    <p className='text-black'>
                       Personally I have worked for years in the engineering and
                       technology fields and bring a wealth of knowledge,
                       practical thinking and solutions to problems. My goals

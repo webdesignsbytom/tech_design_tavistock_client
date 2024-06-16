@@ -9,7 +9,6 @@ const client = {
     const headers = {
       Authorization: `Bearer ${localStorage.getItem(tokenKey)}`,
     };
-    console.log('{host}{path}', `${host}${path}`);
     return axios.get(url, { headers });
   },
 
@@ -17,8 +16,6 @@ const client = {
     const url = `${host}${path}`;
     const token = localStorage.getItem(tokenKey);
     let headers = {};
-
-    console.log('{host}{path}', `${host}${path}`);
 
     if (withToken && token) {
       headers['Authorization'] = `Bearer ${token}`;
