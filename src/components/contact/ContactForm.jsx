@@ -37,7 +37,7 @@ function ContactForm() {
       client
         .post('/contact/contact-submit', formData, false)
         .then((res) => {
-          console.log('res', res.data.data.response);
+          console.log('res', res.data.data);
         })
 
         .catch((err) => {

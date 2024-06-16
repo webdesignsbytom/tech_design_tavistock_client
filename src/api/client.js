@@ -4,23 +4,26 @@ const host = process.env.REACT_APP_API_URL;
 const tokenKey = process.env.REACT_APP_USER_TOKEN;
 
 const client = {
-  get: path => {
+  get: (path) => {
     const url = `${host}${path}`;
     const headers = {
       Authorization: `Bearer ${localStorage.getItem(tokenKey)}`,
     };
-
+    console.log('{host}{path}', `${host}${path}`);
     return axios.get(url, { headers });
   },
 
-  post: (path, data, withToken = true) => {
+  post: (path, data, withToken = false) => {
     const url = `${host}${path}`;
     const token = localStorage.getItem(tokenKey);
     let headers = {};
 
-    if (withToken) {
+    console.log('{host}{path}', `${host}${path}`);
+
+    if (withToken && token) {
       headers['Authorization'] = `Bearer ${token}`;
     }
+
     return axios.post(url, data, { headers });
   },
 
@@ -34,7 +37,7 @@ const client = {
     return axios.patch(url, data, { headers });
   },
 
-  delete: path => {
+  delete: (path) => {
     const url = `${host}${path}`;
     const headers = {
       Authorization: `Bearer ${localStorage.getItem(tokenKey)}`,
