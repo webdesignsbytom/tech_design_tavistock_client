@@ -64,6 +64,7 @@ import Circuit3 from '../assets/images/projects/arduplot-3d-printed-robot-arm.pn
 import Circuit4 from '../assets/images/projects/arduplot-circuit-board-and-housing.png';
 import Circuit5 from '../assets/images/projects/blender-cad-parts-design.png';
 import ArduWeb from '../assets/images/projects/arduplot-website-programming-controller.png';
+import Arduino from '../assets/images/tech/arduino-circuit-board-design.png';
 // Video
 import CatAppVideo from '../assets/video/device/cat_app_video_demo_mobile_app.mp4';
 import ShoppingAppVideo from '../assets/video/device/shopping_app_mobile_app_video_demo.mp4';
@@ -388,7 +389,7 @@ export const circuitDisplayItemData = {
     ArduWeb,
     Circuit3,
     Circuit1,
-    Circuit4,
+    Arduino,
     ArduWeb,
     Circuit3,
   ],
