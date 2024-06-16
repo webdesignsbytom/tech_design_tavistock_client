@@ -1,8 +1,8 @@
 // Icons
-import ComputerIcon from '../assets/images/device/computer.svg';
-import MobileIcon from '../assets/images/device/mobile.svg';
-import WebsiteIcon from '../assets/images/device/website.svg';
-import CircuitBoardIcon from '../assets/images/device/circuit-board.svg';
+import ComputerIcon from '../assets/images/device/computer-app-design-option-icon.svg';
+import MobileIcon from '../assets/images/device/mobile-app-design-option-icon.svg';
+import WebsiteIcon from '../assets/images/device/website-design-option-icon.svg';
+import CircuitBoardIcon from '../assets/images/device/circuit-board-design-option-icon.svg';
 
 export const initAlert = { status: '', content: '' };
 

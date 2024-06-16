@@ -5,7 +5,7 @@ import { headerInfoArray } from '../../utils/HomePageDataUtils';
 // Icons
 import { FiCheckCircle } from 'react-icons/fi';
 // Images
-import CollageImage from '../../assets/images/portfolio/collage1.png';
+import CollageImage from '../../assets/images/portfolio/design-cloud-of-tech-items.png';
 // Hooks
 import useNavigateToPage from '../../hooks/useNavigateToPage';
 // Components

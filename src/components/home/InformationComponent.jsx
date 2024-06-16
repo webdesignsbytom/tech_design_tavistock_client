@@ -7,7 +7,7 @@ import InfoBox from '../global/InfoBox';
 import ButtonComponent from '../global/ButtonComponent';
 import ComponentTitles from '../global/ComponentTitles';
 // Images
-import PcImage from '../../assets/images/sales/heros-expanding.png';
+import PcImage from '../../assets/images/sales/hero-image-pc-variety-of-programs.png';
 // Hooks
 import useNavigateToPage from '../../hooks/useNavigateToPage';
 

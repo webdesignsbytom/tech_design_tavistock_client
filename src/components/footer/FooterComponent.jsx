@@ -5,7 +5,7 @@ import SocialBar from '../social/SocialBar';
 import { businessInfo } from '../../utils/CompanyDataUtil';
 import { navbarLinksArray } from '../../utils/NavbarDataUtils';
 // Images
-import Logo from '../../assets/images/logos/wdbt-white.svg';
+import Logo from '../../assets/images/logos/tech-design-tavistock-logo-white.svg';
 // Hooks
 import useNavigateToPage from '../../hooks/useNavigateToPage';
 

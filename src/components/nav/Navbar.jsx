@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 // Images
-import Logo from '../../assets/images/logos/wdbt-white.svg';
+import Logo from '../../assets/images/logos/tech-design-tavistock-logo-white.svg';
 // Components
 import { navbarLinksArray } from '../../utils/NavbarDataUtils';
 // Icons

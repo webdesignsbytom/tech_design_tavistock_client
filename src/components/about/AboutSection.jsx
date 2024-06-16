@@ -1,8 +1,8 @@
 import React from 'react';
 // Images
-import DevicesImage from '../../assets/images/sales/devices.jpg';
-import CodeImage from '../../assets/images/sales/code3.jpg';
-import Heroes from '../../assets/images/sales/heros-expanding.png';
+import DevicesImage from '../../assets/images/sales/working-people-at-table-in-office.jpg';
+import CodeImage from '../../assets/images/sales/example-of-code-we-made.jpg';
+import Heroes from '../../assets/images/sales/hero-image-pc-variety-of-programs.png';
 // Data
 import { businessInfo } from '../../utils/CompanyDataUtil';
 // Components
