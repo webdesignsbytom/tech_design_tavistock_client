@@ -2,14 +2,28 @@ import React, { useState } from 'react';
 // Components
 import Navbar from '../../components/nav/Navbar';
 import ContactForm from '../../components/contact/ContactForm';
-import ComponentTitles from '../../components/global/ComponentTitles';
-import { businessInfo } from '../../utils/CompanyDataUtil';
 import ContactButtons from '../../components/global/ContactButtons';
-
+import MessageModal from '../../components/contact/MessageModal';
 
 function ContactPage() {
+  const [hasSubmissionFailed, setHasSubmissionFailed] = useState(false);
+  const [messageModalOpen, setMessageModalOpen] = useState(false);
+
+  const closeModal = () => {
+    setMessageModalOpen(false);
+    setHasSubmissionFailed(false);
+  };
+
   return (
-    <div className='min-h-screen w-full'>
+    <div className='min-h-screen w-full relative'>
+      <div className='hidden lg:grid absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+        {messageModalOpen && (
+          <MessageModal
+            hasSubmissionFailed={hasSubmissionFailed}
+            closeModal={closeModal}
+          />
+        )}
+      </div>
       <div className='grid w-full h-full'>
         {/* Header container */}
         <div className='grid grid-rows-reg lg:h-screen w-full overflow-y-scroll scrollbar-hidden lg:overflow-y-hidden bg-main-bg'>
@@ -44,8 +58,19 @@ function ContactPage() {
               </section>
             </div>
 
-            <section className='my-auto grid lg:justify-center'>
-              <ContactForm />
+            <section className='my-auto grid relative lg:justify-center'>
+            <div className='grid lg:hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+        {messageModalOpen && (
+          <MessageModal
+            hasSubmissionFailed={hasSubmissionFailed}
+            closeModal={closeModal}
+          />
+        )}
+      </div>
+              <ContactForm
+                setHasSubmissionFailed={setHasSubmissionFailed}
+                setMessageModalOpen={setMessageModalOpen}
+              />
             </section>
           </main>
         </div>

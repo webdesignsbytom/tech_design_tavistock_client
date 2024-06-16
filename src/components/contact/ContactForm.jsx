@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 import { emptyContactFormData } from '../../utils/ContactFormDataUtils';
 import ButtonComponent from '../global/ButtonComponent';
 import client from '../../api/client';
+const host = process.env.REACT_APP_API_URL;
 
-function ContactForm() {
+function ContactForm({ setMessageModalOpen, setHasSubmissionFailed }) {
   const [formData, setFormData] = useState(emptyContactFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
+      console.log('{host}{path}', `${host}`);
+  
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -43,11 +45,15 @@ function ContactForm() {
         .catch((err) => {
           console.error('Unable to submit', err);
           setIsSubmitting(false);
+          setHasSubmissionFailed(true)
+          setMessageModalOpen(true)
         });
 
       setFormData(emptyContactFormData);
       setErrors({});
       setIsSubmitting(false);
+      setHasSubmissionFailed(false)
+      setMessageModalOpen(true)
     }
   };
 
