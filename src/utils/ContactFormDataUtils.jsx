@@ -4,7 +4,7 @@ export const emptyContactFormData = {
     email: '',
     message: '',
     phoneNumber: '',
-    projectType: '',
+    projectType: 'WEB',
     location: '',
     businessName: '',
   }

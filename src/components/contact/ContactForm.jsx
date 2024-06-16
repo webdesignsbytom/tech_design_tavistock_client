@@ -6,6 +6,7 @@ import client from '../../api/client';
 
 function ContactForm() {
   const [formData, setFormData] = useState(emptyContactFormData);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [errors, setErrors] = useState({});
 
@@ -28,7 +29,7 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setIsSubmitting(true);
     const validationErrors = validateForm();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -41,12 +42,22 @@ function ContactForm() {
 
         .catch((err) => {
           console.error('Unable to submit', err);
+          setIsSubmitting(false);
         });
 
       setFormData(emptyContactFormData);
       setErrors({});
+      setIsSubmitting(false);
     }
   };
+
+  const projectTypes = [
+    { value: 'WEB', label: 'Web' },
+    { value: 'APP', label: 'App' },
+    { value: 'SOFTWARE', label: 'Software' },
+    { value: 'CIRCUITS', label: 'Circuits' },
+    { value: 'OTHER', label: 'Other' },
+  ];
 
   return (
     <div>
@@ -145,7 +156,7 @@ function ContactForm() {
           <div className='mb-4'>
             <label
               className='block text-gray-700 text-sm font-bold mb-2'
-              htmlFor='businessName'
+              htmlFor='projectType'
             >
               Project Type (optional)
             </label>
@@ -156,21 +167,15 @@ function ContactForm() {
               onChange={handleChange}
               className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
             >
-              <option value='web' className='bg-white'>
-                Web
-              </option>
-              <option value='app' className='bg-white'>
-                App
-              </option>
-              <option value='software' className='bg-white'>
-                Software
-              </option>
-              <option value='circuits' className='bg-white'>
-                Circuits
-              </option>
-              <option value='other' className='bg-white'>
-                Other
-              </option>
+              {projectTypes.map((type) => (
+                <option
+                  key={type.value}
+                  value={type.value}
+                  className='bg-white'
+                >
+                  {type.label}
+                </option>
+              ))}
             </select>
           </div>
         </section>
@@ -229,13 +234,16 @@ function ContactForm() {
             <p className='text-red-500 text-xs italic'>{errors.message}</p>
           )}
         </div>
-        <div className='flex items-center justify-end'>
-          <ButtonComponent
-            label='Submit'
-            type='primary'
-            btnType='submit'
-            btnValue='Submit'
-          />
+        <div className='grid items-center'>
+          <div className='w-full'>
+            <ButtonComponent
+              label='Submit'
+              type='submit'
+              btnType='submit'
+              btnValue='Submit'
+              loading={isSubmitting}
+            />
+          </div>
         </div>
       </form>
     </div>
