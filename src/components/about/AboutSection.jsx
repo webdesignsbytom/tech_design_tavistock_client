@@ -644,7 +644,7 @@ function AboutSection() {
                 and can complete any custom build you imagine.
               </p>
               {/* CTA BUTTONS */}
-              <section className='grid p-2 md:p-0 md:mb-12 md:flex justify-center gap-3 w-full mt-8'>
+              <section className='grid p-2 md:p-0 md:mb-12 md:flex gap-3 w-full mt-8'>
                 <div className='grid w-full justify-items-center'>
                   <ButtonComponent
                     label='Contact Now'

@@ -34,22 +34,22 @@ import { BsFillChatDotsFill, BsPeopleFill } from 'react-icons/bs';
 import { BsFillPatchCheckFill } from 'react-icons/bs';
 import { TbTransformPointTopRight } from 'react-icons/tb';
 // Images
-import TavyEpoxy from '../assets/images/projects/tavyepoxyMd.png';
-import BioClicker from '../assets/images/projects/bioclickerMd.png';
-import Myecoapp from '../assets/images/projects/myeaMd.png';
-import Calculator from '../assets/images/projects/calculatorMd.png';
-import MBSHome from '../assets/images/projects/mbs-home-md.png';
-import WSHome from '../assets/images/projects/ws-home-md.png';
-import WSOverview from '../assets/images/projects/ws-overview-md.png';
-import WDBTMain from '../assets/images/projects/wdbt-main-md.png';
-import WDBTPortfolio from '../assets/images/projects/wdbt-portfolio-md.png';
+import TavyEpoxy from '../assets/images/projects/tavy-epoxy-website-portfolio-example-medium-size.png';
+import BioClicker from '../assets/images/projects/bioclicker-game-website-main-page-medium-size.png';
+import Myecoapp from '../assets/images/projects/myecoapp-home-page-website-medium-size.png';
+import Calculator from '../assets/images/projects/matched-betting-calculator-website-large-size.png';
+import MBSHome from '../assets/images/projects/matched-betting-simulator-website-home-page.png';
+import WSHome from '../assets/images/projects/worlds-smartest-online-quiz-website-home-page.png';
+import WSOverview from '../assets/images/projects/worlds-smartest-online-quiz-website-scores-page.png';
+import WDBTMain from '../assets/images/projects/web-design-website-about-page-example.png';
+import WDBTPortfolio from '../assets/images/projects/web-design-website-portfolio-page-example.png';
 // Images - Phone
-import BioCLickerPhone from '../assets/images/projects/bioclickerSm.png';
-import MyecoappPhone from '../assets/images/projects/myeaSm.jpg';
-import TavyepoxyPhone from '../assets/images/projects/tavyepoxyPhone.jpg';
-import MatchedbettingPhone from '../assets/images/projects/matchedbettingPhone.jpg';
-import WSHomeSm from '../assets/images/projects/ws-home-sm.png';
-import WDBTNav from '../assets/images/projects/wdbt-nav-sm.png';
+import BioCLickerPhone from '../assets/images/projects/bioclicker-online-game-mobile-version.png';
+import MyecoappPhone from '../assets/images/projects/myeacoapp-mobile-version-home-page-dark-mode.jpg';
+import TavyepoxyPhone from '../assets/images/projects/tavy-epoxy-mobile-version-home-page.jpg';
+import MatchedbettingPhone from '../assets/images/projects/matched-betting-simulator-calculator-mobile-version.png';
+import WSHomeSm from '../assets/images/projects/worlds-smartest-quiz-app-mobile-version.png';
+import WDBTNav from '../assets/images/projects/web-design-website-account-page-mobile-version.png';
 // Images portfolio component
 import FullWeb1 from '../assets/images/projects/fullpage-modern-website-display-personal-site.png';
 import FullWeb2 from '../assets/images/projects/myecoapp-fullpage-demo-website-modern-design.png';
