@@ -10,7 +10,7 @@ function ReviewItem({ review }) {
           <div className='flex gap-1 justify-center w-full'>⭐⭐⭐⭐⭐</div>
         </div>
         <article className='flex justify-center my-4'>
-          <a href={url} target='_blank' rel='noreferrer'>
+          <a href={url} target='_blank' rel='noreferrer' aria-label='Go to home page'>
             <img
               className='h-20 w-20 rounded-full shadow-lg'
               src={imageUrl}
@@ -21,7 +21,7 @@ function ReviewItem({ review }) {
         </article>
         <article className='grid text-center justify-center '>
           <h4 className='text-hyperlink-blue text-ss md:text-base'>
-            <a href={url} rel='noreferrer' target='_blank'>
+            <a href={url} rel='noreferrer' target='_blank' aria-label='Go to reviwers website'>
               {url}
             </a>
           </h4>

@@ -660,7 +660,7 @@ function AboutSection() {
                   />
                 </div>
                 <div className='grid w-full justify-items-center'>
-                  <a href='#why-choose-us' className='w-full'>
+                  <a href='#why-choose-us' className='w-full' aria-label='See more examples'>
                     <ButtonComponent label='See More!' type='primary' />
                   </a>
                 </div>
