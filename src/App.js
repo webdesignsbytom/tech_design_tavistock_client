@@ -15,7 +15,7 @@ function App() {
       <Route path='/' index element={<HomePage />} />
       <Route path='/portfolio' element={<PortfolioPage />} />
       <Route path='/portfolio-item/:itemId' element={<PortfolioItemPage />} />
-      <Route path="/image-display/:id" element={<ImageDisplayPage />} /> {/* New route */}
+      <Route path="/image-display/:id" element={<ImageDisplayPage />} /> 
       <Route path='/about' element={<AboutPage />} />
       <Route path='/contact' element={<ContactPage />} />
       <Route path='/sales' element={<SalesPage />} />
