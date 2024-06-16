@@ -4,7 +4,7 @@ import ButtonComponent from '../global/ButtonComponent';
 
 function MessageModal({ hasSubmissionFailed, closeModal }) {
   return (
-    <article className='bg-white grid h-fit px-4 py-4 shadow-xl rounded-lg'>
+    <article className='bg-white grid h-fit px-4 z-20 py-4 shadow-xl rounded-lg'>
         {hasSubmissionFailed ? (
           <div className='text-center h-fit px-4 grid gap-2'>
             <h4 className='text-red-500 text-xl font-semibold'>
