@@ -16,7 +16,7 @@ function PortfolioPageHeader({ portfolioDisplayRef }) {
   };
 
   return (
-    <header className='grid relative justify-center items-center dark:text-white'>
+    <header className='grid relative justify-center items-center'>
       <section className='text-center mb-10 md:mb-0'>
         <article className='mb-4 px-4 mx-auto'>
           <div className='my-6'>

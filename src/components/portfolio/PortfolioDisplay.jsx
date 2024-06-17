@@ -18,7 +18,7 @@ function PortfolioDisplay({ portfolioDisplayRef }) {
     <section
       id='portfolio-display'
       ref={portfolioDisplayRef}
-      className='grid lg:grid-rows-reg py-10 dark:text-gray-400'
+      className='grid lg:grid-rows-reg py-10'
     >
       <section className='text-center mt-8 mb-4'>
         <h5 className='font-semibold'>Recent Work</h5>
@@ -29,7 +29,7 @@ function PortfolioDisplay({ portfolioDisplayRef }) {
       <section className='grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center md:mx-2 p-4 lg:mx-8 my-auto py-2'>
         {portfolioData.map((item, index) => {
           return (
-            <article key={index} className='bg-gray-200 dark:text-gray-700 group rounded-xl text-center p-4 grid gap-2 hover:outline hover:outline-4 hover:outline-black dark:hover:outline-white hover:bg-gray-900 cursor-pointer'>
+            <article key={index} className='bg-gray-200 group rounded-xl text-center p-4 grid gap-2 hover:outline hover:outline-4 hover:outline-black hover:bg-gray-900 cursor-pointer'>
             <h3 className='mb-2 group-hover:text-white text-xl font-semibold'>
               {item.title}
             </h3>

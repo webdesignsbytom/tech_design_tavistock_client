@@ -64,7 +64,7 @@ function PortfolioItemPage() {
                     </div>
 
                     <article className='outline-2 outline-black bg-gray-50 outline rounded p-1 shadow-[inset_-12px_-8px_40px_#46464620]'>
-                      <ul className='p-1 grid gap-1 dark:bg-gray-800 justify-center'>
+                      <ul className='p-1 grid gap-1 justify-center'>
                         {portfolioItem.skills.map((skill, index) => {
                           return (
                             <li className='grid' key={index}>

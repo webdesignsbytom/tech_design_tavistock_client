@@ -66,8 +66,8 @@ function FooterComponent() {
           <div className='grid h-fit'>
             <section className='flex justify-center my-1'>
               <SocialBar
-                background={'bg-footer-colour dark:bg-main-colour'}
-                icons={'text-white dark:text-gray-300'}
+                background={'bg-footer-colour'}
+                icons={'text-white'}
               />
             </section>
 

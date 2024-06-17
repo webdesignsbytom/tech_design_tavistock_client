@@ -63,7 +63,7 @@ function WhyChooseUs() {
       id='why-choose-us'
       className='mb-6 px-6 mx-auto lg:px-20 lg:mt-32 lg:mb-24'
     >
-      <section className='text-gray-800 dark:text-gray-400'>
+      <section className='text-gray-800'>
         <div className='mb-12 w-full px-4 lg:w-1/2 mx-auto'>
           <ComponentTitles
             title={`Why ${businessInfo.companyName} is for you!`}
