@@ -22,7 +22,7 @@ function FooterComponent() {
 
   return (
     <footer className='grid h-fit w-full mt-10'>
-      <div className='grid bg-alt-colour h-fit text-white pt-4'>
+      <div className='grid bg-alt-colour h-fit dark:bg-dark-alt-colour text-white dark:text-dark-text-light pt-4'>
         {/* Large */}
         <div className='grid grid-rows-rev h-full'>
           <section className='hidden lg:grid lg:grid-cols-3 h-full px-4 py-4'>

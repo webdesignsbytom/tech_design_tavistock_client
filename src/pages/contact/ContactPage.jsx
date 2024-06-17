@@ -37,7 +37,7 @@ function ContactPage() {
                   <span className='text-primary lg:!text-start mb-2 block text-xl !font-semibold poppins_title lg:pl-4'>
                     Lets chat
                   </span>
-                  <h2 className='mb-8 text-3xl font-bold sm:text-5xl text-text-alt poppins_title'>
+                  <h2 className='mb-8 text-3xl font-bold sm:text-5xl text-purple-main poppins_title'>
                     Tell me about your <br className='hidden lg:block' />{' '}
                     project and goals.
                   </h2>

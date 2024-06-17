@@ -25,7 +25,7 @@ function ExperienceComponent() {
           <div className='grid lg:grid-cols-faf gap-4'>
             <SkillCard
               title='Frontend Development'
-              bg={'outline-text-alt'}
+              bg={'outline-purple-main'}
               skills={frontendSkills}
             />
             <section className='bg-alt-colour grid rounded-xl text-center p-4 min-h-[130px] my-auto w-full z-0 h-full'>
@@ -35,7 +35,7 @@ function ExperienceComponent() {
             </section>
             <SkillCard
               title='Backend Development'
-              bg={'outline-green-1'}
+              bg={'outline-green-main'}
               skills={backendSkills}
             />
           </div>

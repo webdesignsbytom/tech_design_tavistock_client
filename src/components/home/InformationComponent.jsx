@@ -70,7 +70,7 @@ function InformationComponent() {
     >
       {/* Background extension */}
       {/* Main content of section */}
-      <div className='grid h-full w-full overflow-hidden bg-slate-300 mb-24 sm:mb-10 sm:px-6 lg:px-12'>
+      <div className='grid h-full w-full overflow-hidden bg-slate-300 dark:bg-dark-alt-colour mb-24 sm:mb-10 sm:px-6 lg:px-12'>
         <section className='grid sm:grid-cols-2 w-full h-full overflow-hidden'>
           {/* Article - left hand side */}
           <article className='grid items-center h-full w-full overflow-hidden sm:px-4 xl:px-6'>
@@ -92,7 +92,7 @@ function InformationComponent() {
                     className='w-full h-full object-contain'
                   />
                 </div>
-                <div className='px-10 pt-4 sm:px-0 lg:pr-10 sm:pt-6'>
+                <div className='px-10 pt-4 sm:px-0 dark:text-dark-text lg:pr-10 sm:pt-6'>
                   <div className='grid grid-cols-rev'>
                     <div className='grid lg:items-center'>
                       <p>

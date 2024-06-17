@@ -107,7 +107,7 @@ function PortfolioComponent() {
           <section className='grid h-full w-[85%] mx-auto'>
             <section className='grid h-fit w-full'>
               <div className='grid md:justify-end'>
-                <div className='grid grid-cols-3 bg-gray-300 gap-2 p-2 w-full md:w-fit mt-6'>
+                <div className='grid grid-cols-3 bg-gray-300 dark:bg-dark-alt-colour gap-2 p-2 w-full md:w-fit mt-6'>
                   <ButtonComponent
                     label='Websites'
                     onClick={() => setDisplayContents(displayTypes[0])}

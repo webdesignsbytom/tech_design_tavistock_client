@@ -57,7 +57,7 @@ function AboutSection() {
               <span className='text-primary mb-2 block text-lg font-semibold'>
                 We are {businessInfo.companyName}
               </span>
-              <h2 className='mb-8 text-3xl font-bold sm:text-4xl text-text-alt poppins_title'>
+              <h2 className='mb-8 text-3xl font-bold sm:text-4xl text-purple-main poppins_title'>
                 Modern and fully customisable App design
               </h2>
               <p className='mb-8 text-base'>

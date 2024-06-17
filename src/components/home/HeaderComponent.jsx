@@ -65,21 +65,21 @@ function HeaderComponent() {
               <div className='grid h-full lg:h-fit lg:mb-10'>
                 <section className='grid h-fit justify-center'>
                   <div className='grid w-fit mt-8 max-w-[85%] mx-auto'>
-                    <h1 className='poppins_title text-6xl mx-auto text-centers'>
+                    <h1 className='poppins_title text-6xl dark:text-dark-text-light mx-auto text-centers'>
                       {businessInfo.companyName}
                     </h1>
                   </div>
                 </section>
                 <div className='grid w-[80%] mx-auto'>
                   <div>
-                    <h2 className='poppins_title text-4xl text-text-alt my-8 text-center'>
+                    <h2 className='poppins_title text-4xl text-purple-main dark:text-purple-dark my-8 text-center'>
                       Modern Websites Apps and Desktop Software for any need.
                     </h2>
                   </div>
                   <div className='grid justify-center mt-4 sm:mt-0 sm:items-end text-center justify-items-center w-full h-full'>
-                    <p className='text-base'>
+                    <p className='text-base dark:text-dark-text'>
                       At{' '}
-                      <span className='font-semibold'>
+                      <span className='font-semibold text-purple-main dark:text-purple-dark'>
                         {businessInfo.companyName}
                       </span>
                       , we specialize in delivering top-notch web and app
@@ -104,7 +104,7 @@ function HeaderComponent() {
             {/* Right */}
             <section ref={sectionRef} className='grid h-full lg:items-center hidden-container'>
               <div className='lg:h-fit'>
-                <div className='hidden lg:grid overflow-hidden '>
+                <div className='hidden lg:grid overflow-hidden'>
                   <div className='grid mx-auto w-[400px] py-10 -mt-4 overflow-hidden'>
                     <img
                       src={CollageImage}
@@ -119,10 +119,10 @@ function HeaderComponent() {
                       return (
                         <li key={index} className='grid justify-center'>
                           <div className='grid grid-cols-reg gap-4 w-fit'>
-                            <div className='text-text-alt'>
+                            <div className='text-purple-main dark:text-purple-dark'>
                               <FiCheckCircle size={28} />
                             </div>
-                            <div>{item.content}</div>
+                            <div className='dark:text-dark-text-light'>{item.content}</div>
                           </div>
                         </li>
                       );

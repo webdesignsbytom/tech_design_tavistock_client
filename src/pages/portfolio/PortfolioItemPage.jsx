@@ -30,7 +30,7 @@ function PortfolioItemPage() {
           {/* Left side */}
           <div className='grid h-full lg:overflow-hidden'>
             <div className='text-2xl font-bold text-center mt-6 '>
-              <h1 className='text-text-alt poppins_title'>
+              <h1 className='text-purple-main poppins_title'>
                 {portfolioItem.title}
               </h1>
             </div>
@@ -58,7 +58,7 @@ function PortfolioItemPage() {
                 <section className='grid outline-2 h-fit bg-alt-colour outline-black outline rounded p-1 w-full'>
                   <div className=''>
                     <div className='text-center text-xl font-semibold mb-2'>
-                      <h3 className='text-text-alt poppins_title'>
+                      <h3 className='text-purple-main poppins_title'>
                         Skills Used
                       </h3>
                     </div>

@@ -12,18 +12,18 @@ const ButtonComponent = ({ label, onClick, type, btnType, btnValue, href, loadin
   switch (type) {
     case 'primary':
       styles =
-        'bg-alt-colour text-white border-alt-colour hover:bg-opacity-90 hover:bg-white hover:text-alt-colour w-full sm:max-w-[350px] h-fit sm:px-1 lg:px-4 text-sm sm:text-base py-2 font-semibold border-2 border-solid rounded-lg duration-300 shadow-xl hover:shadow-2xl ';
+        'bg-alt-colour text-white border-alt-colour hover:bg-opacity-90 hover:bg-white hover:purple-main-colour w-full sm:max-w-[350px] h-fit sm:px-1 lg:px-4 text-sm sm:text-base py-2 font-semibold border-2 border-solid rounded-lg duration-300 shadow-xl hover:shadow-2xl ';
       break;
     case 'secondary':
       styles =
-        'bg-white text-alt-colour border-alt-colour hover:bg-alt-colour hover:text-white w-full sm:max-w-[350px] h-fit sm:px-1 lg:px-4 text-sm sm:text-base py-2 font-semibold border-2 border-solid rounded-lg duration-300 shadow-xl hover:shadow-2xl ';
+        'bg-white purple-main-colour border-alt-colour hover:bg-alt-colour hover:text-white w-full sm:max-w-[350px] h-fit sm:px-1 lg:px-4 text-sm sm:text-base py-2 font-semibold border-2 border-solid rounded-lg duration-300 shadow-xl hover:shadow-2xl ';
       break;
     case 'selected':
-      styles = 'bg-text-alt text-white px-4 py-2 hover:brightness-90';
+      styles = 'bg-purple-main dark:bg-purple-dark text-white dark:text-dark-text-light px-4 py-2 hover:brightness-90';
       break;
     case 'unselected':
       styles =
-        'text-alt-colour px-4 py-2 hover:bg-text-alt hover:text-white duration-300';
+        'px-4 py-2 hover:bg-purple-main hover:dark:bg-purple-dark hover:text-white dark:text-dark-text-light duration-300';
       break;
     case 'cancel':
       styles =
@@ -31,7 +31,7 @@ const ButtonComponent = ({ label, onClick, type, btnType, btnValue, href, loadin
       break;
     case 'submit':
       styles =
-        'bg-alt-colour text-white border-alt-colour hover:bg-opacity-90 hover:bg-white hover:text-alt-colour w-full h-fit sm:px-1 lg:px-4 text-sm sm:text-base py-2 font-semibold border-2 border-solid rounded-lg duration-300 shadow-xl hover:shadow-2xl ';
+        'bg-alt-colour text-white border-alt-colour hover:bg-opacity-90 hover:bg-white hover:purple-main-colour w-full h-fit sm:px-1 lg:px-4 text-sm sm:text-base py-2 font-semibold border-2 border-solid rounded-lg duration-300 shadow-xl hover:shadow-2xl ';
       break;
     default:
       styles = '';

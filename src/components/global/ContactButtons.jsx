@@ -17,7 +17,7 @@ function ContactButtons() {
               </div>
             </section>
             <section className='grid justify-start poppins_text w-full grid-rows-2 !text-start'>
-              <div className='text-text-alt grid font-semibold w-full'>
+              <div className='text-purple-main grid font-semibold w-full'>
                 Mail me at
               </div>
               <div>{businessInfo.emailAddress}</div>
@@ -35,7 +35,7 @@ function ContactButtons() {
               </div>
             </section>
             <section className='grid justify-start poppins_text w-full grid-rows-2 !text-start'>
-              <div className='text-text-alt grid font-semibold w-full'>
+              <div className='text-purple-main grid font-semibold w-full'>
                 Call Me On
               </div>
               <div>{businessInfo.phoneNumber}</div>

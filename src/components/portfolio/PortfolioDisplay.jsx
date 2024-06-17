@@ -22,7 +22,7 @@ function PortfolioDisplay({ portfolioDisplayRef }) {
     >
       <section className='text-center mt-8 mb-4'>
         <h5 className='font-semibold'>Recent Work</h5>
-        <h2 className='text-3xl font-bold text-text-alt poppins_title'>Portfolio</h2>
+        <h2 className='text-3xl font-bold text-purple-main poppins_title'>Portfolio</h2>
       </section>
 
 

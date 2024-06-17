@@ -14,7 +14,7 @@ function MessageModal({ hasSubmissionFailed, closeModal }) {
           </div>
         ) : (
             <div className='text-center h-fit px-4 grid gap-2'>
-              <h4 className='text-text-alt text-xl font-semibold'>
+              <h4 className='text-purple-main text-xl font-semibold'>
                 MESSAGE SENT!
               </h4>
               <h5 className='text-sm'>

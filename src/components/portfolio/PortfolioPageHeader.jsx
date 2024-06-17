@@ -21,7 +21,7 @@ function PortfolioPageHeader({ portfolioDisplayRef }) {
         <article className='mb-4 px-4 mx-auto'>
           <div className='my-6'>
             <h4 className='font-semibold'>Hello I am</h4>
-            <h1 className='text-3xl lg:text-5xl font-semibold text-text-alt poppins_title'>
+            <h1 className='text-3xl lg:text-5xl font-semibold text-purple-main poppins_title'>
               {businessInfo.owner}
             </h1>
           </div>
@@ -43,11 +43,11 @@ function PortfolioPageHeader({ portfolioDisplayRef }) {
             <div className='mt-2'>
               <p>
                 Check out below for{' '}
-                <span className='font-semibold text-text-alt'>Website</span>{' '}
+                <span className='font-semibold text-purple-main'>Website</span>{' '}
                 designs,{' '}
-                <span className='font-semibold text-text-alt'>Apps</span> for
+                <span className='font-semibold text-purple-main'>Apps</span> for
                 controlling machines, and even building{' '}
-                <span className='font-semibold text-text-alt'>Circuits</span> to
+                <span className='font-semibold text-purple-main'>Circuits</span> to
                 drive theses machines.
               </p>{' '}
             </div>

@@ -49,7 +49,7 @@ function Navbar() {
 
   return (
     <div className='relative w-full h-[62px] md:overflow-hidden'>
-      <nav className='grid grid-cols-reg relative z-50 w-full h-full bg-alt-colour'>
+      <nav className='grid grid-cols-reg relative z-50 w-full h-full bg-alt-colour dark:bg-dark-alt-colour'>
         <section className='grid w-fit pl-4 items-center'>
           <div className='grid h-fit items-center justify-center'>
             <img
@@ -67,7 +67,7 @@ function Navbar() {
             <button
               onClick={openPhoneNav}
               aria-label='Toggle navigation menu'
-              className='grid w-fit p-1 h-fit items-center justify-center text-4xl text-white active:brightness-90'
+              className='grid w-fit p-1 h-fit items-center justify-center text-4xl text-white dark:text-dark-text-light active:brightness-90'
             >
               <IoMdMenu className='active:scale-50 ' />
             </button>
@@ -85,8 +85,9 @@ function Navbar() {
                   >
                     <Link
                       to={item.url}
+                      aria-label={`Link to page ${item.label}`}
                       className={`grid items-end h-fit ${
-                        isActive ? 'text-text-alt' : 'text-white'
+                        isActive ? 'text-purple-main dark:text-purple-dark' : 'text-white dark:text-dark-text-light'
                       } duration-300`}
                     >
                       <div className='grid justify-center items-end h-fit'>
@@ -117,7 +118,7 @@ function Navbar() {
                   <Link
                     to={item.url}
                     className={`grid items-end h-fit ${
-                      isActive ? 'text-text-alt' : 'text-white'
+                      isActive ? 'text-purple-main' : 'text-white'
                     } duration-300`}
                   >
                     <div className='grid justify-center items-end h-fit'>

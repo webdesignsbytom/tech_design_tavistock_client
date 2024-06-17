@@ -19,7 +19,7 @@ function SelectAppOptions({ selectAppType, thisRef }) {
           <span className='text-primary block text-lg font-semibold'>
             {businessInfo.companyName} Sales
           </span>
-          <h2 className='text-2xl font-bold sm:text-4xl text-text-alt poppins_title'>
+          <h2 className='text-2xl font-bold sm:text-4xl text-purple-main poppins_title'>
             Select your project type!
           </h2>
         </section>

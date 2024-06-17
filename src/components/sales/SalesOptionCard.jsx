@@ -25,7 +25,7 @@ function SalesOptionCard({ type, changeDisplayedProduct }) {
         <div className='grid bg-alt-colour h-fit shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg px-2 py-2'>
           <article className='grid grid-flow-col items-center h-fit overflow-hidden'>
             <div className='w-full'>
-              <h2 className='poppins_title text-text-alt text-2xl pl-2'>
+              <h2 className='poppins_title text-purple-main text-2xl pl-2'>
                 {type.label} Project
               </h2>
             </div>
@@ -74,7 +74,7 @@ function SalesOptionCard({ type, changeDisplayedProduct }) {
           <article className='grid '>
             <div className='grid bg-white shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] rounded-lg px-2 lg:px-4 pb-2 pt-4'>
               <div>
-                <h3 className='poppins_title text-text-alt text-center text-xl lg:text-2xl mb-2'>
+                <h3 className='poppins_title text-purple-main text-center text-xl lg:text-2xl mb-2'>
                   Services Offered
                 </h3>
               </div>

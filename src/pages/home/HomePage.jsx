@@ -13,7 +13,7 @@ import BackToTopButton from '../../components/global/BackToTopButton';
 
 function HomePage() {
   return (
-    <div className='min-h-screen w-full overflow-hidden bg-main-bg'>
+    <div className='min-h-screen w-full overflow-hidden bg-main-bg dark:bg-dark-main-bg'>
       <div className='grid w-full h-full overflow-y-scroll scrollbar-hidden'>
         {/* Header container */}
         <div id='/' className='grid grid-rows-reg mb-16 w-full'>
@@ -32,26 +32,26 @@ function HomePage() {
           <PortfolioComponent />
 
           {/* Colour block */}
-          <div className='w-full h-16 bg-main-bg overflow-hidden'></div>
+          <div className='w-full h-16 bg-main-bg dark:bg-dark-main-bg overflow-hidden'></div>
 
           {/* Third section of main */}
           <ServicesComponent />
 
           {/* Contact CTA */}
           <div className='my-4'>
-          <ContactCta />
+            <ContactCta />
           </div>
 
           <div className='my-4'>
             <PortfolioCta />
           </div>
           {/* Colour block */}
-          <div className='w-full h-16 bg-main-bg overflow-hidden'></div>
+          <div className='w-full h-16 bg-main-bg dark:bg-dark-main-bg overflow-hidden'></div>
 
           {/* Forth section of main */}
           <ReviewsComponent />
         </main>
-        
+
         <div>
           <BackToTopButton />
         </div>
