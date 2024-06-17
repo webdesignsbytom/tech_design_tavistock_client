@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ReviewItem({ review }) {
-  const { desc, imageUrl, url } = review;
+  const { desc, imageUrl, url, title } = review;
 
   return (
     <li>
@@ -14,12 +14,12 @@ function ReviewItem({ review }) {
             <img
               className='h-20 w-20 rounded-full shadow-lg'
               src={imageUrl}
-              alt='Componay logo for review'
+              alt={`Componay logo for ${title} review`}
               loading='lazy'
             />
           </a>
         </article>
-        <article className='grid text-center justify-center '>
+        <article className='grid text-center justify-center'>
           <h4 className='text-hyperlink-blue text-ss md:text-base'>
             <a href={url} rel='noreferrer' target='_blank' aria-label='Go to reviwers website'>
               {url}

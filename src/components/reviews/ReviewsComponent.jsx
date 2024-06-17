@@ -10,7 +10,7 @@ function ReviewsComponent() {
   return (
     <section className='bg-alt-colour dark:bg-dark-alt-colour rounded mt-4 mb-10 lg:my-20 mx-4 lg:mx-10 px-1'>
       <div className='flex justify-center text-center text-xl py-1'>
-        <h2 className='max-w-lg my-6 font-sans text-3xl font-bold leading-none tracking-tight text-white dark:text-dark-text-light sm:text-4xl md:mx-auto'>
+        <h3 className='max-w-lg my-6 font-sans text-3xl font-bold leading-none tracking-tight text-white dark:text-dark-text-light sm:text-4xl md:mx-auto'>
           <span className='relative inline-block'>
             <svg
               viewBox='0 0 52 24'
@@ -36,7 +36,7 @@ function ReviewsComponent() {
             </svg>
             <span className='relative'>Reviews and Recommendations</span>
           </span>
-        </h2>
+        </h3>
       </div>
       <section className='grid'>
           <ul className='grid sm:grid-cols-2 lg:grid-cols-4 gap-2 lg:justify-center my-4 mx-4'>

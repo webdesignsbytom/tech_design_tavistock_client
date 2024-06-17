@@ -17,6 +17,7 @@ function SocialBar({ background, icons }) {
               href='https://github.com/webdesignsbytom'
               target='_blank'
               rel='noreferrer'
+              aria-label="link to github"
               className={`${icons} hover:text-active-text`}
             >
               <BsGithub />
@@ -27,6 +28,7 @@ function SocialBar({ background, icons }) {
               href='https://twitter.com/webdesignsbytom'
               target='_blank'
               rel='noreferrer'
+              aria-label="link to twitter"
               className={`${icons} hover:text-active-text`}
             >
               <BsTwitter />
@@ -37,6 +39,7 @@ function SocialBar({ background, icons }) {
               href='https://www.linkedin.com/in/tom-brockington-b011b8230/'
               target='_blank'
               rel='noreferrer'
+              aria-label="link to linkedin"
               className={`${icons} hover:text-active-text`}
             >
               <BsLinkedin />
@@ -47,6 +50,7 @@ function SocialBar({ background, icons }) {
               href='https://www.instagram.com/webdesignsbytom/'
               target='_blank'
               rel='noreferrer'
+              aria-label="link to instagram"
               className={`${icons} hover:text-active-text`}
             >
               <BsInstagram />
