@@ -11,6 +11,7 @@ Welcome to Tech Designs by Tom, your go-to solution for professional websites an
   - [Technologies Used](#technologies-used)
   - [Installation](#installation)
   - [Usage](#usage)
+  - [TODO](#todo)
 
 ## About
 
@@ -63,3 +64,7 @@ About Us: Learn more about our mission and values.
 Services: Detailed information about the services we offer.
 Portfolio: Examples of our work and successful projects.
 Contact: Get in touch with us for inquiries and quotes.
+
+## TODO
+
+header titles - react-helmet

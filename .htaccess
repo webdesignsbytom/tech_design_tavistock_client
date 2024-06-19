@@ -18,7 +18,7 @@ RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Security headers
 <IfModule mod_headers.c>
-  Header set Content-Security-Policy "default-src 'self';"
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://tdt-server.vercel.app"
   Header set X-Content-Type-Options nosniff
   Header set X-Frame-Options DENY
   Header set X-XSS-Protection "1; mode=block"
